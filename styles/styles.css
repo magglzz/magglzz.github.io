@@ -55,9 +55,15 @@ section img {
   font-weight:300;
 }
 #scroll-indicator {
-  padding:200px 0px;
+  padding:160px 0px;
   font-size:.8em;
   font-weight:600;
+}
+/********************************/
+/****** project headers *********/
+/********************************/
+#pp-background{
+  background-color:yellow;
 }
 /********************************/
 /****** homepage projects *********/
@@ -68,8 +74,6 @@ section img {
   flex-wrap: wrap;
   justify-content:space-around;
 }
-/*why isn't this working?*/
-
 .section-content {
   width:35%;
   padding:40px;
@@ -132,25 +136,77 @@ hr {
 .contact-item {
   display:flex;
   flex-wrap:wrap;
-  height:200px;
-  width: 200px;
+  margin:30px;
   font-size:1rem;
-  vertical-align:top;
-  color:#fff;
-  border:1px solid white;
-
+  color: #fff;
+  position: relative;
+  cursor: pointer;
 }
-#bordered-box {
-  position:absolute;
-  top:10px;
-  left:10px;
-  border:1px solid white;
-}
-.contact-contents{
 
+.contact-item-content {
+  /* Force content above ::after element */
+  z-index: 2;
+  padding:2em;
+}
+
+.contact-item::after,
+.contact-item::before {
+  border: 1px solid #323232;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.contact-item::before {
+  /* Set content of box to empty */
+  content: " ";
+  /* Position box absolute in relation to relative parent */
+  position: absolute;
+  /* Offset box by 5px */
+  left: 5px;
+  top: 5px;
+
+  /* Set the background */
+  background-image: linear-gradient(0deg, #3ECC77 0%, #3ECC77 100%);
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 0 0;
+
+  /* Set animation/transition when background-size changes */
+  transition: background-size 500ms -200ms;
+}
+
+.contact-item:focus::before,
+.contact-item:hover::before {
+  background-size: 100% 100%;
+}
+
+.contact-item::after {
+  content: " ";
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: background 600ms;
+}
+
+.contact-contents {
+  display:flex;
+  flex-wrap:wrap;
 }
 #sayhello-content {
   color: white;
+}
+#linkedin {
+  height:172px;
+  width:170px;
+}
+#email {
+  height:232px;
+  width:172px;
+}
+#behance {
+  height:200px;
+  width:172px;
 }
 
 

@@ -2,25 +2,28 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Margaret Liu, Designer</title>
+    <title>Margaret Liu Designer</title>
     <meta name="description" content="SF based UI and UX designer">
     <meta name="keywords" content="SF Designer, designer, product designer, ui designer, ux designer, design, digital">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500" rel="stylesheet">
   </head>
 
   <body>
-    <header>
-      <nav class="top-nav">
+    <header id="pp-background">
+      <nav>
         <img src="images/logo.png" alt="Margaret Liu" id="logo">
-        <ul>
+        <ul class="navigation">
           <li><a href="work.html">Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
-      <h1>Caring.com Partner Portal</h1>
-      <p>a ldkfja; lskdjf ;alksdjf ;alskjf </p>
+      <h1 class="project-head">Caring.com Partner Portal</h1>
+      <p class="project-desc">a ldkfja; lskdjf ;alksdjf ;alskjf </p>
       <img src="images/ppmain.png" class="head-img">
     </header>
     
@@ -62,30 +65,40 @@
       <div class="maring-title">Visual Design --------------------- </div>
       <img src="">
     </section>
+ 
 <!-- **************************************************************** -->    
-<!--how do you create two overlapping bordered boxes? -->
-<!-- **************************************************************** -->  
-    <section class="say-hello"> 
-      <div class="contact-item">
-        <div class="borderedbox"></div>
-        <a href="https://www.linkedin.com" class="borderedbox-title">
-            <h4>Online Resume</h4>
-            <h5>LinkedIn</h5>
-        </a>
+<!--Say Hello -->
+<!-- **************************************************************** --> 
+    <section class="two-column" id="sayhello"> 
+      <div class="contact-contents">
+        <div class="contact-wrapper">
+          <div class="contact-item" id="linkedin">
+            <a href="https://www.linkedin.com" class="contact-item-content">
+                <h4>Online Resume</h4>
+                <h5>LinkedIn</h5>
+            </a>
+          </div>
+          <div class="contact-item" id="email">
+            <a href="contact.html" class="contact-item-content">
+              <h4>Send a Message</h4>
+              <h5>Email</h5>
+            </a>
+          </div>
+        </div>
+        <div class="contact-wrapper">
+          <div class="contact-item" id="behance">
+            <a href="https://behance.net" class="contact-item-content">
+              <h4>Check Out My Art</h4>
+              <h5>Behance</h5>
+            </a>
+          </div>
+          <button class="homepage-buttons" href="">Send a message</button>
+        </div>
       </div>
-      <div class="contact-item">
-        <div class="borderedbox"></div>
-        <a href="contact.html">
-          <h4>Send a Message</h4>
-          <h5>Email</h5>
-        </a>
-      </div>
-      <div class="contact-item">
-        <div class="borderedbox"></div>
-        <a href="https://behance.net">
-          <h4>Check Out My Art</h4>
-          <h5>Behance</h5>
-        </a>
+      <div class="section-content" id="sayhello-content">
+        <h2>04 CONTACT</h2>
+        <h1>Say Hello</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </section>
 
