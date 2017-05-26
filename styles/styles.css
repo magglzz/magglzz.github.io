@@ -63,10 +63,7 @@ section img {
 /****** project headers *********/
 /********************************/
 .project-page header {
-  position: fixed;
-  width: 100%;
-  height: 80px;
-  background-color: white;
+background-color:yellow;
 }
 .project-intro {
   /* Compensate for the header's fixed position */
@@ -92,6 +89,7 @@ section img {
   position: absolute;
   top: 0;
   right: 0;
+}
 /********************************/
 /****** homepage projects *********/
 /********************************/
@@ -153,6 +151,19 @@ hr {
 #company {
   padding-top:0px;
   font-size:.7em;
+}
+/********************************/
+/****** project page *********/
+/********************************/
+.project-nav {
+  padding-top:50px;
+  text-align:left;
+  padding-left:30px;
+}
+dt{
+  cursor:pointer;
+  font-size:1.5em;
+  font-weight:300;
 }
 /********************************/
 /****** say hello *********/
