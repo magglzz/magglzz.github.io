@@ -11,3 +11,4 @@ $('.answer').hide();
 
 $('#myrole').click(showAnswerRole);
 $('#goals').click(showAnswerGoal);
+
