@@ -1,5 +1,13 @@
-// say hello button hover - possibly with css
+//accordian program
+function showAnswerRole() {
+  $('#answer-role').slideToggle();
+}
 
-//see my work arrow - possibly with css
+function showAnswerGoal() {
+  $('#answer-goals').slideToggle();
+}
 
-//contact me submit
+$('.answer').hide();
+
+$('#myrole').click(showAnswerRole);
+$('#goals').click(showAnswerGoal);
