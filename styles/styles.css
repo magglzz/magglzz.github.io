@@ -8,8 +8,10 @@ body {
   font-family:rubik, helvetica neue, sans-serif;
   font-weight:300;
   font-size:1em;
-  text-align:center;
   line-height: 1.5em;
+}
+p {
+  padding-top:20px;
 }
 /********************************/
 /****** top nav styling *********/
@@ -24,9 +26,6 @@ nav img {
 button {
   font: 500 14px rubik; 
   padding:10px 20px;
-}
-section img {
-  width:30%;
 }
 .navigation{
   list-style-type:none;
@@ -48,16 +47,19 @@ section img {
   font-size:5em;
   font-weight:500;
   line-height: 2em;
+  text-align:center;
 }
 #site-description {
   padding:10px;
   font-size:1.5em;
   font-weight:300;
+  text-align:center;
 }
 #scroll-indicator {
   padding:160px 0px;
   font-size:.8em;
   font-weight:600;
+  text-align:center;
 }
 /********************************/
 /****** project headers *********/
@@ -98,7 +100,6 @@ background-color:yellow;
   display: flex;
   flex-wrap: wrap;
   justify-content:space-around;
-  clear:both;
 }
 .section-content {
   width:35%;
@@ -139,12 +140,6 @@ hr {
   box-shadow:0px 10px 30px rgba(0,0,0,0.20);
   padding:30px;
   margin:300px 100px;
-}
-.white-float-img {
-  padding:20px;
-  box-shadow:0px 10px 30px rgba(0,0,0,0.20);
-  float:left;
-  margin:120px;
 }
 .homepage-buttons {
   margin-top:40px;
@@ -193,8 +188,26 @@ hr {
 .wrapper-section {
   padding-top:30px;
 }
-.wrapper-title {
-  padding-bottom:30px;
+.info-arch {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  margin:200px 50px 0px 0px;
+}
+.white-float-arch {
+  width:28%;
+  box-shadow:0px 10px 30px rgba(0,0,0,0.20);
+  padding:30px;
+  margin:100px 50px 0px 50px;
+}
+.img-overlay {
+  margin:200px 0px;
+  text-align:center;
+
+}
+.textoverlay {
+  margin: -100px 0px 0px 100px;
+  text-align:left;
 }
 /********************************/
 /****** accordians *********/
@@ -203,7 +216,8 @@ dt{
   cursor:pointer;
   font-size:1.5em;
   font-weight:300;
-  padding:20px;
+  padding-top:40px;
+  border-bottom: 1px solid black;
 }
 dd {
   padding-left:20px;
@@ -213,7 +227,6 @@ dl {
   padding:50px;
   width:40%;
 }
-
 /********************************/
 /****** say hello *********/
 /********************************/
