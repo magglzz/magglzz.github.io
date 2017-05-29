@@ -15,6 +15,11 @@ p {
   padding-top:20px;
 }
 /********************************/
+/****** colors *********/
+/********************************/
+$primary: #F65672;
+$secondary: #42FA92;
+/********************************/
 /****** top nav styling *********/
 /********************************/
 nav {
@@ -24,10 +29,16 @@ nav {
 nav img {
   float:left;
 }
+
 button {
   font: 500 14px rubik; 
   padding:10px 20px;
+  background-color:white;
+  border:2px solid #F65672;
+  color:#F65672;
+  cursor:pointer;
 }
+
 .navigation{
   list-style-type:none;
   display:inline-block;
@@ -81,12 +92,12 @@ i {
 /****** project headers *********/
 /********************************/
 .project-page header {
-background-color:#6cbee3;
+background-color:#42FA92;
 }
 .project-intro {
   /* Compensate for the header's fixed position */
   padding-top: 80px;
-  background-color: #6cbee3;
+  background-color: #42FA92;
   min-height: 465px;
 }
 .project-head {
@@ -104,13 +115,15 @@ background-color:#6cbee3;
   width: 30%;
   color:white;
 }
-
 .project-desc img {
   position: absolute;
   top: 0;
   right: 0;
-
 }
+.head-img {
+  width:40%;
+}
+
 /********************************/
 /****** homepage projects *********/
 /********************************/
@@ -118,7 +131,8 @@ background-color:#6cbee3;
 .two-column {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-around;
+  margin-left:50px;
+  justify-content:space-between;
 }
 .section-content {
   width:35%;
@@ -131,15 +145,16 @@ background-color:#6cbee3;
   display:inline-block;
 }
 h2 {
-  text-decoration:underline;
   font-weight:500;
   font-size:.8em;
-  padding-bottom: 30px;
+  margin-bottom:10pxh;
 }
 h1 {
-  font-size:1.7em;
+  font-size:6em;
   font-weight:500;
-  line-height:1.5em;
+  line-height:1;
+  padding-top:1em;
+  color:#F65672;
 }
 hr {
   color:black;
@@ -150,6 +165,17 @@ hr {
 .break-text {
   text-align:left;
   font: italic 2em/1em rubik;
+}
+img {
+  width:100%;
+  height:auto;
+}
+.homephotos {
+  width:50%;
+  margin-top:40px;
+}
+.subtitle {
+  border-bottom:1px solid #F65672;
 }
 /********************************/
 /****** referral cards *********/
@@ -233,10 +259,8 @@ hr {
   top:-78px;
 }
 .textoverlay-title {
-  line-height:1;
   --parallax: 1.16174;
-  margin: -130px 0 0;
-  font-size: 6rem;
+  margin: -232px 0 0;
   position:absolute;
   top:0;
   transform: translateY(calc(var(--parallax, 0) * 60px));
@@ -255,10 +279,9 @@ hr {
   position: relative;
 }
 .photo {
-  box-shadow: 0 18px 24px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
   position: relative;
   margin-left:200px;
+  width:35%;
 }
 
 /**** How do I make the border around the images? */
@@ -286,8 +309,31 @@ dl {
 /********************************/
 /****** say hello *********/
 /********************************/
+.headerwhite {
+  color:#42FA92;
+}
+#sayhello button{
+  background-color:#2E2D34;
+  color:#42FA92;
+  border:2px solid #42FA92;
+}
 #sayhello {
-  background-color:gray;
+  background-color:#2E2D34;
+}
+.hello-subtitle {
+  color:#42FA92;
+  font-size:.7em;
+  text-transform:uppercase;
+  text-decoration: none;
+}
+#sayhello-content h2{
+  border-bottom:1px solid #42FA92; 
+  margin-right:50px; 
+}
+h5 {
+  color:white;
+  font-size:1.3em;
+  text-decoration:none;
 }
 .contact-item {
   display:flex;
@@ -303,11 +349,12 @@ dl {
   /* Force content above ::after element */
   z-index: 2;
   padding:2em;
+
 }
 
 .contact-item::after,
 .contact-item::before {
-  border: 1px solid #323232;
+  border: 1px solid #42FA92;
   display: block;
   height: 100%;
   width: 100%;
@@ -319,8 +366,8 @@ dl {
   /* Position box absolute in relation to relative parent */
   position: absolute;
   /* Offset box by 5px */
-  left: 5px;
-  top: 5px;
+  left: 10px;
+  top: 10px;
 
   /* Set the background */
   background-image: linear-gradient(0deg, #3ECC77 0%, #3ECC77 100%);
@@ -343,11 +390,13 @@ dl {
   position: absolute;
   top: 0;
   transition: background 600ms;
+  background-color:#2E2D34;
 }
 
 .contact-contents {
   display:flex;
   flex-wrap:wrap;
+  margin-left:50px;
 }
 #sayhello-content {
   color: white;
