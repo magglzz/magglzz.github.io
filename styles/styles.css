@@ -22,6 +22,9 @@ body {
 p {
   padding-top:20px;
 }
+a {
+  text-decoration:none;
+}
 /********************************/
 /****** top nav styling *********/
 /********************************/
@@ -42,8 +45,12 @@ nav img {
 }
 .navigation li a {
   text-decoration:none;
-  padding:0px 30px;
+  padding:0px 50px;
   color:#2E2D34;
+}
+#logo {
+  width:40px;
+  margin-left:50px;
 }
 
 /****** not working :( *********/
@@ -64,13 +71,14 @@ nav img {
   line-height: 45px;
   text-align: center;
   text-decoration:none;
-  color: #F65672;
+  color: #FB1F00;
   cursor: pointer;
   overflow: hidden;
   margin-top:3em;
 }
 .btn.btndark {
-  color:#42FA92;
+  color:#D8007F;
+  margin-left:30px;
 }
 .btn svg {
   position: absolute;
@@ -78,14 +86,14 @@ nav img {
 }
 .btn svg rect {
   fill: none;
-  stroke: #F65672;
+  stroke: #FB1F00;
   stroke-width: 4;
   stroke-dasharray: 422, 0;
   
   @include transition(all 1300ms $ease-out-expo);
 }
 .btn.btndark svg rect {
-  stroke:#42FA92;
+  stroke:#D8007F;
 }
 .btn:hover svg rect {
   stroke-width: 7;
@@ -94,20 +102,23 @@ nav img {
 }
 
 .btn:hover {
-  color:#F65672;
+  color:#FB1F00;
   font-size:18px;
   letter-spacing:1px;
   font-weight:bold;
 }
 .btndark:hover {
-  color:#42FA92;
+  color:#D8007F;
 }
 /********************************/
 /****** homepage header styling *********/
 /********************************/
 #site-title {
+  background: -webkit-linear-gradient(#FB1F00, #D8007F);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding-top:120px;
-  font-size:5em;
+  font-size:7em;
   font-weight:500;
   line-height: 2em;
   text-align:center;
@@ -125,7 +136,7 @@ nav img {
   text-align:center;
 }
 i {
-  border: solid #F65672;
+  border: solid #FB1F00;
   border-width: 0 3px 3px 0;
   display: inline-block;
   padding: 3px;
@@ -136,12 +147,12 @@ i {
 /****** project headers *********/
 /********************************/
 .project-page header {
-background-color:#42FA92;
+background-color:#FB1F00;
 }
 .project-intro {
   /* Compensate for the header's fixed position */
   padding-top: 80px;
-  background-color: #42FA92;
+  background-color: #FB1F00;
   min-height: 465px;
 }
 .project-head {
@@ -198,7 +209,7 @@ h1 {
   font-weight:500;
   line-height:1;
   padding-top:1em;
-  color:#F65672;
+  color:#FB1F00;
 }
 hr {
   color:black;
@@ -219,7 +230,7 @@ img {
   margin-top:40px;
 }
 .subtitle {
-  border-bottom:1px solid #F65672;
+  border-bottom:1px solid #FB1F00;
 }
 /********************************/
 /****** referral cards *********/
@@ -327,11 +338,6 @@ img {
   margin-left:200px;
   width:35%;
 }
-
-/**** How do I make the border around the images? */
-
-
-
 /********************************/
 /****** accordians *********/
 /********************************/
@@ -354,24 +360,19 @@ dl {
 /****** say hello *********/
 /********************************/
 .headerwhite {
-  color:#42FA92;
-}
-#sayhello button{
-  background-color:#2E2D34;
-  color:#42FA92;
-  border:2px solid #42FA92;
+  color:#D8007F;
 }
 #sayhello {
   background-color:#2E2D34;
 }
 .hello-subtitle {
-  color:#42FA92;
+  color:#D8007F;
   font-size:.7em;
   text-transform:uppercase;
   text-decoration: none;
 }
 #sayhello-content h2{
-  border-bottom:1px solid #42FA92; 
+  border-bottom:1px solid #D8007F; 
   margin-right:50px; 
 }
 h5 {
@@ -398,7 +399,7 @@ h5 {
 
 .contact-item::after,
 .contact-item::before {
-  border: 1px solid #42FA92;
+  border: 1px solid #D8007F;
   display: block;
   height: 100%;
   width: 100%;
@@ -414,7 +415,7 @@ h5 {
   top: 10px;
 
   /* Set the background */
-  background-image: linear-gradient(0deg, #3ECC77 0%, #3ECC77 100%);
+  background-image: linear-gradient(0deg, #D8007F 0%, #D8007F 100%);
   background-position: 100% 100%;
   background-repeat: no-repeat;
   background-size: 0 0;
