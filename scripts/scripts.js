@@ -1,4 +1,4 @@
-alert('SCRIPTS');
+
 //accordian program
 function showAnswerRole() {
   $('#answer-role').slideToggle();

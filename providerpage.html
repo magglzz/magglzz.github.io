@@ -7,7 +7,7 @@
     <meta name="keywords" content="SF Designer, designer, product designer, ui designer, ux designer, design, digital">
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="styles/normalize.css">
+    <!-- <link rel="stylesheet" href="styles/normalize.css"> -->
     <link rel="stylesheet" href="styles/parallax.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500" rel="stylesheet">
@@ -15,19 +15,6 @@
 
   <body class="project-page">
     <header>
-      <div class="container-ham">
-        <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
-       <input id="toggle" type="checkbox">
-
-        <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
-
-        <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
-        <label class="toggle-container" for="toggle">
-        <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
-        <span class="button button-toggle"></span>
-        </label>
-
-        <!-- The nav menu -->
         <nav>
           <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
           <ul class="navigation project-nav">
@@ -38,7 +25,6 @@
         </nav>
       </div>
     </header>
-
     <div class="project-intro">
       <h1 class="project-head">Caring.com Partner Portal</h1>
       <div class="project-desc">
@@ -148,7 +134,21 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
     </section>
-
+  <div class="stripes">
+    <div class="container">
+      <div class="grid">
+        <div class="grid-cell">
+          <div class="stripes-container">
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer> Created by Margaret Liu 2017
   </footer>
   <script src="scripts/jquery-3.2.1.min.js"></script>

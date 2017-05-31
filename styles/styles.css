@@ -27,6 +27,44 @@ a {
   text-decoration:none;
 }
 /********************************/
+/****** background stripes *********/
+/********************************/
+.stripes {
+  height:100%;
+  left:0;
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index:-3;
+}
+.container {
+  margin:0 auto;
+  max-width:1300px;
+  padding: 0 1rem;
+  position:relative;
+  width:100%;
+}
+.grid-cell {
+  margin-left:12.5%;
+  -webkit-flex-basis: 75%;
+  margin-top:0;
+  box-sizing:border-box;
+  display:inline-block;
+  flex: 0 0 100%;
+  position:relative;
+}
+.stripes-container {
+  display:flex;
+  height:100vh;
+  justify-content:space-between;
+  margin:-.5rem;
+}
+.stripes-item {
+  background:rgba(0,0,0,.07);
+  height:100%;
+  width:1px;
+}
+/********************************/
 /****** top nav styling *********/
 /********************************/
 nav {
@@ -53,28 +91,6 @@ nav img {
   width:40px;
   margin-left:50px;
 }
-.container-ham {
-  position: relative;
-  margin: 35px auto 0;
-  width: 300px;
-  height: 534px;
-  background-color: #533557;
-  overflow: hidden;
-}
-/* To hide the checkbox*/
-#toggle {
-  display: none;
-}
-
-/* Styles for the 'open' state, if the checkbox is checked*/
-#toggle:checked {
-  /* Any element you need to change the style if menu is open goes here, using the sibling selector (~) as follows
-*/
-  /*Styles for the open navigation menu, for example*/
-  & ~ .nav {
-  }
-}
-
 .navigation.project-nav li a {
   color:white;
 }
@@ -216,7 +232,10 @@ background-color:#FB1F00;
   height: 100%;
 }
 #myCanvas {
-  cursor:pointer;
+  cursor:url(../images/pencil.png),auto;
+}
+#draw {
+  margin-left:70px;
 }
 .two-column {
   display: flex;
@@ -328,7 +347,6 @@ img {
   margin:200px 50px 0px 0px;
 }
 .grid {
-  margin:10rem -1rem;
   clear:both;
   display:flex;
   flex-wrap:wrap;
@@ -345,13 +363,10 @@ img {
   top:-78px;
 }
 .textoverlay-title {
-  --parallax: 1.16174;
-  margin: -206px 0 0;
+  margin: -133px 0 0;
   position:absolute;
   top:0;
-  transform: translateY(calc(var(--parallax, 0) * 60px));
   z-index: 1;
-  will-change: transform;
 }
 .content {
   padding:2rem 1rem;
