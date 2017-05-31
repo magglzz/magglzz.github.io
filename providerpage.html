@@ -15,17 +15,28 @@
 
   <body class="project-page">
     <header>
-      
+      <div class="container-ham">
+        <!-- This checkbox will give us the toggle behavior, it will be hidden, but functional -->
+       <input id="toggle" type="checkbox">
 
-      
-      <nav>
-        <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
-        <ul class="navigation project-nav">
-          <li><a href="work.html">Work</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
+        <!-- IMPORTANT: Any element that we want to modify when the checkbox state changes go here, being "sibling" of the checkbox element -->
+
+        <!-- This label is tied to the checkbox, and it will contain the toggle "buttons" -->
+        <label class="toggle-container" for="toggle">
+        <!-- If menu is open, it will be the "X" icon, otherwise just a clickable area behind the hamburger menu icon -->
+        <span class="button button-toggle"></span>
+        </label>
+
+        <!-- The nav menu -->
+        <nav>
+          <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
+          <ul class="navigation project-nav">
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <div class="project-intro">
