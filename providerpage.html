@@ -8,15 +8,19 @@
      <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/parallax.css">
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500" rel="stylesheet">
   </head>
 
   <body class="project-page">
     <header>
+      
+
+      
       <nav>
         <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
-        <ul class="navigation" class="project-nav">
+        <ul class="navigation project-nav">
           <li><a href="work.html">Work</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -41,20 +45,22 @@
       <dd id="answer-goals" class="answer">These were the goals</dd>
     </dl>
 
-    <section class="container">
-      <div class="verticalbar">
-        <div class="margin-title">User Research</div>
-        <div id="margin-line"></div>
-      </div>  
-      <div class="wrapper">
-        <div class="wrapper-section">
-          <h3 class="wrapper-title">The User</h3>
-          <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt.</p>
-          <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt.</p>
-        </div>
-        <div class="wrapper-section">
-          <h3 class="wrapper-title">User Pain Points</h3>
-          <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt. </p>
+    <section class="container parallax">
+      <div class="group3">
+        <div class="verticalbar parallax__layer--base">
+          <div class="margin-title">User Research</div>
+          <div id="margin-line"></div>
+        </div>  
+        <div class="wrapper parallax__layer--fore">
+          <div class="wrapper-section">
+            <h3 class="wrapper-title">The User</h3>
+            <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt.</p>
+            <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt.</p>
+          </div>
+          <div class="wrapper-section">
+            <h3 class="wrapper-title">User Pain Points</h3>
+            <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt. </p>
+          </div>
         </div>
       </div>
     </section>
@@ -65,7 +71,7 @@
           <h1 class="textoverlay-title">Information Architecture</h1>
         </div>
         <div class="photo">
-          <img src="images/portalia.png">
+          <img class="photo-shadow" src="images/portalia.png">
         </div>
         <div class="content">
           <h4 class="overview">OVERVIEW</h4>
@@ -118,7 +124,7 @@
               <h5>Behance</h5>
             </a>
           </div>
-          <a href="providerpage.html" class="btn btndark">View project
+          <a href="providerpage.html" class="btn btndark">Contact me
             <svg>
               <rect x="0" y="0" fill="none" width="166" height="45"/>
             </svg>
