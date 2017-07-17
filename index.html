@@ -9,7 +9,8 @@
 
 <!--     <link rel="stylesheet" href="styles/normalize.css"> -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:700" rel="stylesheet">
 
     <!-- Load the Paper.js library -->
     <script type="text/javascript" src="scripts/paper-full.min.js"></script>
@@ -56,147 +57,151 @@
   </head>
 
   <body>
-<!--figure out a way to make the header take up the whole viewport not matter what size screen is at -->
     <header class="home-head">
       <nav>
-        <button id="menu-btn">menu</button>
-        <img src="images/logo.png" alt="Margaret Liu" id="logo">
+        <button id="menu-btn"><span></span></button>
+        <a href="index.html">
+          <img src="images/logo.png" alt="Margaret Liu" id="logo">
+        </a>
         <ul class="navigation">
-          <li class="nav-item"><a href="work.html">Work</a></li>
-          <li class="nav-item"><a href="about.html">About</a></li>
-          <li class="nav-item"><a href="contact.html">Contact</a></li>
+          <li><a data-action="jump-section" href="#seemywork">Work</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
       <div class="header-content-wrapper">
-        <canvas id="myCanvas" resize></canvas>
-        <p id="draw">Draw something</p>
-        <p id="site-title">Margaret Liu</p>
-        <p id="site-description">description text goes here soon</p>
-        <div id="scroll-indicator">
-          <p>SEE MY WORK</p>
-          <i></i>
+        <div id="canvas">
+          <canvas id="myCanvas" resize></canvas>
+          <p id="site-title">Margaret Liu</p>
+          <p id="site-description">description text goes here soon</p>
         </div>
+      </div>
+      <div id="scroll-indicator">
+        <a data-action="jump-section" href="#seemywork">SEE MY WORK</a>
+        <br>
+        <i></i>
       </div>
     </header>
-
-    <section class="two-column">
-      <div class="section-content">
-        <div class="subtitle">
-          <h2>01 B2B PORTAL</h2>
-        </div>
-        <h1>Caring.com Partner Portal</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
-        <a href="providerpage.html" class="btn">View project
-          <svg>
-            <rect x="0" y="0" fill="none" width="166" height="45"/>
-          </svg>
-        </a>
-      </div>
-      <div class="homephotos">
-        <img src="images/portalcommunities.png">
-      </div>
-    </section>
-
-    <div class="white-float">
-      <p class="referral-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-      <p class="referral-by">Bianca Monica</p>
-      <p class="referral-by" id="company">Warner Brothers</p>
-    </div>
-
-    <hr>
-    
-    <div class="break-text">The goal was to adlskfj alsjdf lkasjdf ads jasd Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
-   
-    <section class="two-column">
-      <div class="homephotos">
-        <img src="images/talk.png">
-      </div>
-      <div class="section-content">
-        <div class="subtitle">
-          <h2>02 INTERNAL SALES TOOL</h2>
-        </div>
-        <h1>Caring.com Talk</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-        <a href="talk.html" class="btn">View project
-          <svg>
-            <rect x="0" y="0" fill="none" width="166" height="45"/>
-          </svg>
-        </a>
-      </div>
-    </section>
-
-    <div class="white-float">
-      <p class="referral-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
-      <p class="referral-by">Bianca Monica</p>
-      <p class="referral-by">Warner Brothers</p>
-    </div>
-
-    <section class="two-column">
-      <div class="section-content">
-        <div class="subtitle">
-          <h2>03 WEBSITE</h2>
-        </div>
-        <h1>Caring.com Provider Pages</h1>
-        <p>text about the project Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  </p>
-        <a href="providerpage.html" class="btn">View project
-          <svg>
-            <rect x="0" y="0" fill="none" width="166" height="45"/>
-          </svg>
-        </a>
-      </div>
-      <div class="homephotos">
-        <img src="images/providerpage.png">
-      </div>
-    </section>
-<!-- **************************************************************** -->    
-<!--Say Hello -->
-<!-- **************************************************************** -->  
-    <section class="two-column" id="sayhello"> 
-      <div class="contact-contents">
-        <div class="contact-wrapper">
-          <div class="contact-item" id="linkedin">
-            <a href="https://www.linkedin.com" class="contact-item-content">
-                <h4 class="hello-subtitle">Online Resume</h4>
-                <h5>LinkedIn</h5>
-            </a>
+    <div class="content-wrapper">
+      <section class="two-column">
+        <div class="section-content">
+          <div class="subtitle">
+            <h2 id="seemywork">01 B2B PORTAL</h2>
           </div>
-          <div class="contact-item" id="email">
-            <a href="contact.html" class="contact-item-content">
-              <h4 class="hello-subtitle">Send a Message</h4>
-              <h5>Email</h5>
-            </a>
-          </div>
-        </div>
-        <div class="contact-wrapper">
-          <div class="contact-item" id="behance">
-            <a href="https://behance.net" class="contact-item-content">
-              <h4 class="hello-subtitle">Check Out My Art</h4>
-              <h5>Behance</h5>
-            </a>
-          </div>
-          <a href="providerpage.html" class="btn btndark">Contact me
+          <h1>Caring.com Partner Portal</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
+          <a href="providerpage.html" class="btn">View project
             <svg>
               <rect x="0" y="0" fill="none" width="166" height="45"/>
             </svg>
           </a>
         </div>
+        <div class="homephotos">
+          <img src="images/portalcommunities.png">
+        </div>
+      </section>
+
+      <div class="white-float">
+        <p class="referral-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p class="referral-by">Bianca Monica</p>
+        <p class="referral-by" id="company">Warner Brothers</p>
       </div>
-      <div class="section-content" id="sayhello-content">
-        <h2>04 CONTACT</h2>
-        <h1 class="headerwhite">Say Hello</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+      <hr>
+      
+      <div class="break-text">The goal was to adlskfj alsjdf lkasjdf ads jasd Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+     
+      <section class="two-column">
+        <div class="homephotos">
+          <img src="images/talk.png">
+        </div>
+        <div class="section-content">
+          <div class="subtitle">
+            <h2>02 INTERNAL SALES TOOL</h2>
+          </div>
+          <h1>Caring.com Talk</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
+          <a href="talk.html" class="btn">View project
+            <svg>
+              <rect x="0" y="0" fill="none" width="166" height="45"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <div class="white-float">
+        <p class="referral-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
+        <p class="referral-by">Bianca Monica</p>
+        <p class="referral-by">Warner Brothers</p>
       </div>
-    </section>
-  <div class="stripes">
-    <div class="container">
-      <div class="grid">
-        <div class="grid-cell">
-          <div class="stripes-container">
-            <div class="stripes-item"></div>
-            <div class="stripes-item"></div>
-            <div class="stripes-item"></div>
-            <div class="stripes-item"></div>
-            <div class="stripes-item"></div>
+
+      <section class="two-column">
+        <div class="section-content">
+          <div class="subtitle">
+            <h2>03 WEBSITE</h2>
+          </div>
+          <h1>Caring.com Provider Pages</h1>
+          <p>text about the project Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  </p>
+          <a href="providerpage.html" class="btn">View project
+            <svg>
+              <rect x="0" y="0" fill="none" width="166" height="45"/>
+            </svg>
+          </a>
+        </div>
+        <div class="homephotos">
+          <img src="images/providerpage.png">
+        </div>
+      </section>
+  <!-- **************************************************************** -->    
+  <!--Say Hello -->
+  <!-- **************************************************************** -->  
+      <section class="two-column" id="sayhello"> 
+        <div class="section-content" id="sayhello-content">
+          <h2>04 CONTACT</h2>
+          <h1>Say Hello</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div class="contact-contents">
+          <div class="contact-wrapper">
+            <div class="contact-item" id="linkedin">
+              <a href="https://www.linkedin.com/in/margaret-liu-8b116145/" class="contact-item-content">
+                  <h4 class="hello-subtitle">Online Resume</h4>
+                  <h5>LinkedIn</h5>
+              </a>
+            </div>
+            <div class="contact-item" id="instagram">
+              <a href="https://instagram.com/magglz" class="contact-item-content">
+                <h4 class="hello-subtitle">See What I'm Up To</h4>
+                <h5>Instagram</h5>
+              </a>
+            </div>
+          </div>
+          <div class="contact-wrapper">
+            <div class="contact-item" id="behance">
+              <a href="https://behance.net" class="contact-item-content">
+                <h4 class="hello-subtitle">Check Out My Art</h4>
+                <h5>Behance</h5>
+              </a>
+            </div>
+            <a href="mailto:margaretliu15@gmail.com" class="btn btndark">Contact me
+              <svg>
+                <rect x="0" y="0" fill="none" width="166" height="45"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    <div class="stripes">
+      <div class="container">
+        <div class="grid">
+          <div class="grid-cell">
+            <div class="stripes-container">
+              <div class="stripes-item"></div>
+              <div class="stripes-item"></div>
+              <div class="stripes-item"></div>
+              <div class="stripes-item"></div>
+              <div class="stripes-item"></div>
+            </div>
           </div>
         </div>
       </div>
