@@ -15,17 +15,19 @@ $('#myrole').click(showAnswerRole);
 $('#goals').click(showAnswerGoal);
 
 //top nav 
-  // $('#menu-btn').click(function() {
-  //   // Open menu
-  //   $('body').toggleClass('menu-open');
-  //   $('#menu-btn').toggleClass('active');
-  // });
-
- $('#menu-btn').click(function() {
+  $('#menu-btn').click(function() {
     // Open menu
     $('body').toggleClass('menu-open');
     $('#menu-btn').toggleClass('active');
+    $('#main-menu').slideToggle();
+        console.log('menuworking');
   });
+
+ // $('#menu-btn').click(function() {
+ //    // Find menu and show it
+ //    $('#main-menu').slideToggle();
+ //  });
+
 /*function showMenu() {
   console.log('showmenu');
   $('.navigation').slideToggle();

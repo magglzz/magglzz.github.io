@@ -439,54 +439,54 @@ img {
     align-items: center;
     position: absolute;
     text-transform: uppercase;
-    font-size:14px;
-    font-weight:bold;
+    font-size: 14px;
+    font-weight: bold;
     white-space: nowrap;
     width: 450px;
 }
 #margin-line {
-  background:black;
-  height:1px;
+  background: black;
+  height: 1px;
   margin: 0 20px;
   width: 100%;
 }
 .wrapper {
-  width:75%;
-  padding:10em 0 0 13em;
-  text-align:left;
+  width: 75%;
+  padding: 10em 0 0 13em;
+  text-align: left;
 }
 .wrapper-section {
-  padding-top:30px;
+  padding-top: 30px;
 }
 .img-content {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-  margin:200px 50px 0px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin: 200px 50px 0px 0px;
 }
 .grid {
-  clear:both;
-  display:flex;
-  flex-wrap:wrap;
+  clear: both;
+  display: flex;
+  flex-wrap: wrap;
 }
 .textoverlay {
-  margin-left:6.25%;
+  margin-left: 6.25%;
   flex-basis: 75%;
   max-width: 75%;
   box-sizing: border-box;
-  display:inline-block;
+  display: inline-block;
   padding-left: 1rem;
-  padding-right:1rem;
-  position:relative;
-  top:-78px;
+  padding-right: 1rem;
+  position: relative;
+  top: -78px;
 }
 .textoverlay-title {
   margin: -133px 0 0;
-  position:absolute;
+  position: absolute;
   z-index: 1;
 }
 .content {
-  padding:2rem 1rem;
+  padding: 2rem 1rem;
   margin-left: 1.5rem;
   max-width: 33%;
   margin-top: 0;
@@ -496,8 +496,8 @@ img {
 }
 .photo {
   position: relative;
-  margin-left:200px;
-  width:35%;
+  margin-left: 200px;
+  width: 35%;
 }
 .photo-shadow {
   box-shadow:0px 18px 40px rgba(0,0,0,0.1);
@@ -506,20 +506,20 @@ img {
 /****** accordians *********/
 /********************************/
 dt{
-  cursor:pointer;
-  font-size:1.5em;
-  font-weight:300;
-  padding-top:40px;
+  cursor: pointer;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding-top: 40px;
   border-bottom: 1px solid black;
   overflow: hidden;
 }
 dd {
-  padding-left:20px;
+  padding-left: 20px;
 }
 dl {
-  text-align:left;
-  padding:50px;
-  width:40%;
+  text-align: left;
+  padding: 50px;
+  width: 40%;
 }
 /********************************/
 /****** say hello *********/
@@ -699,11 +699,16 @@ h5 {
     transition: left 0.2s;
   }
   .menu-open ul {
-    left:20px;
+    position: fixed;
+    left: 0px;
+    width: 100%;
+    top: 60px;
+    background: white;
+    box-shadow: 0px 2px 4px rgba (0,0,0,0.25);
   }
-  .menu-open .content-wrapper {
+/*  .menu-open .content-wrapper {
     left:220px;
-  }
+  }*/
   #logo {
     float: right;
   }
