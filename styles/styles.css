@@ -17,6 +17,14 @@
   --sayhello-background: #222323;
   --text-color: #2E2D34;
 }
+.slide-out-top {
+  -webkit-animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+          animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.slide-in-top {
+  -webkit-animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+          animation: slide-in-top 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 body {
   font-family: rubik, helvetica neue, sans-serif;
   font-weight: 300;
@@ -28,16 +36,17 @@ body {
   left: 0;
   transition: left 0.2s;
 }
-/*p {
-  padding-top:20px;
-}*/
 a {
   text-decoration: none;
   cursor: pointer;
   color: var(--text-color);
 }
-a:hover {
+a:hover,
+a:focus {
   color: var(--main-color);
+}
+p {
+  margin: 0;
 }
 /********************************/
 /****** background stripes *********/
@@ -82,7 +91,6 @@ a:hover {
 /********************************/
 nav {
   padding: 30px;
-  overflow: hidden;
 }
 nav img {
   float: left;
@@ -167,13 +175,14 @@ ul {
   background-color: transparent;
 }
 #menu-btn {
-  position: fixed;
+  position: absolute;
   height: 30px;
   width: 35px;
   background: transparent;
   border: none;
   cursor: pointer;
   outline: none;
+  margin: 15px;
 }
 #menu-btn span {
   position: absolute;
@@ -321,7 +330,7 @@ background-color: #FB1F00;
 }
 .home-head .header-content-wrapper {
   position: relative;
-  height: 80vh;
+  height: 69vh;
 }
 
 .home-head canvas {
@@ -349,14 +358,14 @@ background-color: #FB1F00;
   padding-bottom:3em;
 }
 .section-content {
-  width:45%;
-  padding:40px;
-  text-align:left;
+  width: 45%;
+  padding: 40px;
+  text-align: left;
 }
 .section-content p{
-  padding-top:30px;
-  float:left;
-  display:inline-block;
+  padding-top: 30px;
+  float: left;
+  display: inline-block;
 }
 h2 {
   font-weight:500;
@@ -366,28 +375,27 @@ h2 {
 h1 {
   font-size:6em;
   font-family: Cabin, sans-serif;
-  line-height:0.8;
-  padding-top:1em;
+  line-height: 0.8;
   color: var(--main-color);
-  letter-spacing:-0.7px;
+  letter-spacing: -0.7px;
 }
 hr {
-  color:black;
-  background-color:black;
-  margin-top:100px;
+  color: black;
+  background-color: black;
+  margin-top: 100px;
   height: 5px;
 }
 .break-text {
-  text-align:left;
+  text-align: left;
   font: italic 2em/1em rubik;
 }
 img {
-  width:100%;
-  height:auto;
+  width: 100%;
+  height: auto;
 }
 .homephotos {
-  width:50%;
-  margin-top:40px;
+  width: 50%;
+  margin-top: 40px;
 }
 .subtitle {
   border-bottom:1px solid #FB1F00;
@@ -432,7 +440,7 @@ img {
 /********************************/
 .verticalbar {
     left: 40px;
-    top: 600px;
+    top: 477px;
     display: flex;
     transform: rotate(-90deg);
     transform-origin: 0 50%;
@@ -448,59 +456,20 @@ img {
   background: black;
   height: 1px;
   margin: 0 20px;
-  width: 100%;
+  width: 38%;
 }
 .wrapper {
   width: 75%;
-  padding: 10em 0 0 13em;
+  padding: 4em 0 4em 13em;
   text-align: left;
 }
 .wrapper-section {
   padding-top: 30px;
 }
-.img-content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  margin: 200px 50px 0px 0px;
-}
 .grid {
   clear: both;
   display: flex;
   flex-wrap: wrap;
-}
-.textoverlay {
-  margin-left: 6.25%;
-  flex-basis: 75%;
-  max-width: 75%;
-  box-sizing: border-box;
-  display: inline-block;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  position: relative;
-  top: -78px;
-}
-.textoverlay-title {
-  margin: -133px 0 0;
-  position: absolute;
-  z-index: 1;
-}
-.content {
-  padding: 2rem 1rem;
-  margin-left: 1.5rem;
-  max-width: 33%;
-  margin-top: 0;
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-}
-.photo {
-  position: relative;
-  margin-left: 200px;
-  width: 35%;
-}
-.photo-shadow {
-  box-shadow:0px 18px 40px rgba(0,0,0,0.1);
 }
 /********************************/
 /****** accordians *********/
@@ -649,12 +618,6 @@ h5 {
     width:60%;
     padding-top: 6em;
   }
-  .photo {
-    width:60%;
-  }
-  .content {
-    max-width:75%;
-  }
 }
 @media screen and (max-width: 660px) {
   .project-desc img {
@@ -678,12 +641,23 @@ h5 {
     line-height: 1em;
     font-size: 4em;
     padding-bottom: 1em;
+    height: 35vh;
+    padding-top: 2em;
   }
   #site-description {
     font-size: 1.5em;
   }
+  #logo {
+    margin: 10px;
+  }
   h1 {
-    font-size:4em;
+    font-size: 4em;
+  }
+  nav {
+    height: 60px;
+    width: 100%;
+    padding: 0px;
+
   }
   .navigation li {
     width: 100%;
@@ -693,27 +667,23 @@ h5 {
   .navigation {
     display: none;
     position: fixed;
-    top: 45px;
-    left: -250px;
-    width: 200px;
-    transition: left 0.2s;
+    top: 44px;
   }
   .menu-open ul {
     position: fixed;
-    left: 0px;
-    width: 100%;
-    top: 60px;
+    z-index: 1;
+  }
+  ul {
+    display: flex;
+    height: 100vh;
+    align-items: center;
     background: white;
-    box-shadow: 0px 2px 4px rgba (0,0,0,0.25);
   }
 /*  .menu-open .content-wrapper {
     left:220px;
   }*/
   #logo {
     float: right;
-  }
-  .content {
-    width: 80%;
   }
 }
 @media screen and (max-width: 460px) {
@@ -737,9 +707,6 @@ h5 {
   }
   .white-float {
     width:75%;
-  }
-  .content {
-    width:100%;
   }
 }
 @media screen and (min-width: 660px) {

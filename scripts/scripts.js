@@ -14,12 +14,16 @@ $('.answer').hide();
 $('#myrole').click(showAnswerRole);
 $('#goals').click(showAnswerGoal);
 
-//top nav 
+//Mobile menu
   $('#menu-btn').click(function() {
     // Open menu
     $('body').toggleClass('menu-open');
     $('#menu-btn').toggleClass('active');
-    $('#main-menu').slideToggle();
+    $('#main-menu').toggle(function () {
+      // body...
+    });
+    //$('#main-menu').toggleClass('slide-out-top');
+    //$('#main-menu').toggleClass('slide-in-top');
         console.log('menuworking');
   });
 
