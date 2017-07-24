@@ -17,11 +17,10 @@ $('#goals').click(showAnswerGoal);
 //Mobile menu
   $('#menu-btn').click(function() {
     // Open menu
-    $('body').addClass('menu-open');
     $('#menu-btn').toggleClass('active');
 
     if ($('#main-menu').hasClass('slide-in-top')) {
-       $('#main-menu').toggle();
+      $('#main-menu').toggle();
     } else {
       $('#main-menu').addClass('slide-out-top')
     }

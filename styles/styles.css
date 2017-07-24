@@ -176,6 +176,8 @@ ul {
 }
 #menu-btn {
   position: absolute;
+  /* Place menu button above menu ul */
+  z-index: 2;
   height: 30px;
   width: 35px;
   background: transparent;
@@ -649,6 +651,9 @@ h5 {
   }
   #logo {
     margin: 10px;
+    /* Push logo above menu ul */
+    position: relative;
+    z-index: 2;
   }
   h1 {
     font-size: 4em;
@@ -659,25 +664,20 @@ h5 {
     padding: 0px;
 
   }
-  .navigation li {
+  #main-menu {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    height: 100vh;
+    align-content: center;
+    background: white;
+    margin: 0;
+    padding: 0;
+  }
+  #main-menu li {
     width: 100%;
     padding: 10px;
     text-align: center;
-  }
-  .navigation {
-    display: none;
-    position: fixed;
-    top: 44px;
-  }
-  .menu-open ul {
-    position: fixed;
-    z-index: 1;
-  }
-  ul {
-    display: flex;
-    height: 100vh;
-    align-items: center;
-    background: white;
   }
 /*  .menu-open .content-wrapper {
     left:220px;
