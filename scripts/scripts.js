@@ -17,14 +17,24 @@ $('#goals').click(showAnswerGoal);
 //Mobile menu
   $('#menu-btn').click(function() {
     // Open menu
-    $('body').toggleClass('menu-open');
+    $('body').addClass('menu-open');
     $('#menu-btn').toggleClass('active');
-    $('#main-menu').toggle(function () {
-      // body...
-    });
-    //$('#main-menu').toggleClass('slide-out-top');
-    //$('#main-menu').toggleClass('slide-in-top');
-        console.log('menuworking');
+
+    if ($('#main-menu').hasClass('slide-in-top')) {
+       $('#main-menu').toggle();
+    } else {
+      $('#main-menu').addClass('slide-out-top')
+    }
+
+    $('#main-menu').one('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e) {
+      if ($('#main-menu').hasClass('slide-in-top')){
+        $('#main-menu').removeClass('slide-in-top')
+      } else {
+        $('#main-menu').removeClass('slide-out-top')
+        $('#main-menu').addClass('slide-in-top')
+        $('#main-menu').toggle();
+      }
+  });
   });
 
  // $('#menu-btn').click(function() {
