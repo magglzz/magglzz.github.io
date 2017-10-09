@@ -51,24 +51,6 @@ a:hover,
 a:focus {
   color: var(--main-color);
 }
-h1 {
-  font-size: 6em;
-  font-family: Cabin, sans-serif;
-  line-height: 0.8;
-  color: var(--main-color);
-  letter-spacing: -0.7px;
-}
-h2 {
-  font-weight: 500;
-  font-size: .8em;
-  margin-bottom: 10px;
-}
-hr {
-  color: black;
-  background-color: black;
-  margin-top: 100px;
-  height: 5px;
-}
 p {
   margin: 0;
 }
@@ -113,7 +95,7 @@ p {
 /****** top nav styling *********/
 /********************************/
 nav {
-  padding: 1.5em 0;
+  padding: 1.5em 5em;
 }
 nav img {
   float: left;
@@ -128,8 +110,8 @@ nav img {
 }
 .navigation li a {
   text-decoration: none;
-  padding: 50px;
-  color: var(--text-color);
+  padding: 0px 50px;
+  color: var(DarkGray);
 }
 nav ul {
   display: flex;
@@ -138,6 +120,7 @@ nav ul {
 }
 #logo {
   width: 40px;
+  margin-left: 50px;
 }
 .project-page .navigation li a {
   color: white;
@@ -155,7 +138,7 @@ nav ul {
   line-height: 45px;
   text-align: center;
   text-decoration: none;
-  color: var(--accent-color);
+  color: #FB1F00;
   cursor: pointer;
   overflow: hidden;
   margin-top: 3em;
@@ -171,7 +154,7 @@ nav ul {
 }
 .btn svg rect {
   fill: none;
-  stroke: var(--accent-color);
+  stroke: #FB1F00;
   stroke-width: 4;
   stroke-dasharray: 422, 0;
   
@@ -188,7 +171,7 @@ nav ul {
 }
 
 .btn:hover {
-  color: var(--accent-color);
+  color: #FB1F00;
   font-size: 18px;
   letter-spacing: 1px;
   font-weight: bold;
@@ -274,20 +257,16 @@ i {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
 }
-.small-text {
-  font-size: 1em;
-  text-align: center;
-}
 /********************************/
 /****** project headers *********/
 /********************************/
 .project-page header {
-background-color: var(--accent-color);
+background-color: #FB1F00;
 }
 .project-intro {
   /* Compensate for the header's fixed position */
   padding: 2em 7em;
-  background-color: var(--accent-color);
+  background-color: #FB1F00;
   min-height: 465px;
 }
 .project-head {
@@ -300,17 +279,16 @@ background-color: var(--accent-color);
   position: relative;
 }
 .project-desc p {
-  width: 40%;
+  width: 30%;
   color: white;
 }
 .project-desc img {
   position: absolute;
   top: 0;
   right: 0;
-  width: 50%;
 }
-.project-page h1 {
-  font-size: 5em;
+.head-img {
+  width:50%;
 }
 /********************************/
 /****** faq *********/
@@ -373,7 +351,7 @@ background-color: var(--accent-color);
 .two-column {
   display: flex;
   flex-wrap: wrap;
-  padding: 5em 0;
+  padding: 7em;
   justify-content: space-between;
 }
 .two-row {
@@ -390,7 +368,26 @@ background-color: var(--accent-color);
 }
 .section-content p{
   padding-top: 30px;
+  float: left;
   display: inline-block;
+}
+h2 {
+  font-weight: 500;
+  font-size: .8em;
+  margin-bottom: 10px;
+}
+h1 {
+  font-size: 6em;
+  font-family: Cabin, sans-serif;
+  line-height: 0.8;
+  color: var(--main-color);
+  letter-spacing: -0.7px;
+}
+hr {
+  color: black;
+  background-color: black;
+  margin-top: 100px;
+  height: 5px;
 }
 .break-text {
   text-align: left;
@@ -405,15 +402,27 @@ img {
   margin-top: 40px;
 }
 .subtitle {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom:1px solid #FB1F00;
+}
+/********************************/
+/****** carousel *********/
+/********************************/
+.carousel {
+  width:75%;
+  margin:0 auto;
+  margin-top:6em;
+}
+.slick-prev:before,
+.slick-next:before {
+  color:black;
 }
 /********************************/
 /****** referral cards *********/
 /********************************/
 .white-float {
-  width:30%;
-  box-shadow: 0px 2px 30px rgba(0,0,0,0.20);
-  padding: 30px;
+  width:28%;
+  box-shadow:0px 10px 30px rgba(0,0,0,0.20);
+  padding:30px;
   margin: 0 7em;
   background-color: #FFF;
 }
@@ -430,35 +439,6 @@ img {
   padding-top:0px;
   font-size:.7em;
 }
-.more-work {
-  border: 1px solid rgba(0,0,0,0.2);
-  border-radius: 3px;
-  padding: 2em;
-  margin: 3em 0;
-}
-.more-work .two-column {
-  padding: 0;
-}
-.more-work p {
-  font-size: 0.8em;
-}
-.more-work h1 {
-  font-size: 2em;
-  margin: 1em 0;
-}
-.more-work .white-float {
-  margin: 0;
-}
-.white-float:hover {
-  box-shadow: 0 2px 50px rgba(0,0,0,0.3);
-}
-a.white-float:hover {
-  color: var(--text-color);
-}
-.projects-btn {
-  text-align: center;
-}
-
 /********************************/
 /****** project page *********/
 /********************************/
@@ -519,8 +499,8 @@ dd {
 }
 dl {
   text-align: left;
-  padding: 4em 0;
-  width: 40%;
+  padding: 4em 7em;
+  width: 50%;
 }
 /********************************/
 /****** say hello *********/
@@ -560,7 +540,7 @@ h5 {
 }
 .contact-item::after,
 .contact-item::before {
-  border: 2px solid var(--main-color);
+  border: 1px solid var(--main-color);
   display: block;
   height: 100%;
   width: 100%;
@@ -622,21 +602,8 @@ h5 {
 /********************************/
 /****** About me *********/
 /********************************/
-.about-page .two-column {
+.white-page section {
   width: 100%;
-}
-.about-page .contact-wrapper {
-  display: flex;
-}
-.about-page .contact-contents {
-  margin: 0;
-  width: 40%;
-}
-.about-page .contact-item::after {
-  background-color: white;
-}
-.about-page h5 {
-  color: var(--text-color);
 }
 /********************************/
 /****** Work page *********/
@@ -647,12 +614,6 @@ h5 {
 }
 .work-section {
   width:45%;
-}
-.work-page .two-column {
-  width: 100%;
-}
-.work-page h1 {
-  font-size: 4em;
 }
 /********************************/
 /****** responsive *********/
@@ -809,3 +770,9 @@ h5 {
     display:none;
   }
 }
+
+
+
+
+
+
