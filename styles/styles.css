@@ -72,6 +72,14 @@ hr {
 p {
   margin: 0;
 }
+.flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
 /********************************/
 /****** background stripes *********/
 /********************************/
@@ -129,7 +137,6 @@ nav img {
 .navigation li a {
   text-decoration: none;
   padding: 50px;
-  color: var(--text-color);
 }
 nav ul {
   display: flex;
@@ -266,7 +273,7 @@ nav ul {
   text-align: center;
   margin: 2em;
 }
-i {
+.arrow {
   border: solid var(--accent-color);
   border-width: 0 3px 3px 0;
   display: inline-block;
@@ -286,7 +293,7 @@ background-color: var(--accent-color);
 }
 .project-intro {
   /* Compensate for the header's fixed position */
-  padding: 2em 7em;
+  padding: 2em 0;
   background-color: var(--accent-color);
   min-height: 465px;
 }
@@ -396,39 +403,49 @@ background-color: var(--accent-color);
   text-align: left;
   font: italic 2em/1em rubik;
 }
+.subtitle {
+  border-bottom: 1px solid var(--accent-color);
+}
+/********************************/
+/****** images *********/
+/********************************/
 img {
   width: 100%;
   height: auto;
 }
 .homephotos {
-  width: 50%;
+  width: 45%;
   margin-top: 40px;
 }
-.subtitle {
-  border-bottom: 1px solid var(--accent-color);
+.homephotos img{
+  margin-bottom: 1em;
+}
+.inline-images {
+  margin-bottom: 1em;
+  border: 2px solid #E3E3E3;
 }
 /********************************/
 /****** referral cards *********/
 /********************************/
 .white-float {
-  width:30%;
+  width: 30%;
   box-shadow: 0px 2px 30px rgba(0,0,0,0.20);
   padding: 30px;
   margin: 0 7em;
   background-color: #FFF;
 }
 .homepage-buttons {
-  margin-top:40px;
+  margin-top: 40px;
 }
 .referral-by {
-  font-size:.8em;
-  text-transform:uppercase;
-  font-weight:400;
-  padding-top:20px;
+  font-size: .8em;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding-top: 20px;
 }
 #company {
-  padding-top:0px;
-  font-size:.7em;
+  padding-top: 0px;
+  font-size: .7em;
 }
 .more-work {
   border: 1px solid rgba(0,0,0,0.2);
@@ -624,19 +641,23 @@ h5 {
 /********************************/
 .about-page .two-column {
   width: 100%;
+  padding: 2em 0;
 }
 .about-page .contact-wrapper {
   display: flex;
 }
 .about-page .contact-contents {
   margin: 0;
-  width: 40%;
+  width: 47%;
 }
 .about-page .contact-item::after {
   background-color: white;
 }
 .about-page h5 {
   color: var(--text-color);
+}
+.about-page .section-content p {
+  padding: 0;
 }
 /********************************/
 /****** Work page *********/
@@ -657,17 +678,35 @@ h5 {
 /********************************/
 /****** responsive *********/
 /********************************/
+@media screen and (max-width: 1300px) {
+  .container {
+    padding: 0 2em;
+  }
+}
 @media screen and (max-width: 960px) {
   .section-content {
-    width: 75%;
+    width: 80%;
+  }
+  .wrapper {
+    width: 80%;
+    padding: 2em 0 0 5em;
+  }
+  .two-column {
+    justify-content: center;
+  }
+  .work-page .two-column {
+    padding: 0;
+  }
+  #sayhello .two-column {
+    padding: 3em 0;
   }
   .homephotos {
     width: 80%;
     padding-bottom: 4em;
   }
   .white-float {
-    width:50%;
-    margin-top:100px;
+    width: 50%;
+    margin-top: 100px;
   }
   .head-img {
     width: 75%;
@@ -675,24 +714,29 @@ h5 {
   dl {
     width: 85%;
     padding-top: 7em;
+    margin: 0 auto;
   }
   .project-desc img {
-    width: 100%;
+    width: 80%;
     position: static;
   }
   .project-desc p {
     width: 100%;
     margin-bottom: 2em;
   }
+  .more-work .white-float {
+    width: 90%;
+    margin: 1em;
+  }
   .white-float {
     margin: 2em;
   }
   .work-section {
-    width: 100%;
-    padding: 3em 7em;
+    width: 80%;
+    padding: 3em 0;
   }
-  .white-page .two-column {
-    padding: 0px;
+  .about-page .homephotos {
+    width: 60%;
   }
   .white-page #sayhello {
     padding: 3em 7em;
@@ -703,11 +747,11 @@ h5 {
   .white-page .contact-contents {
     margin: 0;
   }
+  .about-page .contact-contents {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 660px) {
-  .contact-contents {
-    width: 100%;
-  }
   .section-content {
     width: 100%;
   }
@@ -719,7 +763,8 @@ h5 {
     padding-top: 2em;
   }
   #site-description {
-    font-size: 1.5em;
+    font-size: 1.2em;
+    padding: .6em 2em;
   }
   #logo {
     margin: 10px;
@@ -733,8 +778,6 @@ h5 {
   nav {
     height: 60px;
     width: 100%;
-    padding: 30px;
-    max-width: 1700px;
   }
   #main-menu {
     display: none;
@@ -762,14 +805,17 @@ h5 {
     display: none;
   }
   .wrapper {
-    padding:2em;
+    padding: 2em;
     width: 100%;
+  }
+  .work-section {
+    width: 100%;
+  }
+  .work-page .white-float {
+
   }
 }
 @media screen and (max-width: 490px) {
-  .contact-contents {
-    width: 100%;
-  }
   .section-content {
     width: 100%;
   }
@@ -788,9 +834,6 @@ h5 {
   .two-column {
     padding: 2em;
   }
-  .project-intro {
-    padding: 2em;
-  }
   dl {
     padding: 2em;
   }
@@ -806,6 +849,6 @@ h5 {
 }
 @media screen and (min-width: 660px) {
   #menu-btn {
-    display:none;
+    display: none;
   }
 }
