@@ -15,7 +15,7 @@
   --main-color: #7FCEFF;
   --accent-color: #FB1F00;
   --sayhello-background: #222323;
-  --text-color: #2E2D34;
+  --text-color: #2D2F34;
 }
 .slide-out-top {
   -webkit-animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -71,6 +71,7 @@ hr {
 }
 p {
   margin: 0;
+  padding-top: 30px;
 }
 .flip {
   -moz-transform: scaleX(-1);
@@ -375,7 +376,7 @@ background-color: var(--accent-color);
   height: 100%;
 }
 #canvas {
-  cursor:url(../images/pencil.png),auto;
+  cursor: url(../images/pencil.png) ;
 }
 .two-column {
   display: flex;
@@ -396,7 +397,6 @@ background-color: var(--accent-color);
   text-align: left;
 }
 .section-content p{
-  padding-top: 30px;
   display: inline-block;
 }
 .break-text {
@@ -421,8 +421,15 @@ img {
   margin-bottom: 1em;
 }
 .inline-images {
-  margin-bottom: 1em;
+  margin-top: 1.2em;
   border: 2px solid #E3E3E3;
+  border-radius: 1px;
+}
+.caption {
+  background-color: #F2F2F2;
+  padding: 0.5em;
+  font-size: 0.8em;
+  line-height: 1.15em;
 }
 /********************************/
 /****** referral cards *********/
@@ -481,7 +488,7 @@ a.white-float:hover {
 /********************************/
 .verticalbar {
     left: 40px;
-    top: 477px;
+    top: 700px;
     display: flex;
     transform: rotate(-90deg);
     transform-origin: 0 50%;
@@ -491,7 +498,7 @@ a.white-float:hover {
     font-size: 14px;
     font-weight: bold;
     white-space: nowrap;
-    width: 450px;
+    width: 700px;
 }
 #margin-line {
   background: black;

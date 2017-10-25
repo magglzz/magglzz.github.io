@@ -46,7 +46,6 @@ $('#goals').click(showAnswerGoal);
   $('.navigation').slideToggle();
   $('#menu-btn').toggleClass('active');
 }
-
 $('#menu-btn').click(showMenu);*/
 
 //see my work scroll
@@ -68,34 +67,34 @@ $('#menu-btn').click(showMenu);*/
   });
 
   // Initialize Slick carousel
-  console.log('slick loaded');
-  $('.carousel').slick({
-    dots: true,
-    // infinite: false,
-    speed: 300,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-        }
-      }
+  // console.log('slick loaded');
+  // $('.carousel').slick({
+  //   dots: true,
+  //   // infinite: false,
+  //   speed: 300,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1024,
+  //       settings: {
+  //         infinite: true,
+  //         dots: true
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 600,
+  //       settings: {
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 480,
+  //       settings: {
+  //       }
+  //     }
       // You can unslick at a given breakpoint now by adding:
       // settings: "unslick"
       // instead of a settings object
-    ]
-  });
+    
+  // });
+
  
 });
-

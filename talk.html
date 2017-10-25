@@ -7,188 +7,254 @@
     <meta name="keywords" content="SF Designer, designer, product designer, ui designer, ux designer, design, digital">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="icon" 
+      type="image/png" 
+      href="images/logo.png">
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,500" rel="stylesheet">
-    <link rel="stylesheet" href="styles/parallax.css">
-    <link rel="stylesheet" type="text/css" href="styles/slick.css">
     <link rel="stylesheet" type="text/css" href="styles/slick-theme.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body class="project-page">
     <header>
+      <div class="container">
         <nav>
-          <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
-          <ul class="navigation project-nav">
+          <button id="menu-btn"><span></span></button>
+          <a href="index.html">
+            <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
+          </a>
+          <ul id="main-menu" class="navigation slide-in-top">
+            <li><a href="index.html">Home</a></li>
             <li><a href="work.html">Work</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
         </nav>
+      </div>
     </header>
 
     <div class="project-intro">
-      <h1 class="project-head">Caring.com Talk</h1>
-      <div class="project-desc">
-        <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt.</p>
-        <div>
-          <img class ="head-img"src="images/portalhome.png">
+      <div class="container">
+        <h1 class="project-head">Talk</h1>
+        <div class="project-desc">
+          <p>Talk is an internal program that encompasses a contact database, a community directory, and a search tool that is used by the sales team and is our main avenue of revenue generation. </p>
+          <div>
+            <img src="images/portalhome.png">
+          </div>
         </div>
       </div>
     </div>
-    <dl>
-      <dt id="myrole">My Role<button class="plus"><span></span></button></dt>
-      
-      <dd id="answer-role" class="answer">I did this and this</dd>
-      <dt id="goals">Goals<button class="plus"><span></span></button></dt>
-      
-      <dd id="answer-goals" class="answer">These were the goals</dd>
-    </dl>
+    <div class="container">
+      <dl>
+        <dt id="myrole">My Role<button class="plus"><span></span></button></dt>
+        
+        <dd id="answer-role" class="answer">As lead designer, I helped product managers conduct user research to find pain points and blockers for achieving our  goals. I also went through multiple iterations of prototype creation, conducrting user tests as well as creating the final responsive design.</dd>
+
+        <dt id="goals">Goals<button class="plus"><span></span></button></dt>
+        
+        <dd id="answer-goals" class="answer">Though Talk has been our CRM for over three3 years, we wanted to change it to better incorporate our current processes and technologies. Our goals, in order of importance started with:
+          <ol>
+            <li>Improve lead ordering with the new lead probability score;</li>
+            <li>Send fewer low probability leads per contact;</li>
+            <li>Improve call quality and efficiency by making Talk more usable by Family Advisors.</li>
+          </ol>
+          Improving Talk is an ongoing process and more goals have been added since the first iteration.
+        </dd>
+      </dl>
+    </div>
 
     <section class="container">
       <div class="verticalbar">
-        <div class="margin-title">User Research</div>
+        <div class="margin-title">Examining Talk from 2015</div>
         <div id="margin-line"></div>
       </div>  
       <div class="wrapper">
         <div class="wrapper-section">
-          <h3 class="wrapper-title">The User</h3>
-          <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt.</p>
-          <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt.</p>
-        </div>
-        <div class="wrapper-section">
-          <h3 class="wrapper-title">User Pain Points</h3>
-          <p>Pellentesque sollicitudin tristique erat, sit amet volutpat tellus consectetur at. Maecenas molestie faucibus elit, in blandit odio tempus eu. Nunc posuere egestas aliquam. Nunc luctus sollicitudin ligula posuere tincidunt. </p>
+          <h3 class="wrapper-title">Background</h3>
+          <p>The way Talk works can be summarized as follows:</p>
+          <ol>
+            <li>Family Advisor calls a contact to gather information about their needs;</li>
+            <li>Family Advisor uses our search tool to find communities that fit their needs;</li>
+            <li>They add those communities to the lead and schedule tours if desired;</li>
+            <li>They email the communities of the new contact, their needs, and if there are any tours scheduled;</li>
+            <li>The contact gets saved in our database for nurture.</li>
+          </ol>
+          <p>Below is what Talk used to look like before I joined</p>
+
+          <img src="images/talkmainpage.png" alt="Old Portal Move In Page" class="inline-images">
+          <div class="caption">Talk's main page was designed with outdated styles, no attention to vertical rhythm and use of space, and no visual heirarchy.</div>
         </div>
       </div>
     </section>
     
-    <div class="content-wrapper">
+    <div class="container">
       <section class="two-column">
         <div class="section-content">
           <div class="subtitle">
-            <h2 id="seemywork">01 B2B PORTAL</h2>
+            <h2>01</h2>
           </div>
-          <h1>Caring.com Partner Portal</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
-          <a href="providerpage.html" class="btn">View project
-            <svg>
-              <rect x="0" y="0" fill="none" width="166" height="45"/>
-            </svg>
-          </a>
+          <h1>Usability</h1>
+          <p>Watching Mouseflow recordings and sitting in on calls showed that there was too much time being spent on:</p>
+          <ul>
+            <li>Scrolling</li>
+            <li>Searching for form fields</li>
+            <li>Removing auto-matched leads</li>
+            <li>Writing long emails to leads introducing the contact</li>
+          </ul>
+          <p>Instead of entering the data into the form fields as the call progressed, a common practice for FA’s would be to use their internal notes section to type notes during a call, referring back to their notes to input the data at the end of the call. I suggested we use category cards to better define where form fields should live so that they would be more intuitive to find. Grouping form fields together didn’t significantly improve the issue though, so I explored other options. I ended up creating well-defined sections that reduced cognitive load, and a more narrow layout that was easier to digest and scroll through. Small visual details like label proximity to form field, line height, and white space, and color coded icons also made the readability of the page better. </p>
+          <p>Auto-matched leads were not performing as well as we thought, and most FAs would actually delete all auto-matched leads before adding their own. To improve efficiency, we deleted that feature, instead shifting the goal to a new story on our backlog so as to improve lead ordering.</p>
+          <p>At the end of a call, FA’s would write long emails introducing the contact to leads that would take up to 30% of their call time. We removed this step for the FA’s by templatizing emails. Based on the data given, we would format the contact’s information into an email that could be edited by the FA. However, templated emails meant that we could not personalize individual emails to leads that might have a higher likelihood of move-in. There was also the complication of whether the contact had revised their serach, or was searching again and a new list of leads was added.To solve this, I decided to section off new leads, old leads, and contact information. The templated email would belong in the new lead section so that it was clear it would only be sent to new leads. A CTA was included for updating old leads in the old lead section to further differentiate the two. Other information was filed under drop down menus in each section. This highlighted the important things we wanted the FA to focus on, while still providing access to all information.</p>
         </div>
         <div class="homephotos">
-          <img src="images/portalcommunities.png">
+          <img src="images/newtalk.png">
         </div>
       </section>
 
-      <div class="white-float">
-        <p class="referral-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-        <p class="referral-by">Bianca Monica</p>
-        <p class="referral-by" id="company">Warner Brothers</p>
-      </div>
+      <section class="two-column">
+        <div class="section-content">
+          <div class="subtitle">
+            <h2>02</h2>
+          </div>
+          <h1>User Feedback</h1>
+          <p>One of the main reasons Talk was so difficult to use was because there was no feedback once a user made an action. Error messages were uninformative and “rage clicking” was common for actions that simply took a few more seconds to execute. For example, phone numbers required a certain format and the only error message the user received was: "this number is not in the required format." With phone numbers, there are more than five possibilities, with five already being too many. Therefore, we restructured that cell to automatically reformat any numerical input to the “required format” and to ignore character input. Error messages often happened at different areas of the page than where the error was. For instance, an incorrect cell input at the bottom of the page would generate an error message at the top in a banner. The user was left confused as to why their contact would not save. Now, error messages for cell data appear right under the cell, and the cell in question is highlighted with a red border. Disabled buttons also come with a hover pop up that describes why the button is disabled. With the help of Mouseflow and Google Analytic events, we noticed “rage clicking” occurred most often when the user was trying to add a lead to the contact. There was no feedback to the user that the action was executed and while the system was thinking, the user was excessively clicking. To solve this, we added a small animation to the button.</p>
+        </div>
+        <div class="homephotos">
+          <img src="images/talkleaddetails.png">
+          <img src="images/leaddetails.png">
+        </div>
+      </section>
+    </div>
 
-      <hr>
-      
-      <div class="break-text">The goal was to adlskfj alsjdf lkasjdf ads jasd Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </div>
+    <hr>
+    <div class="break-text">Though Talk has been our CRM for over three3 years, we wanted to change it to better incorporate our current processes and technologies.</div>
      
+    <div class="container">
       <section class="two-column">
         <div class="homephotos">
-          <img src="images/talk.png">
+          <img src="images/leadtiers.png">
         </div>
         <div class="section-content">
           <div class="subtitle">
-            <h2>02 INTERNAL SALES TOOL</h2>
+            <h2>03</h2>
           </div>
-          <h1>Caring.com Talk</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  </p>
-          <a href="talk.html" class="btn">View project
-            <svg>
-              <rect x="0" y="0" fill="none" width="166" height="45"/>
-            </svg>
-          </a>
+          <h1>Lead Ordering</h1>
+          <p>One of the exciting new advancements in Talk was implementing machine ordering and algorithms to help better predict move-in probability for FA’s. This was part of the greater 2017 OGSM goal of providing a more accurate and comprehensive service for families. I came up with the idea of gamifying Talk, which had the potential to make lead ordering a fun new feature for FA’s to use. We wanted them to head the data and algorithm, but also to make their own decisions as humans talking to humans. Based on the information they provided, and the data we have on communities, the program would order possible leads based on the likelihood that the contact would move into one of them. The more data the FA gathered on the contact, the greater the likelihood of move-in. Likewise, the quality of the contact was increased as more high quality leads were added. Small hearts and broken hearts indicated lead quality and added a fun touch. The point was to serve as a guide but not a rule for the FA’s. We still wanted them to be able to make the final judgement. </p>
         </div>
       </section>
 
-      <div class="white-float">
-        <p class="referral-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse </p>
-        <p class="referral-by">Bianca Monica</p>
-        <p class="referral-by">Warner Brothers</p>
-      </div>
-
       <section class="two-column">
         <div class="section-content">
           <div class="subtitle">
-            <h2>03 WEBSITE</h2>
+            <h2>04</h2>
           </div>
-          <h1>Caring.com Provider Pages</h1>
-          <p>text about the project Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  </p>
-          <a href="providerpage.html" class="btn">View project
+          <h1>Conclusion</h1>
+          <p>Talk is a program that is used by an older demographic who is not particularly tech savvy and who are extremely averse to change. The true test of success was how quickly our FA team could become accustomed to the program or throw in the towel. Thankfully, we now have a much more efficient sales team that is delighted by the improvements. Because of limited engineering resources, we haven’t been able to implement the full extent of gamification that we initially wanted. Still, our move-in numbers remain strong and our relationship with our consumers and partners have strengthened with the new design.</p>
+          <a href="behance.net" class="btn">View on Behance
             <svg>
               <rect x="0" y="0" fill="none" width="166" height="45"/>
             </svg>
           </a>
         </div>
         <div class="homephotos">
-          <img src="images/providerpage.png">
+          <img src="images/talkhome.png">
         </div>
       </section>
+
+      <section class="more-work">
+        <div class="two-column">
+          <a href="portal.html" class="white-float">
+              <div class="subtitle">
+                <h2>INTERNAL CRM</h2>
+              </div>
+              <h1>Partner Portal</h1>
+              <p>Partner portal is a special product since it connects us to our partners, and our partners to our consumers. Through portal, partners can update their community information which is fed into our call center and into our directory on our website. Partners can also report move ins and manage their leads.</p>
+          </a>
+          <div class="white-float">
+            <div class="subtitle">
+              <h2>INTERNAL CRM</h2>
+            </div>
+            <h1>Partner Portal</h1>
+            <p>Partner portal is a special product since it connects us to our partners, and our partners to our consumers. Through portal, partners can update their community information which is fed into our call center and into our directory on our website. Partners can also report move ins and manage their leads.</p>
+          </div>
+          <div class="white-float">
+            <div class="subtitle">
+              <h2>INTERNAL CRM</h2>
+            </div>
+            <h1>Partner Portal</h1>
+            <p>Partner portal is a special product since it connects us to our partners, and our partners to our consumers. Through portal, partners can update their community information which is fed into our call center and into our directory on our website. Partners can also report move ins and manage their leads.</p>
+          </div>
+        </div>
+        <div class="projects-btn">
+          <a href="work.html" class="btn">See All Work
+            <svg>
+              <rect x="0" y="0" fill="none" width="166" height="45"/>
+            </svg>
+          </a>
+        </div>
+      </section>
+    </div>
   <!-- **************************************************************** -->    
   <!--Say Hello -->
-  <!-- **************************************************************** -->  
-      <section class="two-column" id="sayhello"> 
-        <div class="section-content" id="sayhello-content">
-          <h2>04 CONTACT</h2>
-          <h1>Say Hello</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="contact-contents">
-          <div class="contact-wrapper">
-            <div class="contact-item" id="linkedin">
-              <a href="https://www.linkedin.com/in/margaret-liu-8b116145/" class="contact-item-content">
-                  <h4 class="hello-subtitle">Online Resume</h4>
-                  <h5>LinkedIn</h5>
-              </a>
-            </div>
-            <div class="contact-item" id="instagram">
-              <a href="https://instagram.com/magglz" class="contact-item-content">
-                <h4 class="hello-subtitle">See What I'm Up To</h4>
-                <h5>Instagram</h5>
-              </a>
-            </div>
-          </div>
-          <div class="contact-wrapper">
-            <div class="contact-item" id="behance">
-              <a href="https://behance.net" class="contact-item-content">
-                <h4 class="hello-subtitle">Check Out My Art</h4>
-                <h5>Behance</h5>
-              </a>
-            </div>
-            <a href="mailto:margaretliu15@gmail.com" class="btn btndark">Contact me
-              <svg>
-                <rect x="0" y="0" fill="none" width="166" height="45"/>
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
-    <div class="stripes">
+  <!-- **************************************************************** -->
+    <div id="sayhello">  
       <div class="container">
-        <div class="grid">
-          <div class="grid-cell">
-            <div class="stripes-container">
-              <div class="stripes-item"></div>
-              <div class="stripes-item"></div>
-              <div class="stripes-item"></div>
-              <div class="stripes-item"></div>
-              <div class="stripes-item"></div>
+        <section class="two-column"> 
+          <div class="section-content" id="sayhello-content">
+            <h2>04 CONTACT</h2>
+            <h1>Say Hello</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="contact-contents">
+            <div class="contact-wrapper">
+              <div class="contact-item" id="linkedin">
+                <a href="https://www.linkedin.com/in/margaret-liu-8b116145/" class="contact-item-content">
+                    <h4 class="hello-subtitle">Online Resume</h4>
+                    <h5>LinkedIn</h5>
+                </a>
+              </div>
+              <div class="contact-item" id="instagram">
+                <a href="https://instagram.com/magglz" class="contact-item-content">
+                  <h4 class="hello-subtitle">See What I'm Up To</h4>
+                  <h5>Instagram</h5>
+                </a>
+              </div>
             </div>
+            <div class="contact-wrapper">
+              <div class="contact-item" id="behance">
+                <a href="https://behance.net" class="contact-item-content">
+                  <h4 class="hello-subtitle">Check Out My Art</h4>
+                  <h5>Behance</h5>
+                </a>
+              </div>
+              <a href="mailto:margaretliu15@gmail.com" class="btn btndark">Contact me
+                <svg>
+                  <rect x="0" y="0" fill="none" width="166" height="45"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    
+    <div class="stripes">
+      <div class="grid">
+        <div class="grid-cell">
+          <div class="stripes-container">
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <footer> Created by Margaret Liu 2017
+  <footer> Created with my <i class="em em-wave"></i><i class="em em-wave flip"></i> 2017
   </footer>
   <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/scripts.js"></script>
