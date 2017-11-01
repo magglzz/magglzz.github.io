@@ -95,6 +95,11 @@ $('#menu-btn').click(showMenu);*/
       // instead of a settings object
     
   // });
-
+  // function() {}
+  // $.get('https://magglzz.github.io', function(result) {
+  //   var text = $(result).find("#id").text();
+  //   $('some element').text(text)
+  //   console.log(result);
+  // });
  
 });
