@@ -71,7 +71,7 @@ hr {
 }
 p {
   margin: 0;
-  padding-top: 30px;
+  padding-top: 1em
 }
 .flip {
   -moz-transform: scaleX(-1);
@@ -422,14 +422,15 @@ img {
 }
 .inline-images {
   margin-top: 1.2em;
-  box-shadow: 0px 0px 18px rgba(0,0,0,0.11);
-  border-radius: 1px;
+ /** box-shadow: 0px 0px 38px rgba(0,0,0,0.25);**/
+  border-radius: 2px;
+  border: solid 1px #D4D8D7;
 }
 .caption {
-  background-color: #F2F2F2;
   padding: 0.5em;
   font-size: 0.8em;
   line-height: 1.15em;
+  font-style: italic;
 }
 /********************************/
 /****** referral cards *********/
@@ -699,7 +700,8 @@ h5 {
     padding: 2em 0 0 5em;
   }
   .two-column {
-    justify-content: center;
+    justify-content: space-evenly;
+    padding: 2em 0 0 0;
   }
   .work-page .two-column {
     padding: 0;
@@ -708,12 +710,15 @@ h5 {
     padding: 3em 0;
   }
   .homephotos {
-    width: 80%;
+    width: 100%;
     padding-bottom: 4em;
   }
   .white-float {
-    width: 50%;
+    width: 45%;
     margin-top: 100px;
+  }
+  .thirdfloat {
+    display: none;
   }
   .head-img {
     width: 75%;
@@ -724,7 +729,7 @@ h5 {
     margin: 0 auto;
   }
   .project-desc img {
-    width: 80%;
+    width: 100%;
     position: static;
   }
   .project-desc p {
@@ -732,8 +737,11 @@ h5 {
     margin-bottom: 2em;
   }
   .more-work .white-float {
-    width: 90%;
+    width: 40%;
     margin: 1em;
+  }
+  .more-work {
+    padding: 1em;
   }
   .white-float {
     margin: 2em;
@@ -759,6 +767,10 @@ h5 {
   }
 }
 @media screen and (max-width: 660px) {
+  .more-work .white-float {
+    width: 90%;
+    margin: 1em;
+  }
   .section-content {
     width: 100%;
   }
@@ -817,9 +829,6 @@ h5 {
   }
   .work-section {
     width: 100%;
-  }
-  .work-page .white-float {
-
   }
 }
 @media screen and (max-width: 490px) {

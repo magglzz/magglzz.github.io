@@ -39,9 +39,9 @@
       <div class="container">
         <h1 class="project-head">Talk</h1>
         <div class="project-desc">
-          <p>Talk is an internal program that encompasses a contact database, a community directory, and a search tool that is used by the sales team and is our main avenue of revenue generation. </p>
+          <p>Talk is an internal program composed of a contact database, a community directory, and a search tool that is used by the sales team and is our main source of revenue. </p>
           <div>
-            <img src="images/portalhome.png">
+            <img src="images/talkhome.png">
           </div>
         </div>
       </div>
@@ -54,11 +54,11 @@
 
         <dt id="goals">Goals<button class="plus"><span></span></button></dt>
         
-        <dd id="answer-goals" class="answer">Though Talk has been our CRM for over three years, we wanted to change it to better incorporate our current processes and technologies. Our goals, in order of importance started with:
+        <dd id="answer-goals" class="answer">Talk has been our CRM for over three years with no change. This year, we wanted to improve it to help achieve our OGSM goals. Our goals, in order of importance started with:
           <ol>
             <li>Improve lead ordering with the new lead probability score;</li>
             <li>Send fewer low probability leads per contact;</li>
-            <li>Improve call quality and efficiency by making Talk more usable by Family Advisors.</li>
+            <li>Improve call quality and efficiency by making Talk more usable by Sales.</li>
           </ol>
           Improving Talk is an ongoing process and more goals have been added since the first iteration.
         </dd>
@@ -75,13 +75,13 @@
           <h3 class="wrapper-title">Background</h3>
           <p>The way Talk works can be summarized as follows:</p>
           <ol>
-            <li>Family Advisor calls a contact to gather information about their needs;</li>
-            <li>Family Advisor uses our search tool to find communities that fit their needs;</li>
-            <li>They add those communities to the lead and schedule tours if desired;</li>
-            <li>They email the communities of the new contact, their needs, and if there are any tours scheduled;</li>
-            <li>The contact gets saved in our database for nurture.</li>
+            <li>Sales team calls a contact to gather information</li>
+            <li>Sales team uses our search tool to find communities that fit their needs</li>
+            <li>They add these leads to the contact and schedule tours if desired</li>
+            <li>They email the communities of the new contact</li>
+            <li>The contact gets saved in our database for nurture</li>
           </ol>
-          <p>Below is what Talk used to look like before I joined</p>
+          <p>Below is what Talk used to look like before I joined:</p>
 
           <img src="images/talkmainpage.png" alt="Old Portal Move In Page" class="inline-images">
           <div class="caption">Talk's main page was designed with outdated styles, no attention to vertical rhythm and use of space, and no visual heirarchy.</div>
@@ -96,19 +96,10 @@
             <h2>01</h2>
           </div>
           <h1>Usability</h1>
-          <p>Watching Mouseflow recordings and sitting in on calls showed that there was too much time being spent on:</p>
-          <ul>
-            <li>Scrolling</li>
-            <li>Searching for form fields</li>
-            <li>Removing auto-matched leads</li>
-            <li>Writing long emails to leads introducing the contact</li>
-          </ul>
-          <p>Instead of entering the data into the form fields as the call progressed, a common practice for FA’s would be to use their internal notes section to type notes during a call, referring back to their notes to input the data at the end of the call. I suggested we use category cards to better define where form fields should live so that they would be more intuitive to find. Grouping form fields together didn’t significantly improve the issue though, so I explored other options. I ended up creating well-defined sections that reduced cognitive load, and a more narrow layout that was easier to digest and scroll through. Small visual details like label proximity to form field, line height, and white space, and color coded icons also made the readability of the page better. </p>
-          <p>Auto-matched leads were not performing as well as we thought, and most FAs would actually delete all auto-matched leads before adding their own. To improve efficiency, we deleted that feature, instead shifting the goal to a new story on our backlog so as to improve lead ordering.</p>
-          <p>At the end of a call, FA’s would write long emails introducing the contact to leads that would take up to 30% of their call time. We removed this step for the FA’s by templatizing emails. Based on the data given, we would format the contact’s information into an email that could be edited by the FA. However, templated emails meant that we could not personalize individual emails to leads that might have a higher likelihood of move-in. There was also the complication of whether the contact had revised their serach, or was searching again and a new list of leads was added.To solve this, I decided to section off new leads, old leads, and contact information. The templated email would belong in the new lead section so that it was clear it would only be sent to new leads. A CTA was included for updating old leads in the old lead section to further differentiate the two. Other information was filed under drop down menus in each section. This highlighted the important things we wanted the FA to focus on, while still providing access to all information.</p>
+          <p>Watching Mouseflow recordings and sitting in on calls showed that the sales flow was often interrupted by searching for form fields to input data. Instead of entering the data into the form fields as the call progressed, a common practice for Sales would be to type notes during a call, referring back to their notes to input the data at the end of the call. I suggested we use category cards to better define where form fields should live so that they would be more intuitive to find. Grouping form fields together didn’t significantly improve the issue though, so I explored other options. I ended up creating well-defined sections that reduced cognitive load, and a more narrow layout that was easier to digest and scroll through. Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page. </p>
         </div>
         <div class="homephotos">
-          <img src="images/newtalk.png">
+          <img src="images/newtalk.png" class="inline-images">
         </div>
       </section>
 
@@ -118,29 +109,28 @@
             <h2>02</h2>
           </div>
           <h1>User Feedback</h1>
-          <p>One of the main reasons Talk was so difficult to use was because there was no feedback once a user made an action. Error messages were uninformative and “rage clicking” was common for actions that simply took a few more seconds to execute. For example, phone numbers required a certain format and the only error message the user received was: "this number is not in the required format." With phone numbers, there are more than five possibilities, with five already being too many. Therefore, we restructured that cell to automatically reformat any numerical input to the “required format” and to ignore character input. Error messages often happened at different areas of the page than where the error was. For instance, an incorrect cell input at the bottom of the page would generate an error message at the top in a banner. The user was left confused as to why their contact would not save. Now, error messages for cell data appear right under the cell, and the cell in question is highlighted with a red border. Disabled buttons also come with a hover pop up that describes why the button is disabled. With the help of Mouseflow and Google Analytic events, we noticed “rage clicking” occurred most often when the user was trying to add a lead to the contact. There was no feedback to the user that the action was executed and while the system was thinking, the user was excessively clicking. To solve this, we added a small animation to the button.</p>
+          <p>One of the main reasons Talk was so difficult to use was because there was no feedback once a user made an action. Error messages were uninformative and “rage clicking” was common for actions that simply took a few more seconds to execute. For example, phone numbers required a certain format and the only error message the user received was: “this number is not in the required format.” With phone numbers, there are more than five possible formats, with five already being too many. Therefore, I restructured that cell to automatically reformat any numerical input to the “required format.” With the help of Mouseflow and Google Analytic events, I noticed “rage clicking” occurred most often when the user was trying to add a lead to the contact. There was no feedback to the user that the action was executed and while the system was thinking, the user was excessively clicking. To solve this, I added a small animation to the button.</p>
         </div>
         <div class="homephotos">
-          <img src="images/talkleaddetails.png">
-          <img src="images/leaddetails.png">
+          <img src="images/adding_animation.gif" class="inline-images">
         </div>
       </section>
     </div>
 
     <hr>
-    <div class="break-text">Though Talk has been our CRM for over three3 years, we wanted to change it to better incorporate our current processes and technologies.</div>
+    <div class="break-text">Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page.</div>
      
     <div class="container">
       <section class="two-column">
         <div class="homephotos">
-          <img src="images/leadtiers.png">
+          <img src="images/leadtiers.png" class="inline-images">
         </div>
         <div class="section-content">
           <div class="subtitle">
             <h2>03</h2>
           </div>
           <h1>Lead Ordering</h1>
-          <p>One of the exciting new advancements in Talk was implementing machine ordering and algorithms to help better predict move-in probability for FA’s. This was part of the greater 2017 OGSM goal of providing a more accurate and comprehensive service for families. I came up with the idea of gamifying Talk, which had the potential to make lead ordering a fun new feature for FA’s to use. We wanted them to head the data and algorithm, but also to make their own decisions as humans talking to humans. Based on the information they provided, and the data we have on communities, the program would order possible leads based on the likelihood that the contact would move into one of them. The more data the FA gathered on the contact, the greater the likelihood of move-in. Likewise, the quality of the contact was increased as more high quality leads were added. Small hearts and broken hearts indicated lead quality and added a fun touch. The point was to serve as a guide but not a rule for the FA’s. We still wanted them to be able to make the final judgement. </p>
+          <p>One of the exciting new advancements in Talk was implementing machine ordering and algorithms to help better predict move-in probability. I came up with the idea of gamifying Talk, which had the potential to make lead ordering a fun new feature for Sales to use. We wanted them to heed the data and algorithm, but also to make their own decisions as humans talking to humans. Based on the information they provided, and the data we have on communities, the program would order possible leads based on the likelihood that the contact would move into one of them. The more data the Sales team member gathered on the contact, the greater the likelihood of move-in. Likewise, the quality of the contact was increased as more high quality leads were added. Small hearts and broken hearts indicated lead quality and added a fun touch. The point was to serve as a guide but not a rule for the Sales team. We still wanted them to be able to make the final judgement.</p>
         </div>
       </section>
 
@@ -150,15 +140,15 @@
             <h2>04</h2>
           </div>
           <h1>Conclusion</h1>
-          <p>Talk is a program that is used by an older demographic who is not particularly tech savvy and who are extremely averse to change. The true test of success was how quickly our FA team could become accustomed to the program or throw in the towel. Thankfully, we now have a much more efficient sales team that is delighted by the improvements. Because of limited engineering resources, we haven’t been able to implement the full extent of gamification that we initially wanted. Still, our move-in numbers remain strong and our relationship with our consumers and partners have strengthened with the new design.</p>
-          <a href="behance.net" class="btn">View on Behance
+          <p>Because of limited engineering resources, we haven’t been able to implement the full extent of gamification that we initially wanted. Still, our move-in numbers remain strong and our relationship with our consumers and partners have strengthened with the new design. </p>
+          <a href="work.html" class="btn">View More Projects
             <svg>
               <rect x="0" y="0" fill="none" width="166" height="45"/>
             </svg>
           </a>
         </div>
         <div class="homephotos">
-          <img src="images/talkhome.png">
+          <img src="images/talkdash.png">
         </div>
       </section>
     </div>
@@ -174,21 +164,21 @@
                 <h2>CRM</h2>
               </div>
               <h1>Portal</h1>
-              <p>Partner portal is a product that connects us to our partners, and our partners to our consumers. Through portal, partners can update their community information, report move ins, and manage their referrals.</p>
+              <img src="images/portalhome.png">
           </a>
           <a href="toolbox.html" class="white-float">
             <div class="subtitle">
               <h2>ARCHITECTURE</h2>
             </div>
             <h1>Playing John Muir</h1>
-            <p>Playing John Muir was a toolbox created from sheet metal and leather to store nature's most precious treasures. The box was modeled after a geode and it's pockets inspired by plants and organic matter. We wanted to create something that was not only functional, but was also an experience that related to the things the box would hold.</p>
+            <img src="boxinmuseum.jpg">
           </a>
-          <a href="search.html" class="white-float">
+          <a href="search.html" class="white-float thirdflat">
             <div class="subtitle">
               <h2>WEBSITE</h2>
             </div>
             <h1>Search</h1>
-            <p>The new search flow was developed in response to a number of users dropping off early in the process due to overwhelming information and confusion. The new flow streamlines the search experience and uses design patterns users are familiar with to lower cognitive load.</p>
+            <img src="images/searchlaptop.png">
           </a>
         </div>
         <div class="projects-btn">
@@ -228,8 +218,8 @@
             </div>
             <div class="contact-wrapper">
               <div class="contact-item" id="behance">
-                <a href="https://behance.net" class="contact-item-content">
-                  <h4 class="hello-subtitle">Check Out My Art</h4>
+                <a href="https://www.behance.net/margaretliu" class="contact-item-content">
+                  <h4 class="hello-subtitle">Check Out My Designs</h4>
                   <h5>Behance</h5>
                 </a>
               </div>
