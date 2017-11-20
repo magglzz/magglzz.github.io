@@ -832,6 +832,9 @@ h5 {
   .work-section {
     width: 100%;
   }
+  #myCanvas {
+    display: none;
+  }
 }
 @media screen and (max-width: 490px) {
   .section-content {
