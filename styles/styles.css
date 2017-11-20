@@ -28,8 +28,6 @@
 body {
   font-family: rubik, helvetica neue, sans-serif;
   font-weight: 300;
-  font-size: 1.1em;
-  line-height: 1.5em;
   color: var(--text-color);
   width: 100%;
   position: relative;
@@ -42,6 +40,10 @@ footer {
   text-align: center;
   padding: 1em;
 }
+html {
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
 a {
   text-decoration: none;
   cursor: pointer;
@@ -52,7 +54,7 @@ a:focus {
   color: var(--main-color);
 }
 h1 {
-  font-size: 6em;
+  font-size: 4em;
   font-family: Cabin, sans-serif;
   line-height: 0.8;
   color: var(--main-color);
@@ -256,17 +258,15 @@ nav ul {
   background: -webkit-linear-gradient(var(--main-color), #A5DDFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 7em; 
+  font-size: 5em; 
   font-family: Cabin, sans-serif;
   line-height: 2em;
   text-align: center;
 }
 #site-description {
   padding: .6em 5em;
-  font-size: 1.5em;
-  font-weight: 300;
+  font-size: 1.2em;
   text-align: center;
-  line-height: 1.5em;
 }
 #scroll-indicator {
   font-size: .8em;
@@ -283,7 +283,7 @@ nav ul {
   -webkit-transform: rotate(45deg);
 }
 .small-text {
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: center;
 }
 /********************************/
@@ -316,9 +316,6 @@ background-color: var(--accent-color);
   top: 0;
   right: 0;
   width: 50%;
-}
-.project-page h1 {
-  font-size: 5em;
 }
 /********************************/
 /****** faq *********/
@@ -436,14 +433,24 @@ img {
 /****** referral cards *********/
 /********************************/
 .white-float {
-  width: 30%;
+  width: 35%;
   box-shadow: 0px 2px 30px rgba(0,0,0,0.20);
   padding: 30px;
   margin: 0 7em;
   background-color: #FFF;
 }
+.work-float {
+  width: 30%;
+  box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 2px;
+}
 .homepage-buttons {
   margin-top: 40px;
+}
+.referral-text {
+  font-size: 0.88em;
 }
 .referral-by {
   font-size: .8em;
@@ -471,14 +478,8 @@ img {
   font-size: 2em;
   margin: 1em 0;
 }
-.more-work .white-float {
-  margin: 0;
-}
-.white-float:hover {
+.work-float:hover {
   box-shadow: 0 2px 50px rgba(0,0,0,0.3);
-}
-a.white-float:hover {
-  color: var(--text-color);
 }
 .projects-btn {
   text-align: center;
@@ -540,7 +541,7 @@ dt{
   overflow: hidden;
 }
 dd {
-  padding-left: 20px;
+  margin: 1em 0 0 0 ;
 }
 dl {
   text-align: left;
@@ -556,6 +557,7 @@ dl {
 .hello-subtitle {
   color: var(--accent-color);
   font-size: .7em;
+  line-height: 1.5em;
   text-transform: uppercase;
   text-decoration: none;
 }
@@ -565,14 +567,14 @@ dl {
 }
 h5 {
   color: white;
-  font-size: 1.3em;
+  font-size: 1.05em;
+  margin: 0;
   text-decoration: none;
 }
 .contact-item {
   display: flex;
   flex-wrap: wrap;
   margin: 30px;
-  font-size: 1rem;
   color: #fff;
   position: relative;
   cursor: pointer;
@@ -714,7 +716,7 @@ h5 {
     padding-bottom: 4em;
   }
   .white-float {
-    width: 45%;
+    width: 60%;
     margin-top: 100px;
   }
   .thirdfloat {
@@ -736,7 +738,7 @@ h5 {
     width: 100%;
     margin-bottom: 2em;
   }
-  .more-work .white-float {
+  .work-float {
     width: 40%;
     margin: 1em;
   }
@@ -767,7 +769,7 @@ h5 {
   }
 }
 @media screen and (max-width: 660px) {
-  .more-work .white-float {
+  .work-float {
     width: 90%;
     margin: 1em;
   }
@@ -791,8 +793,8 @@ h5 {
     position: relative;
     z-index: 2;
   }
-  h1 {
-    font-size: 4em;
+  .white-float {
+    width: 80%;
   }
   nav {
     height: 60px;
@@ -824,7 +826,7 @@ h5 {
     display: none;
   }
   .wrapper {
-    padding: 2em;
+    padding: 0;
     width: 100%;
   }
   .work-section {
@@ -845,13 +847,12 @@ h5 {
     font-size: 1em;
   }
   .white-float {
-    width: 75%;
-  }
-  .two-column {
-    padding: 2em;
+    width: 100%;
+    margin: 0;
   }
   dl {
-    padding: 2em;
+    padding: 0;
+    width: 100%;
   }
   .homephotos {
     width: 100%;
