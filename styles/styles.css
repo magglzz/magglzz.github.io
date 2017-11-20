@@ -68,7 +68,7 @@ h2 {
 hr {
   color: black;
   background-color: black;
-  margin-top: 100px;
+  margin-top: 1em;
   height: 5px;
 }
 p {
@@ -553,6 +553,7 @@ dl {
 /********************************/
 #sayhello {
   background-color: var(--sayhello-background);
+  margin-top: 2em;
 }
 .hello-subtitle {
   color: var(--accent-color);
@@ -834,6 +835,9 @@ h5 {
   }
   #myCanvas {
     display: none;
+  }
+  .break-text {
+    font-size: 1.2em;
   }
 }
 @media screen and (max-width: 490px) {
