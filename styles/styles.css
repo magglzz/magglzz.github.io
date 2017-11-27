@@ -345,8 +345,8 @@ background-color: var(--accent-color);
 .plus {
   position: relative;
   float: right;
-  width: 25px;
-  height: 25px;
+  width: 1em;
+  height: 1em;
   background: transparent;
   border: none;
   cursor: pointer;
