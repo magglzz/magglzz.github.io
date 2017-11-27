@@ -345,8 +345,8 @@ background-color: var(--accent-color);
 .plus {
   position: relative;
   float: right;
-  width: 1em;
-  height: 1em;
+  width: 25px;
+  height: 25px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -893,6 +893,10 @@ h5 {
   }
   .white-page #sayhello {
     padding: 2em;
+  }
+  .plus {
+    height: 15px;
+    width: 15px;
   }
 }
 @media screen and (min-width: 660px) {
