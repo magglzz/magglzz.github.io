@@ -126,6 +126,9 @@ p {
   position: relative;
   width: 100%;
 }
+.overflow {
+  overflow: auto;
+}
 .grid-cell {
   margin-left: 12.5%;
   -webkit-flex-basis: 75%;
@@ -165,7 +168,8 @@ nav img {
 }
 .navigation li a {
   text-decoration: none;
-  padding: 1.9rem;
+  padding: 1.2rem;
+  font-size: 1rem;
 }
 nav ul {
   display: flex;
@@ -442,6 +446,9 @@ img {
   width: 100%;
   height: auto;
 }
+.arvideo {
+  width: 45%;
+}
 .homephotos {
   width: 45%;
   margin-top: 40px;
@@ -470,6 +477,7 @@ img {
   box-shadow: 0px 2px 30px rgba(0,0,0,0.20);
   padding: 30px;
   background-color: #FFF;
+  margin: 0 0 1.5rem 1.5rem;
 }
 
 .work-float {
@@ -810,6 +818,9 @@ h5 {
   .section-content {
     width: 100%;
   }
+  .arvideo {
+    width: 65%;
+  }
   #site-title {
     line-height: 1em;
     padding-bottom: 1rem;
@@ -887,6 +898,9 @@ h5 {
   dl {
     padding: 0;
     width: 100%;
+  }
+  .arvideo {
+    width: 85%;
   }
   .homephotos {
     width: 100%;
