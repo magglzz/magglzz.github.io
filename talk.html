@@ -47,7 +47,7 @@
       <div class="container">
         <h1 class="project-head">Talk</h1>
         <div class="project-desc">
-          <p>Talk is an internal program composed of a contact database, a community directory, and a search tool that is used by the sales team and is our main source of revenue. </p>
+          <p>Talk is a complex tool that is used by our sales team to assist customers, compile information, and generate sales.</p>
           <div>
             <img src="images/talkmain.png">
           </div>
@@ -56,108 +56,67 @@
     </div>
     <div class="container">
       <dl>
-        <dt id="myrole">My Role<button class="plus"><span></span></button></dt>
+        <dt id="myrole">Question<button class="plus"><span></span></button></dt>
         
-        <dd id="answer-role" class="answer">As lead designer, I helped product managers conduct user research to find pain points and blockers for achieving our  goals. I also went through multiple iterations of prototype creation, conducrting user tests as well as creating the final responsive design.</dd>
+        <dd id="answer-role" class="answer">How can we make Talk a tool that helps the sales team make better and more sales?</dd>
 
         <dt id="goals">Goals<button class="plus"><span></span></button></dt>
         
-        <dd id="answer-goals" class="answer">Talk has been our CRM for over three years with no change. This year, we wanted to improve it to help achieve our OGSM goals. Our goals, in order of importance started with:
-          <ol>
-            <li>Improve lead ordering with the new lead probability score;</li>
-            <li>Send fewer low probability leads per contact;</li>
-            <li>Improve call quality and efficiency by making Talk more usable by Sales.</li>
-          </ol>
-          Improving Talk is an ongoing process and more goals have been added since the first iteration.
-        </dd>
+        <dd id="answer-goals" class="answer">Improve lead quality and call efficiency</dd>
       </dl>
     </div>
 
     <section class="container">
       <div class="verticalbar">
-        <div class="margin-title">Examining Talk from 2015</div>
+        <div class="margin-title">Dissecting the Problem</div>
         <div id="margin-line"></div>
       </div>  
       <div class="wrapper">
         <div class="wrapper-section">
-          <h3 class="wrapper-title">Background</h3>
-          <p>The way Talk works can be summarized as follows:</p>
-          <ol>
-            <li>Sales team calls a contact to gather information</li>
-            <li>Sales team uses our search tool to find communities that fit their needs</li>
-            <li>They add these leads to the contact and schedule tours if desired</li>
-            <li>They email the communities of the new contact</li>
-            <li>The contact gets saved in our database for nurture</li>
-          </ol>
-          <p>Below is what Talk used to look like before I joined:</p>
+          <h1>Let's Talk About Talk</h1>
+          <p>Talk was a tough project to tackle, mainly because as it existed, it was already pretty good. The biggest challenge here was to make a good product even better in the eyes of users who have been using Talk every day, all day, for the last 3 years.</p>
 
-          <img src="images/talkmainpage.png" alt="Old Portal Move In Page" class="inline-images">
-          <div class="caption">Talk's main page was designed with outdated styles, no attention to vertical rhythm and use of space, and no visual heirarchy.</div>
+          <img src="images/talk.gif" alt="New Talk" class="inline-images">
+          <div class="caption">I created a column based layout for easier scanning and gave structure to all data cells. Color is only used where necessary and each section is clearly separated.</div>
+
+          <p>The business had identified the sending of low quality leads and call inefficiency as the main problems. The solutions they architected were better lead ordering and a faster search algorithm. My job was to design how these would be implemented into the product. I sat through several sales calls and watched our sales team use Talk, then had one on one conversations with those users to compare my notes with their actual thought process. Despite their generally positive view of Talk, they would often run into roadblocks in the tool but find creative ways of working around them. For example, we show them previous emails that are sent when they hover over the email icon - but because you can’t actually interact with the text in the hover pop up they use internal notes to keep a record of emails sent instead. It seemed that call inefficiency wasn’t rooted so much in a slow search, but a better UI. </p>
+
+          <img src="images/talkhover.png" alt="Email hover in Talk" class="inline-images">
+          <div class="caption">Hovering over the email icon displays the sent message. This interaction was not useful for the user.</div>
+
+          <p>This is what Talk looked like before I joined:</p>
+          <img src="images/oldtalk.gif" alt="Talk circa 2014" class="inline-images">
+          <div class="caption">Talk's main page was designed with no attention to vertical rhythm, use of space, visual heirarchy, and no intentionality behind elements.</div>
+
+          <h1>UI</h1>
+          <p>Users couldn’t find the form field they needed fast enough while on a call and would often type information into a word doc and then go back after the call to enter that information into the form fields. I suggested we use category cards to better define where form fields should live and how they should be grouped. When grouping didn’t give significant enough results, I explored other options. I ended up creating well-defined sections that reduced cognitive load, and a more narrow layout that was easier to digest and scroll through. Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page. </p>
+
+          <h1>Simple Solutions</h1>
+          <p>A complaint we got a lot was that “Talk is too slow.” Making it faster would take a lot of engineering points so I tried to figure out exactly why users thought that way and if there was a simple solution. Through Mouseflow, I found that “rage clicking” occurred whenever there was an error message or when users searched or added a lead. How could these interactions be designed so that they pacified the user?</p>
+
+          <p>I played with different error messaging and realized that the placement of the message was key. As long as it was close to where the error was occuring, the user seemed satisfied with the interaction.</p>
+
+          <p>Most users would have to do several searches for different care levels which was what made the process take so long. If the user could limit their search to once or twice, it seemed much quicker without having to actually make the search engine work faster. The solution to this was a simple multi select feature in the search box.</p>
+
+          <p>Adding leads was an opportunity for us to delight the user. We added a fun animation each time the user clicked the “add lead” button and changed the words from “add lead” to “adding”. This feedback reassured the user the action had been received even if it took a little longer to execute, and the animation acted as a reward for the wait.</p>
+          <img src="images/adding_animation.gif" alt="adding animation" class="inline-images">
+
+          <h1>What I Learned</h1>
+          <p>This was the first product I touched that had clear constraints and many many of them. It was extremely complicated with layers of information and a lot of key stakeholders. It took quite a few iterations to get it to where it is now and I still don’t (if ever) feel that it’s complete. However this journey has been a great learning experience, from supporting other departments to conducting more comprehensive user tests, it has taught me many lessons in designing better.</p>
+
+          <p>Halfway through learning our sales flow, I found myself trying to redesign the sales flow instead of Talk. I imagine this is a problem most designers face when they try to redesign everything. I recognized that I need to trust others to be experts in their domain and design to support that. </p>
+
+          <p>I also learned that aggregate data is important. Getting too in depth with a few users will lead you to be convinced that their personal tendencies and assumptions are user truths. Supporting your 1-on-1 interviews with mass user research is imperative to shaping the whole user story. I had such a close relationship with a few MVP users that I took their word for a lot of design decisions I initially made. The first iteration of Talk did not perform well because many of the other users did not share the same workflow. Sending out a mass survey was actually a more accurate representation of the user group. </p>
+
         </div>
       </div>
     </section>
-    
+
     <div class="container">
-      <section class="two-column">
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>01</h2>
-          </div>
-          <h1>Usability</h1>
-          <p>Watching Mouseflow recordings and sitting in on calls showed that the sales flow was often interrupted by searching for form fields to input data. Instead of entering the data into the form fields as the call progressed, a common practice for Sales would be to type notes during a call, referring back to their notes to input the data at the end of the call. I suggested we use category cards to better define where form fields should live so that they would be more intuitive to find. Grouping form fields together didn’t significantly improve the issue though, so I explored other options. I ended up creating well-defined sections that reduced cognitive load, and a more narrow layout that was easier to digest and scroll through. Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page. </p>
-        </div>
-        <div class="homephotos">
-          <img src="images/newtalk.png" class="inline-images">
-        </div>
-      </section>
-
-      <section class="two-column">
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>02</h2>
-          </div>
-          <h1>User Feedback</h1>
-          <p>One of the main reasons Talk was so difficult to use was because there was no feedback once a user made an action. Error messages were uninformative and “rage clicking” was common for actions that simply took a few more seconds to execute. For example, phone numbers required a certain format and the only error message the user received was: “this number is not in the required format.” With phone numbers, there are more than five possible formats, with five already being too many. Therefore, I restructured that cell to automatically reformat any numerical input to the “required format.” With the help of Mouseflow and Google Analytic events, I noticed “rage clicking” occurred most often when the user was trying to add a lead to the contact. There was no feedback to the user that the action was executed and while the system was thinking, the user was excessively clicking. To solve this, I added a small animation to the button.</p>
-        </div>
-        <div class="homephotos">
-          <img src="images/adding_animation.gif" class="inline-images">
-        </div>
-      </section>
-
       <hr>
       <div class="break-text">Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page.</div>
-
-      <section class="two-column">
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>03</h2>
-          </div>
-          <h1>Lead Ordering</h1>
-          <p>One of the exciting new advancements in Talk was implementing machine ordering and algorithms to help better predict move-in probability. I came up with the idea of gamifying Talk, which had the potential to make lead ordering a fun new feature for Sales to use. We wanted them to heed the data and algorithm, but also to make their own decisions as humans talking to humans. Based on the information they provided, and the data we have on communities, the program would order possible leads based on the likelihood that the contact would move into one of them. The more data the Sales team member gathered on the contact, the greater the likelihood of move-in. Likewise, the quality of the contact was increased as more high quality leads were added. Small hearts and broken hearts indicated lead quality and added a fun touch. The point was to serve as a guide but not a rule for the Sales team. We still wanted them to be able to make the final judgement.</p>
-        </div>
-        <div class="homephotos">
-          <img src="images/leadtiers.png" class="inline-images">
-        </div>
-      </section>
-
-      <section class="two-column">
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>04</h2>
-          </div>
-          <h1>Conclusion</h1>
-          <p>Because of limited engineering resources, we haven’t been able to implement the full extent of gamification that we initially wanted. Still, our move-in numbers remain strong and our relationship with our consumers and partners have strengthened with the new design. </p>
-          <a href="work.html" class="btn">View More Projects
-            <svg>
-              <rect x="0" y="0" fill="none" width="166" height="45"/>
-            </svg>
-          </a>
-        </div>
-        <div class="homephotos">
-          <img src="images/talkdash.png">
-        </div>
-      </section>
     </div>
+
 
  <!-- **************************************************************** -->    
   <!--More work -->

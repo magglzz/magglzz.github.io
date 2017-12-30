@@ -56,36 +56,34 @@
     </div>
     <div class="container">
       <dl>
-        <dt id="myrole">My Role<button class="plus"><span></span></button></dt>
+        <dt id="myrole">Question<button class="plus"><span></span></button></dt>
         
-        <dd id="answer-role" class="answer">As lead designer, I helped product managers conduct user research to find pain points and blockers for achieving our  goals. I went through multiple iterations of prototype creation, conducting user tests, creating the final responsive design, and editing the code.</dd>
+        <dd id="answer-role" class="answer">How can we improve the experience for our partners?</dd>
         <dt id="goals">Goals<button class="plus"><span></span></button></dt>
         
-        <dd id="answer-goals" class="answer">Partner Portal was born from the need to protect and sustain partner relationships. We wanted a product that would build a better relationship with our partners. This included making it easier for users to report move- ins, putting a system in place for tracking leads and reporting, and converting most operations to self- serve.</dd>
+        <dd id="answer-goals" class="answer">Our goal was to create a product that would build a better relationship with our partners. This included making it easier for users to report move-ins, putting a system in place for tracking leads and reporting, and converting most operations to self-serve.</dd>
       </dl>
     </div>
 
     <section class="container">
       <div class="verticalbar">
-        <div class="margin-title">Examining Partner Portal from 2015</div>
+        <div class="margin-title">The Process</div>
         <div id="margin-line"></div>
       </div>  
       <div class="wrapper">
         <div class="wrapper-section">
-          <h3 class="wrapper-title">Background</h3>
-          <p>XYZ offers a directory of senior living options and through a conversation with our call center, we qualify consumers and match them with senior living communities. Therefore our service relies on a good relationship with our partners. Partner Portal was born from the need to protect and sustain partner relationships, leading to better service for our users. </p>
+          <h1 class="wrapper-title">Dissecting the Problem</h1>
+          <p>I was given a set of business goals that I translated to better human experiences. Focusing on these human experiences is like the northern light for my design process. For me, that starts with getting to know the people that will be using our product. I sat with the PM and had casual conversations with some MVP users to just get a feel of how they felt about Partner Portal and how it tied in with their job and what motivates them. In our initial conversations, we focused on the big picture. We let this be the foundation for our product and later dug deeper to add the details. I translated these conversations to storyboards to discover what steps could be taken out, what felt natural and what didn’t, and opportunities where we could delight the user.</p>
+          <img src="images/portal.gif" alt="Partner Portal" class="inline-images">
+
+          <p>The original portal design had little thought regarding the flows, visual hierarchy, or design patterns. For instance, the most important feature--reporting a move-in and viewing your referrals--was buried under five steps and categorized under “Community Performance,” which partners did not recognize as relating to referrals or move ins.</p>
 
           <img src="images/likely_moveins.png" alt="Old Portal Move In Page" class="inline-images">
           <div class="caption">Portal move-ins page circa 2015. If you don't know the name of your referral, it could take a lot of scrolling to find. There was also a lot of confusion between the Finalize Reporting button and Report Move-in button.</div>
-          <img src="images/oldreferrals.png" alt="Old Portal Referrals Page" class="inline-images">
-          <div class="caption">Portal referrals page circa 2015. Status colors were counter-intuitive, the wrong information is displayed in the columns, and there is no way to sort or filter through the data.</div>
-          <img src="images/oldreferral_detail.png" alt="Old Portal Referrals Page" class="inline-images">
-          <div class="caption">Portal referral detail page circa 2015. The agent is the highlighted information and is  confused with the referral, it takes 5 steps to get to this page, and you have to make sure the inconspicuous date filter is set correctly.</div>
 
-          <p>The user experience reflected a lack of no thought regarding the flows, visual hierarchy, or any of the design patterns in the system. For instance, the most important feature--reporting a move-in and viewing your referrals--was buried under five steps and categorized under “Community Performance,” which partners did not recognize as relating to referrals or move ins. </p>
         </div>
         <div class="wrapper-section">
-          <h3 class="wrapper-title">User Pain Points</h3>
+          <h3 class="wrapper-title">Main Complaints</h3>
           <ul>
             <li>Unable to update rates in real time, 24 hour lag</li>
             <li>Impossible to find leads in database</li>
@@ -93,84 +91,56 @@
             <li>Move-in reporting is confusing</li>
           </ul>
         </div>
+
+        <h1>Flow Mapping</h1>
+        <p>I focused most of the IA on our main flow; reporting a move in. Which parts could we cut? Which parts were more complex? Are there edge cases? Are there opportunities that we missed? We laid out the organization of the system so that we could see areas for improvement and landed on the below structure. </p>
+        <img src="images/portalia.png" alt="Portal IA" class="inline-images">
+        <p>The organization of the system was designed to accommodate new features that could be added in the future without compromising the most important ones.</p>
+
+        <h1>Modular Layout</h1>
+        <p>One of best ways to ensure a move-in is with up-to-date information. The more accurate the information we have about a community, the better we can match them with a consumer. Historically, communities had only been able to manage their rate information in the Portal. We decided to significantly  expand that functionality in the new Portal by adding the capacity for partners to set and update not just rates, but also images, promotions, and contact information.</p>
+
+        <p>The first iteration had a table system that limited the program to a horizontal space and didn’t support images.</p>
+
+        <img src="images/oldreferrals.png" alt="old community detail page of portal" class="inline-images">
+
+        <p>I approached the product team and argued for an overhaul of the entire design in favor of a new one that would support current and new features. The resulting layout has a modular UI with flexible containers to hold varying amounts of information, allowed room for additional features, and can easily be made responsive.</p>
+
+        <img src="images/community_detail.png" alt="New community detail page of portal" class="inline-images">
+
+        <h1>Prioritizing Flows</h1>
+        <p>Through the initial research process, we concluded that Referrals should be made its own section allowing users to access the most important data with a single click. We compiled a spec that included the following:</p>
+        <ul>
+          <li>List of all leads that have been sent to the partner</li>
+          <li>Show the following data: date sent, statuses, contact name, phone number, resident name, agent name, agent phone number</li>
+          <li>Support SMB and chains</li>
+          <li>Form field for partners to be able to sent an update or add a note</li>
+          <li>Access a detailed view of any one referral</li>
+          <li>Search for Leads</li>
+          <li>Connect to referral emails</li>
+        </ul>
+        <p>After setting out to create an MVP, we had to decrease scope in some areas. The first version solved many of the issues we had with the old portal, but further testing revealed that it still wasn’t very intuitive. As a result, I played with various button placements and tweaked the layout and copy. </p>
+
+        <img src="images/referrallayouts.png" alt="different layouts for portal" class="inline-images">
+
+        <p>The flow still had a few tricky areas, but over a few iterations, these were resolved. I found that the two points that always appeared before a move-in was reported were from the Referral Detail view and from the Referrals View. Placing a “report move-in” button on those two pages made sense for the user and we saw a significant increase in move-in reporting.</p>
+
+        <img src="images/portalreferrals.png" alt="New referrals page in portal" class="inline-images">
+
+        <h1>What I Learned</h1>
+        <p>Portal was one of the first big projects I worked on in my time here and it was a nice introduction to the importance of an established style guide for engineers. I assumed that the engineers could see what I saw when they couldn't. Having predetermined components and styles create rules that engineers can follow and understand. Furthermore, creating logical rules for button and element behaviors also help them to make decisions on edge cases where there may not be a design already in place.</p>
+        <a href="https://www.behance.net/gallery/58314553/Partner-Portal" class="btn">View on Behance
+          <svg>
+            <rect x="0" y="0" fill="none" width="166" height="45"/>
+          </svg>
+        </a>
+
       </div>
     </section>
     
     <div class="container">
-      <section class="two-column">
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>01</h2>
-          </div>
-          <h1>Flow Mapping</h1>
-          <p>The first step in the process was getting a feeling for the flow based on one of our goals: reporting move-ins. Which parts could we cut? Which parts were more complex? Are there edge cases? Are there opportunities that we missed? We laid out the organization of the system so that we could see areas for improvement and landed on the below IA. </p>
-          <p>The organization of the system was designed to accommodate new features that could be added in the future without compromising the most important ones. </p>
-        </div>
-        <div class="homephotos">
-          <img src="images/portalia.png">
-        </div>
-      </section>
-
-      <section class="two-column">
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>02</h2>
-          </div>
-          <h1>Community Profiles</h1>
-          <p>One of best ways to ensure a move-in is with up-to-date information. The more accurate the information we have about a community, the better we can match them with a consumer. Historically, communities had only been able to manage their rate information in the Portal. We decided to significantly  expand that functionality in the new Portal by adding the capacity for partners to set and update not just rates, but also images, promotions, and contact information. I started the design with a simple wireframe that laid out all the features up front, followed by scheduling interviews with six VIP users: from larger chain, and three smaller partners.</p>
-          <p>AAfter the first week of interviews, our features and layout were validated and I had a great amount of new information to supplement our design. In the second week, I looked more closely at the design to pinpoint further improvements. The table system limited the program to a horizontal space and didn’t support images. I approached the product team and argued for an overhaul of the entire design in favor of a new one that would support both SMBs and chains. The resulting layout has a modular UI with flexible containers to hold varying amounts of information, allowed room for additional features, and can easily be made responsive.</p>
-        </div>
-        <div class="homephotos">
-          <img src="images/communities.png" class="inline-images">
-          <img src="images/community_detail.png" class="inline-images">
-        </div>
-      </section>
-
-    <hr>
-    <div class="break-text">Partner Portal was born from the need to protect and sustain partner relationships, leading to better service for our users. </div>
-
-      <section class="two-column">
-        <div class="homephotos">
-          <img src="images/portalreferrals.png" class="inline-images">
-          <img src="images/portalreferrals_detail.png" class="inline-images">
-        </div>
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>03</h2>
-          </div>
-          <h1>Referrals</h1>
-          <p>Referrals is now a separate section, allowing users to access the most important data with a single click. The initial spec for referrals included the following features:</p>
-          <ul>
-            <li>List of all leads that have been sent to the partner</li>
-            <li>Show the following data: date sent, statuses, contact name, phone number, resident name, agent name, agent phone number</li>
-            <li>Support SMB and chains</li>
-            <li>Form field for partners to be able to sent an update or add a note</li>
-            <li>Access a detailed view of any one referral</li>
-            <li>Search for Leads</li>
-            <li>Connect to referral emails</li>
-          </ul>
-          <p>After setting out to create an MVP, we had to decrease scope in some areas. The first version solved many of the issues we had with the old portal, but further testing revealed that it still wasn’t that intuitive. As a result,I played with various button placements and tweaked the layout and copy. </p>
-          <p>The flow still had a few tricky areas, but over a few iterations, these were resolved. I found that the two points that always appeared before a move-in was reported were from the Referral Detail view and from the Referrals View. Placing a “report move-in” button on those two pages made sense for the user and we saw a significant increase in move-in reporting. </p>
-        </div>
-      </section>
-
-      <section class="two-column">
-        <div class="section-content">
-          <div class="subtitle">
-            <h2>04</h2>
-          </div>
-          <h1>Conclusion</h1>
-          <p>After the initial launch, we have since added more to the product, including a feature to add, edit, and remove users, view and download reports, and send email campaigns soliciting reviews. This product has proved to be a valuable asset to our business and we will continue to grow it.</p>
-          <a href="https://www.behance.net/gallery/58314553/Partner-Portal" class="btn">View on Behance
-            <svg>
-              <rect x="0" y="0" fill="none" width="166" height="45"/>
-            </svg>
-          </a>
-        </div>
-        <div class="homephotos">
-          <img src="images/portalcommunities.png">
-        </div>
-      </section>
+      <hr>
+      <div class="break-text">Focusing on these human experiences is like the northern light for my design process.</div>
     </div>
 
   <!-- **************************************************************** -->    
