@@ -464,7 +464,8 @@ img {
   border: solid 1px #D4D8D7;
 }
 .caption {
-  padding: 0.5em;
+  padding: 0 0 1em 0;
+  margin: 0;
   font-size: 1rem;
   line-height: 1.15em;
   font-style: italic;
