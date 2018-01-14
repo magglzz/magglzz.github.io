@@ -99,7 +99,7 @@ hr {
   height: 4px;
 }
 p {
-  padding: 0;
+  margin: 0.9em 0 0 0;
 }
 .flip {
   -moz-transform: scaleX(-1);
@@ -288,14 +288,14 @@ nav ul {
   background: -webkit-linear-gradient(var(--main-color), #A5DDFF);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 5.2rem; 
+  font-size: 6.2rem; 
   font-weight: bold;
   line-height: 2em;
   text-align: center;
 }
 #site-description {
   padding: .6em 5em;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 #scroll-indicator {
@@ -305,16 +305,12 @@ nav ul {
   margin: 2em;
 }
 .arrow {
-  border: solid var(--accent-color);
-  border-width: 0 3px 3px 0;
-  display: inline-block;
-  padding: 3px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+  width: 40px;
 }
-.small-text {
-  font-size: 1rem;
-  text-align: center;
+.drawing {
+  width: 25%;
+  position: absolute;
+  padding-left: 2rem;
 }
 /********************************/
 /****** project headers *********/
@@ -326,7 +322,7 @@ background-color: var(--accent-color);
   /* Compensate for the header's fixed position */
   padding: 2em 0;
   background-color: var(--accent-color);
-  min-height: 465px;
+  min-height: 329px;
 }
 .project-head {
   text-align: left;
@@ -338,12 +334,12 @@ background-color: var(--accent-color);
   position: relative;
 }
 .project-desc p {
-  width: 40%;
+  width: 45%;
   color: white;
 }
 .project-desc img {
   position: absolute;
-  top: 0;
+  top: 0px;
   right: 0;
   width: 50%;
 }
@@ -555,7 +551,7 @@ img {
   margin: 0 auto;
 }
 .wrapper-section {
-  padding-top: 30px;
+  padding-top: 7rem;
 }
 .grid {
   clear: both;
@@ -573,6 +569,26 @@ img {
 /********************************/
 /****** accordians *********/
 /********************************/
+h3 {
+  font-size: .9rem;
+  text-transform: uppercase;
+  color: var(--main-color);
+  margin: .9rem 0 0 0;
+}
+.wrapper-section h3 {
+  color: var(--accent-color);
+}
+.details {
+  text-align: left;
+  width: 45%;
+  border: 2px solid var(--main-color);
+  padding: 1rem 3rem 2rem 3rem;
+  margin-top: 1rem;
+}
+.details p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+}
 dt{
   cursor: pointer;
   font-size: 1.5rem;
@@ -697,9 +713,10 @@ h5 {
 }
 .about-page .contact-wrapper {
   display: flex;
+  flex-wrap: wrap;
 }
 .about-page .contact-contents {
-  margin: 0;
+  margin: 0 auto;
   width: 47%;
 }
 .about-page .contact-item::after {
@@ -710,6 +727,9 @@ h5 {
 }
 .about-page .section-content p {
   padding: 0;
+}
+.about-page .homephotos {
+  margin: 0 auto;
 }
 /********************************/
 /****** Work page *********/
@@ -736,6 +756,10 @@ h5 {
   }
 }
 @media screen and (max-width: 960px) {
+  .drawing {
+    width: 27%;
+    padding-left: 1rem;
+  }
   .section-content {
     width: 80%;
   }
@@ -770,6 +794,11 @@ h5 {
     width: 85%;
     padding-top: 7em;
     margin: 0 auto;
+  }
+  .details {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 2rem;
   }
   .project-desc img {
     width: 100%;
@@ -826,9 +855,11 @@ h5 {
     height: 35vh;
     padding-top: 2rem;
     margin: 0;
+    font-size: 4.5rem;
   }
   #site-description {
     padding: .6em 2em;
+    font-size: 1.2rem;
   }
   #logo {
     /*margin: 10px;*/
@@ -878,7 +909,7 @@ h5 {
   #myCanvas {
     display: none;
   }
-  .small-text {
+  .drawing {
     display: none;
   }
   .break-text {
@@ -896,6 +927,9 @@ h5 {
   }
   dl {
     padding: 0;
+    width: 100%;
+  }
+  .details {
     width: 100%;
   }
   .arvideo {
