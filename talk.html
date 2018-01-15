@@ -73,7 +73,7 @@
           <h1>Let's Talk About Talk</h1>
           <p>Talk was a tough project to tackle, mainly because as it existed, it was already pretty good. Talk is also our main source of revenue and possibly our most important product. Lots of pressure, amiright?</p>
 
-          <img src="images/talk.gif" alt="New Talk" class="inline-images">
+          <img src="images/Talk.gif" alt="New Talk" class="inline-images">
           <div class="caption">I created a column based layout for easier scanning and gave structure to all data cells. Color is only used where necessary and each section is clearly separated.</div>
 
           <p>The business had identified the sending of low quality leads and call inefficiency as the main problems. The solutions they architected were better lead ordering and a faster search algorithm. My job was to design how these would be implemented into the product.</p>
@@ -81,7 +81,7 @@
           <img src="images/talkplanning.png" alt="planning out talk" class="inline-images">
           <div class="caption">Please don't judge me for my bad handwriting!</div>
 
-          <p>I sat through several sales calls and watched our sales team use Talk, then had one on one conversations with those users to compare my notes with their actual thought process. Despite their generally positive view of Talk, they would often run into roadblocks in the tool but find creative ways of working around them. For example, we show them previous emails that are sent when they hover over the email icon - but because you can’t actually interact with the text in the hover pop up they use internal notes to keep a record of emails sent instead. It seemed that call inefficiency wasn’t rooted so much in a slow search, but a better UI. </p>
+          <p>I sat through several sales calls and watched our sales team use Talk, then had one on one conversations with those users to compare my notes with their actual thought process. Despite their generally positive view of Talk, they would often run into roadblocks in the tool but find creative ways of working around them. For example, we show them previous emails that are sent when they hover over the email icon - but because you can’t actually interact with the text in the hover pop up they use internal notes to keep a record of emails sent instead. It seemed that call inefficiency wasn’t rooted so much in a slow search, but better usability. </p>
 
           <img src="images/talkhover.png" alt="Email hover in Talk" class="inline-images">
           <div class="caption">Hovering over the email icon displays the sent message. This interaction was not useful for the user.</div>
@@ -90,21 +90,23 @@
           <img src="images/oldtalk.gif" alt="Talk circa 2014" class="inline-images">
           <div class="caption">Talk's main page was designed with no attention to vertical rhythm, use of space, visual heirarchy, and no intentionality behind elements.</div>
 
-          <h1>UI</h1>
+          <h1>Usability</h1>
           <p>Users couldn’t find the form field they needed fast enough while on a call and would often type information into a word doc and then go back after the call to enter that information into the form fields. I suggested we use category cards to better define where form fields should live and how they should be grouped. When grouping didn’t give significant enough results, I explored other options. I ended up creating well-defined sections that reduced cognitive load, and a more narrow layout that was easier to digest and scroll through. Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page. </p>
 
           <h1>Simple Solutions</h1>
           <p>A complaint we got a lot was that “Talk is too slow.” Making it faster would take a lot of engineering points so I tried to figure out exactly why users thought that way and if there was a simple solution. Through Mouseflow, I found that “rage clicking” occurred whenever there was an error message or when users searched or added a lead. How could these interactions be designed so that they pacified the user?</p>
 
-          <p>I played with different error messaging and realized that the placement of the message was key. As long as it was close to where the error was occuring, the user seemed satisfied with the interaction.</p>
+          <p>Generally, error messages are a negative user experience. I tried to limit these by first showing warning notifications whenever a user would leave a section and go to the next without entering required information. I used playful language that was clear and felt like a conversation rather than a 404 error. This was also helpful for the user during a call to see what fields they might have missed and be able to catch those before the call ended.</p>
 
-          <p>Most users would have to do several searches for different care levels which was what made the process take so long. If the user could limit their search to once or twice, it seemed much quicker without having to actually make the search engine work faster. The solution to this was a simple multi select feature in the search box.</p>
+          <img src="images/warning.png" alt="warning notification" class="inline-images">
+
+          <p>The current search algorithm can only search by one care level and location at a time. However, because most callers could be placed in more than one care level, users would have to search multiple times. By giving them a simple multi select feature for care levels, the process seemed much faster without having to change the search engine at all. </p>
 
           <p>Adding leads was an opportunity for us to delight the user. We added a fun animation each time the user clicked the “add lead” button and changed the words from “add lead” to “adding”. This feedback reassured the user the action had been received even if it took a little longer to execute, and the animation acted as a reward for the wait.</p>
           <img src="images/adding_animation.gif" alt="adding animation" class="inline-images">
 
           <h1>What I Learned</h1>
-          <p>This was the first product I touched that had clear constraints and many many of them. It was extremely complicated with layers of information and a lot of key stakeholders. It took quite a few iterations to get it to where it is now and I still don’t (if ever) feel that it’s complete. However this journey has been a great learning experience, from supporting other departments to conducting more comprehensive user tests, it has taught me many lessons in designing better.</p>
+          <p>This was the first product I touched that had clear constraints and many many of them. It was extremely complicated with layers of information and a lot of key stakeholders. It took quite a few iterations to get it to where it is now and I still don’t (if ever) feel like it’s complete. However this journey has been a great learning experience, from supporting other departments to conducting more comprehensive user tests, it has taught me many lessons in designing better.</p>
 
           <p>Halfway through learning our sales flow, I found myself trying to redesign the sales flow instead of Talk. I imagine this is a problem most designers face when they try to redesign everything. I recognized that I need to trust others to be experts in their domain and design to support that. </p>
 

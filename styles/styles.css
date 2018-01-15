@@ -309,6 +309,7 @@ nav ul {
 }
 .drawing {
   width: 25%;
+  max-width: 350px;
   position: absolute;
   padding-left: 2rem;
 }
