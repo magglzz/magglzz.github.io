@@ -71,6 +71,7 @@
       <div class="wrapper">
         <div class="wrapper-section">
           <h1 class="wrapper-title">Dissecting the Problem</h1>
+          <p>For more context, <a href="companyxyzintro.html" class="link">read a bit about Company XYZ</a></p>
           <p>I was given a set of business goals that I translated to better human experiences. Focusing on these human experiences is like the northern light for my design process. For me, that starts with getting to know the people that will be using our product. I sat with the PM and had casual conversations with some users to just get a feel of how they felt about Partner Portal and how it tied in with their job and what motivates them. In our initial conversations, we focused on the big picture. We let this be the foundation for our product and later dug deeper to add the details. I translated these conversations to storyboards to discover what steps could be taken out, what felt natural and what didn’t, and opportunities where we could delight the user.</p>
           <img src="images/portalplanning.png" alt="My sketches for planning out partner portal" class="inline-images">
           <p class="caption">Scribbling out ideas and flows helps me to think - no matter how incomprehensible it may seem.</p>
@@ -116,11 +117,13 @@
         <p>I started out with a critique of the current flow. Here is one page of many notes: </p>
 
         <img src="images/referralnotes.png" alt="critique of a page of the referrals flow" class="inline-images">
+        <div class="caption">My notes on the old referral details page.</div>
 
         <p>The first version solved many of the issues we had with the old portal, but further testing revealed that it still wasn’t very intuitive. More move-ins were being reported, but when we followed up on them, only the same amount were valid. It seemed that people were accidentally reporting move-ins.</p>
 
         <p>The two places you can enter the flow from are the Referrals page and the Referral Details page. The split here was to reflect the two different ways you could report a move in. You could either report it on a monthly basis, in which you would select all the move ins you had that month and report them, or on a case by case basis, in which you would report them one by one as they moved in. Chains liked to use the monthly reporting feature, and SMBs used the case by case feature.</p>
         <img src="images/portalfirstflow.png" alt="first flow for reporting move in" class="inline-images">
+        <div class="caption">Diagram of report move in flow</div>
 
         <h3>So What Went Wrong?</h3>
 
@@ -137,30 +140,32 @@
         <p>In the case where a community had no move-ins for the month, they needed a way to report that as well. However, the only way to do that was by entering the Report Flow and selecting <i>Report No Move-ins</i> at the first step. This was counterintuitive and caused many people to get frustrated.</p>
 
         <img src="images/nomoveins.png" alt="report no move ins flow" class="inline-images">
+        <div class="caption">Users have to click the create move in button in order to enter the move in flow and report <b>no</b> move ins, which made no sense.</div>
 
         <h3>Iterate, iterate, iterate!</h3>
 
-        <p>To solve the above problems, I developed a new, single flow that could be used for monthly and case by case reporting. Referrals on the Referral page would be ordered based on their status; with active leads at the top, then cold, and so on (there's no point showing deceased or closed leads at the top). When the user comes to the page to report a move-in, they can do so directly on the page without ever having to navigate away. The seamlessness of the new flow made it just as easy to report mulitple move-ins as it was to report just one.</p>
+        <p>To solve the above problems, I developed a new flow that could be used for monthly and case by case reporting. When the user comes to the page to report a move-in, they can do so directly on the page without ever having to navigate away. The seamlessness of the new flow made it just as easy to report mulitple move-ins as it was to report just one. We took it a step further and made it even easier to report by ordering the referrals on the page based on their likelihood of move in.</p>
 
         <img src="images/reportmovein2.png" alt="new report move ins flow" class="inline-images">
+        <div class="caption">Instead of having to enter a flow, users can just do a quick interaction on each row of data to report a move in.</div>
 
-        <p>When it's time to report monthly move-ins, a blue info bar will appear at the top of the page so that communities with no move-ins can report that through a quick link.</p>
+        <p>I realized that communities only report no move ins at the end of the month, so I designed the system to detect this and notify the user with a blue info bar whenever they log in within 1 week of when reporting is due. Communities with no move-ins can report that by clicking  the link in the blue bar.</p>
 
         <img src="images/reportnonebar.png" alt="info bar for reporting no move ins" class="inline-images">
+        <div class="caption">The user no longer has to enter the create move in flow to report no move ins.</div>
 
         <p>The area also served as a great place to list out referrals they had already reported on a case by case basis for the month. If those were the only ones they had to report, we gave them an easy way to finalize their reporting and stop getting emails from us.</p>
 
         <img src="images/bluebar.png" alt="info bar showing referrals already reported as moved in" class="inline-images">
+        <div class="caption">The second state of the blue bar is if there are reported move ins for the month. In this case, we remind them what they are and let them finalize their reporting.</div>
 
-        <p>In the new flow, the move-in would only register in our system if the user completed the reporting flow. Placing the <i>optional</i> tag next to the form labels instead in copy was a more concise and noticeable way to inform users that they could click "Next" without the extra information.</p>
+        <p>In the new flow, the move-in would only register in our system if the user completed the reporting process. Doing so prevented duplicate and accidental reporting. Additionally, placing the <i>optional</i> tag next to the form labels instead of in copy was a more concise and noticeable way to inform users that they could click "Next" without the extra information. This eliminated any ambuiguities about whether they could continue reporting or not.</p>
 
-        <p>Right next to the "Report Move-in" button on each row is also a "More" link to report other statuses for the lead besides "Moved-in". This placement made sense for the user and was a benefit to us since we could get extra information rather easily.</p>
+        <p>Right next to the "Report Move-in" button on each row is also a "More" link to report other statuses for the lead besides "Moved-in". This placement made sense for the user and was a benefit to us since we could get extra information at little added cost to the user.</p>
 
         <img src="images/morebutton.png" alt="more actions button drop down on referrals page" class="inline-images"> 
 
-        <p>In the end, we were able to cut the number of steps in monthly reporting down to 2 and maintain consistency between monthly and case by case reporting. Users can still report a move-in through the Referral Details page, but they would be using the same flow as the Referrals page. </p>
-
-        <img src="images/referraldetailspage.png" alt="report move in from referral details page" class="inline-images">
+        <p>In the end, we were able to cut the number of steps in monthly reporting down to 2 and maintain consistency between monthly and case by case reporting. Making the system dynamic to catch users whenever reporting was relevant was also helpful in getting more valid reports and keeping the user engaged with our business. We saw a significant increase in the number of users reporting their move ins through portal versus by emailing their account managers, and a much higher move in rate from the communities that saw the most value in the product. </p>
 
         <h1>What I Learned</h1>
         <p>Portal was one of the first big projects I worked on in my time here and it had a lot of eyes on it. Design is much more than just creating flows and pretty visuals, it's also about collaboration and communication. Managing expectations with stakeholders and working with them every step of the way, made them feel personally invested in my designs and when something didn't work the way we expected it to, blame was not passed around. Instead, there was a collective effort to reinvent and improve.</p>

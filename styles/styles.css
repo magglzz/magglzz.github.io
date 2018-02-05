@@ -281,6 +281,13 @@ nav ul {
 #menu-btn.active span:after {
   transform: translate3d(0,-10px,0) rotate(-45deg)
 }
+.link {
+  text-decoration: underline;
+}
+.link:hover {
+  text-decoration: none;
+  color: var(--text-color);
+}
 /********************************/
 /****** homepage header styling *********/
 /********************************/
@@ -444,7 +451,7 @@ img {
   width: 100%;
   height: auto;
 }
-.arvideo {
+.mobileimg {
   width: 45%;
 }
 .homephotos {
@@ -847,7 +854,7 @@ h5 {
   .section-content {
     width: 100%;
   }
-  .arvideo {
+  .mobileimg {
     width: 65%;
   }
   #site-title {
@@ -933,7 +940,7 @@ h5 {
   .details {
     width: 100%;
   }
-  .arvideo {
+  .mobileimg {
     width: 85%;
   }
   .homephotos {
