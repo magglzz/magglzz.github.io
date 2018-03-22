@@ -13,7 +13,7 @@
 
     <meta charset="UTF-8">
     <title>Margaret Liu Designer</title>
-    <meta name="description" content="SF based UI and UX designer">
+    <meta name="description" content="SF based product designer">
     <meta name="keywords" content="SF Designer, designer, product designer, ui designer, ux designer, design, digital">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -31,7 +31,7 @@
         <nav>
           <button id="menu-btn"><span></span></button>
           <a href="index.html">
-            <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
+            <img src="images/logo.png" alt="Margaret Liu" id="logo">
           </a>
           <ul id="main-menu" class="navigation slide-in-top">
             <li><a href="index.html">Home</a></li>
@@ -43,85 +43,54 @@
       </div>
     </header>
 
-    <div class="project-intro">
-      <div class="container">
-        <h1 class="project-head">Talk</h1>
+    <section class="container">
+      <div class="wrapper">
         <div class="project-desc">
-          <p>Talk is a complex tool that is used by our sales team to make calls, schedule tasks, match customers to providers, and manage client information.</p>
+          <h1>Talk</h1>
+          <h2>Redesigning the CRM and adding a scheduling feature.</h2>
+          <div class="line"></div>
+          <p>Talk is a lead management tool that is used by our sales team to make calls, schedule tasks, match customers to providers, and manage client information. For more context about designing for seniors and the senior care industry, <a href="companyxyzintro.html" class="link">start here</a>.</p>
           <div>
-            <img src="images/talk/talkmain.png">
+            <img src="images/talk/talk.png">
           </div>
         </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="details">
-        <h3>Question</h3>
-        <p>How can we make Talk a tool that helps the sales team make better and more sales?</p>
-        <h3>Goals</h3>
-        <p>Improve lead quality and call efficiency</p>
-      </div>
-    </div>
 
-    <section class="container">
-      <div class="verticalbar">
-        <div class="margin-title">Dissecting the Problem</div>
-        <div id="margin-line"></div>
-      </div>  
-      <div class="wrapper">
-        <div class="wrapper-section">
-          <h1>Let's Talk About Talk</h1>
-          <p>Talk was a tough project to tackle, mainly because as it existed, it was already pretty good. Talk is also our main source of revenue and possibly our most important product, which is why we wanted to improve it beyond "pretty good."</p>
+        <h2>Let's Talk About Talk</h2>
+        <p>Talk is a lead management tool that our internal team uses to get information about our customers' care needs and match them to communities that fit those needs.</p> 
+        <img src="images/talk/talkflow.png" alt="Flow map of how sales works">
+        <p>The problem here was that our sales team would not be able to find the data cells fast enough in our Talk CRM to input customer information while on a call with them. So they would put everything into a google doc and then go back into Talk at the end of the call to input information. This was a huge waste of time.</p> 
+        
+        <h2>Problems</h2>
+        <p>This is what Talk looked like before I joined:</p>
+        <img src="images/talk/oldtalk.png" alt="Talk circa 2014" class="inline-images">
+        <div class="caption">Talk's main page was designed with no attention to vertical rhythm, use of space, visual heirarchy, and no intentionality behind elements.</div>
+        
+        <h2>Research</h2>
+        <p>So the first step here was research. I got to know the sales process really well and wanted to figure out how our sales team was trained on data entry so I could get the names of labels correct and other nomenclature. I also wanted to see what cells had to be values or which ones could be drop downs or yes or no check boxes.</p>
+        <p>The first thing I did besides a styles change, was work on layout. I put all the information that already available about the contact on the left, with all the information they need to gather about the contact on the right. I wanted to create a narrow frame of view so that they'd be able to scan the content easier. I also listened to many many sales calls to get a feel of the flow of their sales pitch so that I could order the sections based off of that. I wanted to limit how much they were jumping from section to section.</p>
+        <img src="images/talk/talkcrm.png" alt="Talk CRM redesign" class="inline-images">
+        <p>Next, wanted to make contact history more visual so that it was easily digestable. I highlighted three pieces of information that were the most important for the sales team to make split second decisions while on a call.</p>
+        <img src="images/talk/contacthistory.png" alt="contact history redesign" class="inline-images">
+        <p>It was during this project that I noticed the opportunity in tour scheduling. A lot of our users were confused why there was so much focus on the CRM when tours were where the real money was at.</p> 
+        <p>So why tour scheduling? Tours are the number 1 precursor to move ins and we know that they lead to a 30% higher chance of a customer moving in. If we can schedule more tours, our percentage of move ins would most likely increase.</p>
+        <p>So after doing some research on tour scheduling, I sketched out a few directions and picked on to prototype. In this case I picked the one cheapest to build and easiest to implement. The first prototype isn't meant to be right, but just to serve as a starting ground for getting the business around the same goal and making sure all the teams have our intention aligned. We wanted to start dirty and validate quick.</p> 
+        <img src="images/talk/iterations.png" alt="iterations">
+        <p>After doing a lot of testing on the prototype, we got a lot of good findings. I built another prototype that addressed the issues and tested it. This one made it much easier for sales to sell tours.</p>
+        <img src="images/talk/tours.png" alt="new prototype" class="inline-images">
+        <p>But I wasn't satisfied with the results and thought we could take it one step further. So I approached our data team about how we could implement their knowledge with our new feature and "Suggested Tours" was born. The algorithm they were able to develop would take information about move in rates, care needs, costs, location, etc and suggest communities that they consumer should tour. This took the guesswork out for the sales team, but we wanted to keep it "suggested" since they would still know things the algorithm didn't.</p> 
+        <img src="images/talk/suggested.png" alt="suggested tours" class="inline-images">
 
-          <p>The business had identified the sending of low quality leads and call inefficiency as the main problems. The solutions they architected were better lead ordering and a faster search algorithm. My job was to design how these would be implemented into the product.</p>
+        <h2>What I Learned</h2>
+        <p>This was the first product I touched that had clear constraints and many many of them. It was extremely complicated with layers of information and a lot of key stakeholders. It took quite a few iterations to get it to where it is now and I still don’t (if ever) feel like it’s complete. However this journey has been a great learning experience, from supporting other departments to conducting more comprehensive user tests, it has taught me many lessons in designing better.</p>
 
-          <img src="images/talk/talkplanning.png" alt="planning out talk" class="inline-images">
-          <div class="caption">Please don't judge me for my bad handwriting!</div>
+        <p>Halfway through learning our sales flow, I found myself trying to redesign the sales flow instead of Talk. I imagine this is a problem most designers face when they try to redesign everything. I recognized that I need to trust others to be experts in their domain and design to support that. </p>
 
-          <p>I sat through several sales calls and watched our sales team use Talk, then had one on one conversations with those users to compare my notes with their actual thought process. Despite their generally positive view of Talk, they would often run into roadblocks in the tool but find creative ways of working around them. For example, we show them previous emails that are sent when they hover over the email icon - but because you can’t actually interact with the text in the hover pop up they use internal notes to keep a record of emails sent instead. It seemed that call inefficiency wasn’t rooted so much in a slow search, but better usability. </p>
-
-          <img src="images/talk/talkhover.png" alt="Email hover in Talk" class="inline-images">
-          <div class="caption">Hovering over the email icon displays the sent message. This interaction was not useful for the user.</div>
-
-          <h1>Usability</h1>
-          <p>Users couldn’t find the form field they needed fast enough while on a call and would often type information into a word doc and then go back after the call to enter that information into the form fields. I suggested we use category cards to better define where form fields should live and how they should be grouped. When grouping didn’t give significant enough results, I explored other options. I ended up creating well-defined sections that reduced cognitive load, and a more narrow layout that was easier to digest and scroll through. Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page. </p>
-
-          <p>This is what Talk looked like before I joined:</p>
-          <img src="images/talk/oldtalk.png" alt="Talk circa 2014" class="inline-images">
-          <div class="caption">Talk's main page was designed with no attention to vertical rhythm, use of space, visual heirarchy, and no intentionality behind elements.</div>
-
-          <p>This is my re-design of the main page:</p>
-          <img src="images/talk/newtalk.png" alt="My new design for Talk" class="inline-images">
-          <div class="caption">I created a column based layout for easier scanning and data entry. Data cells are grouped intuitively and color coded icons allow for quick navigation between sections.</div>
-
-          <h1>Simple Solutions</h1>
-          <p>A complaint we got a lot was that “Talk is too slow.” Making it faster would take a lot of engineering points so I tried to figure out exactly why users thought that way and if there was a simple solution. Through Mouseflow, I found that “rage clicking” occurred whenever there was an error message or when users searched or added a lead. How could these interactions be designed so that they pacified the user?</p>
-
-          <p>Generally, error messages are a negative user experience. I tried to limit these by first showing warning notifications whenever a user would leave a section and go to the next without entering required information. I used playful language that was clear and felt like a conversation rather than a 404 error. This was also helpful for the user during a call to see what fields they might have missed and be able to catch those before the call ended.</p>
-
-          <img src="images/talk/warning.png" alt="warning notification" class="inline-images">
-
-          <p>The current search algorithm can only search by one care level and location at a time. However, because most callers could be placed in more than one care level, users would have to search multiple times. By giving them a simple multi select feature for care levels, the process seemed much faster without having to change the search engine at all. </p>
-
-          <p>Adding leads was an opportunity for us to delight the user. We added a fun animation each time the user clicked the “add lead” button and changed the words from “add lead” to “adding”. This feedback reassured the user the action had been received even if it took a little longer to execute, and the animation acted as a reward for the wait.</p>
-          <img src="images/talk/adding_animation.gif" alt="adding animation" class="inline-images">
-          <div class="caption">Adding leads interaction with feedback for the user</div>
-
-          <h1>What I Learned</h1>
-          <p>This was the first product I touched that had clear constraints and many many of them. It was extremely complicated with layers of information and a lot of key stakeholders. It took quite a few iterations to get it to where it is now and I still don’t (if ever) feel like it’s complete. However this journey has been a great learning experience, from supporting other departments to conducting more comprehensive user tests, it has taught me many lessons in designing better.</p>
-
-          <p>Halfway through learning our sales flow, I found myself trying to redesign the sales flow instead of Talk. I imagine this is a problem most designers face when they try to redesign everything. I recognized that I need to trust others to be experts in their domain and design to support that. </p>
-
-          <p>I also learned that aggregate data is important. Getting too in depth with a few users will lead you to be convinced that their personal tendencies and assumptions are user truths. Supporting your 1-on-1 interviews with mass user research is imperative to shaping the whole user story. I had such a close relationship with a few MVP users that I took their word for a lot of design decisions I initially made. The first iteration of Talk did not perform well because many of the other users did not share the same workflow. Sending out a mass survey was actually a more accurate representation of the user group. </p>
+        <p>I also learned that aggregate data is important. Getting too in depth with a few users will lead you to be convinced that their personal tendencies and assumptions are user truths. Supporting your 1-on-1 interviews with mass user research is imperative to shaping the whole user story. I had such a close relationship with a few MVP users that I took their word for a lot of design decisions I initially made. The first iteration of Talk did not perform well because many of the other users did not share the same workflow. Sending out a mass survey was actually a more accurate representation of the user group. </p>
 
         </div>
+        <div class="line"></div>
       </div>
     </section>
-
-    <div class="container">
-      <hr>
-      <div class="break-text">Small visual details like label proximity to form field, line height and white space, and color coded icons also improved the readability of the page.</div>
-    </div>
 
 
  <!-- **************************************************************** -->    
@@ -132,24 +101,24 @@
         <div class="two-column">
           <a href="portalmobile.html" class="work-float">
               <div class="subtitle">
-                <h2>Mobile</h2>
+                <h3>Mobile</h3>
               </div>
               <h1>Portal Mobile</h1>
               <img src="images/portal/portalmobile.png">
           </a>
           <a href="toolbox.html" class="work-float">
             <div class="subtitle">
-              <h2>ARCHITECTURE</h2>
+              <h3>ARCHITECTURE</h3>
             </div>
             <h1>Playing John Muir</h1>
             <img src="images/architecture/boxinmuseum.jpg">
           </a>
           <a href="search.html" class="work-float thirdfloat">
             <div class="subtitle">
-              <h2>WEBSITE</h2>
+              <h3>WEBSITE</h3>
             </div>
             <h1>The Search Flow</h1>
-            <img src="images/search/searchlaptop.png">
+            <img src="images/search/searchhome.png">
           </a>
         </div>
         <div class="projects-btn">
@@ -168,7 +137,7 @@
       <div class="container">
         <section class="two-column"> 
           <div class="section-content" id="sayhello-content">
-            <h2>04 CONTACT</h2>
+            <h3>04 CONTACT</h3>
             <h1>Say Hello</h1>
             <p>Have a cool project? Want to get in contact or just want to say hello? Drop me a line.</p>
           </div>
@@ -180,10 +149,10 @@
                     <h5>LinkedIn</h5>
                 </a>
               </div>
-              <div class="contact-item" id="instagram">
-                <a href="https://instagram.com/magglz" class="contact-item-content" target="_blank">
-                  <h4 class="hello-subtitle">See What I'm Up To</h4>
-                  <h5>Instagram</h5>
+              <div class="contact-item" id="twitter">
+                <a href="https://twitter.com/magglzz" class="contact-item-content" target="_blank">
+                  <h4 class="hello-subtitle">Read My Random Thoughts</h4>
+                  <h5>Twitter</h5>
                 </a>
               </div>
             </div>
@@ -220,7 +189,7 @@
       </div>
     </div>
   </div>
-  <footer> Created with my <i class="em em-wave"></i><i class="em em-wave flip"></i> 2017
+  <footer> Created with my <i class="em em-wave"></i><i class="em em-wave flip"></i> 2018
   </footer>
   <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/scripts.js"></script>

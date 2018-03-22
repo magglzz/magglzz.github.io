@@ -31,7 +31,7 @@
         <nav>
           <button id="menu-btn"><span></span></button>
           <a href="index.html">
-            <img src="images/logowhite.png" alt="Margaret Liu" id="logo">
+            <img src="images/logo.png" alt="Margaret Liu" id="logo">
           </a>
           <ul id="main-menu" class="navigation slide-in-top">
             <li><a href="index.html">Home</a></li>
@@ -43,146 +43,64 @@
       </div>
     </header>
 
-    <div class="project-intro">
-      <div class="container">
-        <h1 class="project-head">Partner Portal</h1>
-        <div class="project-desc">
-          <p>Partner portal is a product that connects us to our partners, and our partners to our consumers. Through portal, partners can update their community information, report move ins, and manage their referrals.</p>
-          <div>
-            <img src="images/portal/portalhome.png">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="details">
-        <h3>Problem</h3>
-        <p>Partners had no easy way of reporting a move in and will often not report it at all or credit a referral we sent them to a competitor instead.</p>
-        <h3>Goals</h3>
-        <p>To create a better relationship with our partners so that they can report their move ins with a feeling of delight.</p>
-      </div>
-    </div>
-
     <section class="container">
-      <div class="verticalbar">
-        <div class="margin-title">The Process</div>
-        <div id="margin-line"></div>
-      </div>  
-      <div class="wrapper">
-        <div class="wrapper-section">
-          <h1 class="wrapper-title">Dissecting the Problem</h1>
-          <p>For more context, <a href="companyxyzintro.html" class="link">read a bit about Company XYZ</a></p>
-          <p>I was given a set of business goals that I translated to better human experiences. Focusing on these human experiences is like the northern light for my design process. For me, that starts with getting to know the people that will be using our product. I sat with the PM and had casual conversations with some users to just get a feel of how they felt about Partner Portal and how it tied in with their job and what motivates them. In our initial conversations, we focused on the big picture. We let this be the foundation for our product and later dug deeper to add the details. I translated these conversations to storyboards to discover what steps could be taken out, what felt natural and what didn’t, and opportunities where we could delight the user.</p>
-          <img src="images/portal/portalplanning.png" alt="My sketches for planning out partner portal" class="inline-images">
-          <p class="caption">Scribbling out ideas and flows helps me to think - no matter how incomprehensible it may seem.</p>
-          <img src="images/portal/portal.gif" alt="Partner Portal" class="inline-images">
-          <p class="caption">From ideation to creation</p>
-
-          <p>The original portal design had little thought regarding the flows, visual hierarchy, or design patterns. For instance, the most important feature--reporting a move-in and viewing your referrals--was buried under five steps and categorized under “Community Performance,” which partners did not recognize as relating to referrals or move ins.</p>
-
-          <img src="images/portal/likely_moveins.png" alt="Old Portal Move In Page" class="inline-images">
-          <div class="caption">Portal move-ins page circa 2015. If you don't know the name of your referral, it could take a lot of scrolling to find. There was also a lot of confusion between the Finalize Reporting button and Report Move-in button.</div>
-
-          <h3>Problems</h3>
-          <ul>
-            <li>Unable to update rates in real time, 24 hour lag</li>
-            <li>Impossible to find leads in database</li>
-            <li>Can’t send or see updates about a lead</li>
-            <li>Move-in reporting is confusing</li>
-          </ul>
+      <div class="wrapper">     
+        <div class="project-desc">
+          <h1>Partner Portal</h1>
+          <h2>Redesigning the Report Move In Flow in our B2B portal.</h2>
+          <div class="line"></div>
+          <p>For more context about designing for seniors and the senior care industry, <a href="companyxyzintro.html" class="link">start here</a>.</p>
         </div>
+        <div>
+          <img src="images/portal/portalhome.png" alt="portal design">
+        </div>
+        <h2>Dissecting the Problem</h2>
+        <p>Understanding this project takes a little understanding of the senior care industry. We refer customers to senior care providers and are paid a small fee for the referral. You can think of this the same way a real estate agent is paid a comission from landlords for finding them tenants. When partners go in to Portal to mark a referral as moved in, they were getting a negative and confusing experience. Because of this, they weren't reporting move ins. They didn't know how to use the interface and would get frustrated and give up. To fix this, we wanted to do a re-design of the report move in flow.</p>
+        <h2>Research</h2>
+        <p>I was given a set of business goals that I translated to better human experiences. Focusing on these human experiences is like the northern light for my design process. For me, that starts with getting to know the people that will be using our product. I sat with the PM and had casual conversations with some users to just get a feel of how they felt about Partner Portal and how it tied in with their job and what motivates them. In our initial conversations, we focused on the big picture. We let this be the foundation for our product and later dug deeper to add the details.</p>
+      <!--   <img src="images/portal/portal.gif" alt="Partner Portal" class="inline-images">
+        <p class="caption">This was the report move in flow prior to the re-design.</p> -->
 
-        <h1>Flow Mapping</h1>
-        <p>I focused most of the IA on our main flow; reporting a move in. Which parts could we cut? Which parts were more complex? Are there edge cases? Are there opportunities that we missed? We laid out the organization of the system so that we could see areas for improvement and landed on the below structure: </p>
-        <img src="images/portal/portalia.png" alt="Portal IA" class="inline-images">
+        <h2>Examining the Current Flow</h2>
+        <p>The first step of the flow is the Referrals page. The problem with this page is that attention is unfocused. There's a lot going on in the page and the user isn't sure what they're supposed to do.</p>
+        <img src="images/portal/referralspage.png" class="inline-images" alt="referrals page before redesign">
+        <p>When the click the "report move ins" button they get a pop up modal that asks them to click "report move ins" again. It also doesn't make sense here why there is a "report no move ins" option after clicking "report move ins".</p>
+        <img src="images/portal/reportmodal.png" class="inline-images" alt="referrals page before redesign">
+        <p>The next step takes them to a page that looks a lot like the first referrals page except with even more going on. The user has no idea what to do here and most drop off at this point. The tutorial at the top was meant to help them, but they didn't understand it and would often click the tutorial more than the actual buttons on the page.</p>
+        <img src="images/portal/reportmoveins.png" class="inline-images" alt="referrals page before redesign">
+        <p>The last step of the flow asks for OPTIONAL rent and care information but the way it's deisnged it seemes like this informaton is necessary in order to report the move in. Most partners wouldn't have that information at the time of reporting and would cancel out of the flow.</p>
+        <img src="images/portal/costspage.png" class="inline-images" alt="referrals page before redesign">
 
-        <p>The organization of the system was designed to accommodate new features that could be added in the future without compromising the most important ones.</p>
+        <h2>The New Flow</h2>
+        <p>So the first step I took to fix this was look at the flow map.</p>
+        <img src="images/portal/flowmap.png" alt="report move in flow before the redesign">
+        <p>It seemed unnecesary to me to have the second and third step in there. Not only were these steps unnecessary, but seniors hate having their options hidden behind buttons.</p>
+        <img src="images/portal/flowmaprevised.png" alt="report move in flow revised">
+        <p>So I made both actions immediately available to them on the referrals page. They would be able to report referrals as moved in, or report no move ins for the month directly on the referrals page. I also removed all color from the page to better direct attention towards the most important actions that we wanted the user to take. I figured that power users would be able to use the other features on the page without color ques. I also changed the headline of the page to ensure users would know exactly what to do on the page and what the page was for.</p> 
+        <img src="images/portal/newreferralspage.png" class="inline-images" alt="new referrals page">
+        <p>Seniors need a lot of hand holding when it comes to technology, but I believe interfaces should be self explanatory instead of having tutorials or wizards. So we got rid of the tutorial and reframed title text to be questions, with action buttons as answers. The flow would walk the user through it step by step, Turbo Tax style.</p>
+        <p>Optional care and rent cost items would be placed at the end of the flow and made clear that they were optional. It was more clicks, but clearer decisions for the user.</p>
+        <img src="images/portal/turbotax.png" alt="step by step reporting">
+        <p>I also created a new reporting section that would always live on the left hand side of the page. This allowed users to see what they and others sharing their account, had already reported for the month and submit that when the month was over. The button would be a different color from the report button to indicate that this was a different action that needed attention.</p>
+        <img src="images/portal/reportingsection.jpg" class="inline-images" alt="new reporting section">
+        <p>The button here would be smart. The copy in it would change depending on the state. The copy would also better reflect what the user was thinking at the time to reduce cognitive load and so they would be more confident in clicking.</p>
+        <img src="images/portal/smartbuttons.png" alt="smart buttons">
+        <p>I used this opportunity to also capture other information about the referral if they didn't move in, for example was the budget not a good fit? Did the care needs not match? This was something we hadn't done before.</p>
+        <img src="images/portal/no.jpg" class="inline-images" alt="no move in reporting">
+        <p>Here's the new flow in action:</p>
+        <img src="images/portal/newportal.gif" alt="the new report move in flow" class="inline-images">
 
-        <h1>Modular Layout</h1>
-        <p>One of best ways to ensure a move-in is with up-to-date information. The more accurate the information we have about a community, the better we can match them with a consumer. Historically, communities had only been able to manage their rate information in the Portal. We decided to significantly  expand that functionality in the new Portal by adding the capacity for partners to set and update not just rates, but also images, promotions, and contact information.</p>
-
-        <p>The first iteration had a table system that limited the program to a horizontal space and didn’t support images.</p>
-
-        <img src="images/portal/oldcommunitypage.png" alt="old community page of portal" class="inline-images">
-        <div class="caption">The table system was great for seeing an overall picture of many communities at once. But was useless for SMB's with only one community and for viewing images.</div>
-
-        <p>I approached the product team and argued for an overhaul of the entire design in favor of a new one that would support current and new features. The resulting layout has a modular UI with flexible containers to hold varying amounts of information, allowed room for additional features, and can easily be made responsive.</p>
-
-        <img src="images/portal/community_detail.png" alt="New community detail page of portal" class="inline-images">
-        <div class="caption">Visual organization = mental peace </div>
-
-        <h1>Prioritizing Flows</h1>
-        <p>We had a set number of engineering points allocated for this story and that meant we had to prioritize and decrease scope. We focused on our initial goal of building a better relationship with our partners and used our research to discover what might be the biggest driving factor. In the end, we decided on re-designing the Report Move-ins Flow. </p>
-
-        <p>I started out with a critique of the current flow. Here is one page of many notes: </p>
-
-        <img src="images/portal/referralnotes.png" alt="critique of a page of the referrals flow" class="inline-images">
-        <div class="caption">My notes on the old referral details page.</div>
-
-        <p>The first version solved many of the issues we had with the old portal, but further testing revealed that it still wasn’t very intuitive. More move-ins were being reported, but when we followed up on them, only the same amount were valid. It seemed that people were accidentally reporting move-ins.</p>
-
-        <p>The two places you can enter the flow from are the Referrals page and the Referral Details page. The split here was to reflect the two different ways you could report a move in. You could either report it on a monthly basis, in which you would select all the move ins you had that month and report them, or on a case by case basis, in which you would report them one by one as they moved in. Chains liked to use the monthly reporting feature, and SMBs used the case by case feature.</p>
-        <img src="images/portal/portalfirstflow.png" alt="first flow for reporting move in" class="inline-images">
-        <div class="caption">Diagram of report move in flow</div>
-
-        <h3>So What Went Wrong?</h3>
-
-        <p>First of all, the Create a Move-in button threw people off. To me, the flow was the same thing whether reporting monthly or case by case, but to the user they were very different and the buttons didn't show that.</p>
-
-        <img src="images/portal/moveinbuttons.png" alt="side by side comparison of the report move in buttons" class="inline-images">
-        <div class="caption">On the left is the Referral page (monthly reporting) and on the right is the Referral Details page (case by case reporting).</div>
-
-        <p>Having the move-in register in our system before the user hit the final submit button was a decision we made based on fear. Fear that the user wouldn't know to follow through on the flow to submit the move-in. Boy were we wrong. In fact, the user would accidentally click report move-in so often that they were reporting move-ins that didn't happen, causing more work for both sides.</p>
-
-        <img src="images/portal/entercostdata.png" alt="enter cost data page for reporting move ins" class="inline-images">
-        <div class="caption">The Enter Costs and Data page is optional information and a user can submit a move in without this data. Because of this, we register the move in as reported before they get to this page, but the flow implies that it would not be reported until they hit the final submit.</div>
-
-        <p>In the case where a community had no move-ins for the month, they needed a way to report that as well. However, the only way to do that was by entering the Report Flow and selecting <i>Report No Move-ins</i> at the first step. This was counterintuitive and caused many people to get frustrated.</p>
-
-        <img src="images/portal/nomoveins.png" alt="report no move ins flow" class="inline-images">
-        <div class="caption">Users have to click the create move in button in order to enter the move in flow and report <b>no</b> move ins, which made no sense.</div>
-
-        <h3>Iterate, iterate, iterate!</h3>
-
-        <p>To solve the above problems, I developed a new flow that could be used for monthly and case by case reporting. When the user comes to the page to report a move-in, they can do so directly on the page without ever having to navigate away. The seamlessness of the new flow made it just as easy to report mulitple move-ins as it was to report just one. We took it a step further and made it even easier to report by ordering the referrals on the page based on their likelihood of move in.</p>
-
-        <img src="images/portal/reportmovein2.png" alt="new report move ins flow" class="inline-images">
-        <div class="caption">Instead of having to enter a flow, users can just do a quick interaction on each row of data to report a move in.</div>
-
-        <p>I realized that communities only report no move ins at the end of the month, so I designed the system to detect this and notify the user with a blue info bar whenever they log in within 1 week of when reporting is due. Communities with no move-ins can report that by clicking  the link in the blue bar.</p>
-
-        <img src="images/portal/reportnonebar.png" alt="info bar for reporting no move ins" class="inline-images">
-        <div class="caption">The user no longer has to enter the create move in flow to report no move ins.</div>
-
-        <p>The area also served as a great place to list out referrals they had already reported on a case by case basis for the month. If those were the only ones they had to report, we gave them an easy way to finalize their reporting and stop getting emails from us.</p>
-
-        <img src="images/portal/bluebar.png" alt="info bar showing referrals already reported as moved in" class="inline-images">
-        <div class="caption">The second state of the blue bar is if there are reported move ins for the month. In this case, we remind them what they are and let them finalize their reporting.</div>
-
-        <p>In the new flow, the move-in would only register in our system if the user completed the reporting process. Doing so prevented duplicate and accidental reporting. Additionally, placing the <i>optional</i> tag next to the form labels instead of in copy was a more concise and noticeable way to inform users that they could click "Next" without the extra information. This eliminated any ambuiguities about whether they could continue reporting or not.</p>
-
-        <p>Right next to the "Report Move-in" button on each row is also a "More" link to report other statuses for the lead besides "Moved-in". This placement made sense for the user and was a benefit to us since we could get extra information at little added cost to the user.</p>
-
-        <img src="images/portal/morebutton.png" alt="more actions button drop down on referrals page" class="inline-images"> 
-
-        <p>In the end, we were able to cut the number of steps in monthly reporting down to 2 and maintain consistency between monthly and case by case reporting. Making the system dynamic to catch users whenever reporting was relevant was also helpful in getting more valid reports and keeping the user engaged with our business. We saw a significant increase in the number of users reporting their move ins through portal versus by emailing their account managers, and a much higher move in rate from the communities that saw the most value in the product. </p>
-
-        <h1>What I Learned</h1>
+        <h2>Results</h2>
+        <p>We had an overall 31% increase in the number of partners reporting their move ins through portal, which meant a whole lot of nagging from our operations team, which in turn meant a better relationship with our partners. Not only did we save a whole lot in operations costs, but we were also able to gather valuable information about the referral if they did <i>not</i> move in, which meant we could send our partners better referrals in the future making both customers and partners happier.</p>
+        
+        <h2>What I Learned</h2>
         <p>Portal was one of the first big projects I worked on in my time here and it had a lot of eyes on it. Design is much more than just creating flows and pretty visuals, it's also about collaboration and communication. Managing expectations with stakeholders and working with them every step of the way, made them feel personally invested in my designs and when something didn't work the way we expected it to, blame was not passed around. Instead, there was a collective effort to reinvent and improve.</p>
-
-        <a href="https://www.behance.net/gallery/58314553/Partner-Portal" class="btn" target="_blank">View on Behance
-          <svg>
-            <rect x="0" y="0" fill="none" width="166" height="45"/>
-          </svg>
-        </a>
-
       </div>
-    </section>
-    
-    <div class="container">
-      <hr>
-      <div class="break-text">Focusing on these human experiences is like the northern light for my design process.</div>
+
     </div>
+    <div class="line"></div>
+  </section>
+  
 
   <!-- **************************************************************** -->    
   <!--More work -->
@@ -190,26 +108,26 @@
     <div class="container">
       <section class="more-work">
         <div class="two-column">
-          <a href="portalmobile.html" class="work-float">
+          <a href="talk.html" class="work-float">
               <div class="subtitle">
-                <h2>Mobile</h2>
+                <h3>LEAD MANAGEMENT</h3>
               </div>
-              <h1>Partner Portal Mobile</h1>
-              <img src="images/portal/portalmobile.png">
+              <h1>Talk</h1>
+              <img src="images/talk/talk.png">
           </a>
           <a href="ar.html" class="work-float">
             <div class="subtitle">
-              <h2>EXPERIMENT</h2>
+              <h3>EXPERIMENT</h3>
             </div>
             <h1>Augmented Reality</h1>
             <img src="images/experiments/unity.png">
           </a>
-          <a href="geometricspeciation.html" class="work-float thirdfloat">
+          <a href="search.html" class="work-float thirdfloat">
             <div class="subtitle">
-              <h2>ARCHITECTURE</h2>
+              <h3>WEBSITE</h3>
             </div>
-            <h1>Geometric Speciation</h1>
-            <img src="images/architecture/geometricdrawing.jpeg">
+            <h1>Search</h1>
+            <img src="images/search/searchhome.png">
           </a>
         </div>
         <div class="projects-btn">
@@ -228,7 +146,7 @@
       <div class="container">
         <section class="two-column"> 
           <div class="section-content" id="sayhello-content">
-            <h2>04 CONTACT</h2>
+            <h3>04 CONTACT</h3>
             <h1>Say Hello</h1>
             <p>Have a cool project? Want to get in contact or just want to say hello? Drop me a line.</p>
           </div>
@@ -240,10 +158,10 @@
                     <h5>LinkedIn</h5>
                 </a>
               </div>
-              <div class="contact-item" id="instagram">
-                <a href="https://instagram.com/magglz" class="contact-item-content" target="_blank">
-                  <h4 class="hello-subtitle">See What I'm Up To</h4>
-                  <h5>Instagram</h5>
+              <div class="contact-item" id="twitter">
+                <a href="https://twitter.com/magglzz" class="contact-item-content" target="_blank">
+                  <h4 class="hello-subtitle">Read My Random Thoughts</h4>
+                  <h5>Twitter</h5>
                 </a>
               </div>
             </div>
@@ -280,7 +198,7 @@
       </div>
     </div>
 
-  <footer> Created with my <i class="em em-wave"></i><i class="em em-wave flip"></i> 2017
+  <footer> Created with my <i class="em em-wave"></i><i class="em em-wave flip"></i> 2018
   </footer>
   <script src="scripts/jquery-3.2.1.min.js"></script>
   <script src="scripts/scripts.js"></script>
