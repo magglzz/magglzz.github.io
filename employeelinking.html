@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111267119-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111267119-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Margaret Liu Designer</title>
+    <meta name="description" content="SF based UI and UX designer">
+    <meta name="keywords" content="SF Designer, designer, product designer, ui designer, ux designer, design, digital">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" 
+      type="image/png" 
+      href="images/logo.png">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body class="project-page">
+    <header>
+      <div>
+        <nav>
+          <button id="menu-btn"><span></span></button>
+          <a href="index.html">
+            <img src="images/logo.png" alt="Margaret Liu" id="logo">
+          </a>
+          <ul id="main-menu" class="navigation slide-in-top">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="body-content">
+      <div class="verticalbar">
+        <div class="margin-title">Employee linking</div>
+        <div id="margin-line"></div>
+      </div>  
+      <div class="wrapper">
+        <div class="wrapper-section">
+          <h1>Employee linking</h1>
+          <p>We started Uber for Business 5 years ago to serve organizations globally, from the enterprise level to single freelancers. Our suite of tools help business travel managers, event managers, health travel administrators, and more provide seamless and reliable rides and food to their employees, guests, patients, and customers. Uber for Business serves thousands of organizations—65,000 specifically—but in order to help small organizations plan their travel more efficiently, we aim to scale our product and hit a few key benchmarks along the way.</p>
+
+          <img src="images/employee_traveler.png" class="inline-images">
+
+          <p><b>Our core offering is simple</b></p>
+
+          <ul>
+            <li>Organizations can create an Uber for Business account to streamline and manage Uber services for their people and customers</li>
+            <li>Administrators can select the payment method that works best for their team, whether a shared company card or an individual corporate card</li>
+            <li>Administrators of the Uber for Business account can set up travel programs that specify types of rides available (like Pool, X, or Black), time restrictions (weekdays only), and location restrictions (certain pick-up and drop-off locations)</li>
+            <li>Employees don’t have to save receipts or go through the hassle of expensing at the end of their trip because it’s already paid for by the company</li>
+          </ul>
+
+      
+          <h2>The problem</h2>
+          <p>As we worked with more and more organizations, we noticed that signing up for an account wasn’t always simple, for organizations or employees. The problem was two-fold: admins experienced friction when trying to add team members to their company account; admins need to upload the email addresses of the individuals they want to add to their Uber for Business account, but it’s easy for the email invitation to get lost in their inboxes. Other times, employees try to join the account but don’t remember their Uber passwords and therefore don't finish signing up.</p>
+
+          <img src="images/employee_admin.png" class="inline-images">
+
+          <h2>Dissecting the problem</h2>
+
+          <p><b>Methodology</b><p>
+
+          <p>Our approach leveraged user research and data science to help validate our assumptions, paired with knowledge of our customer journey map to ensure we were focusing on the right steps along the way.</p>
+
+          <p>We wanted to track down all of the pain points our customers were experiencing by answering key questions.</p>
+
+          <p>We gathered feedback from focus groups, interviews, and surveys about our users. We wanted to deeply understand the way they think, their pain points, and motivations for success. We asked questions like: who is the admin? Why did they sign up? Why did they end up not using the product?</p>
+
+          <p><b>The issues</b></p>
+
+          <p>We found that many administrators signed up to spend less time and energy managing travel—reconciliation, accounting, and reimbursements. And even though using Uber for Business would save them time in the long term, their signup experience felt like ​extra​ work.</p>
+
+          <p>Qualitative: check. Next we aimed to get a holistic view of the problem by quantifying it with data. We ran the numbers and found that organizations took more trips over the lifetime of their account if they constantly add and remove employees to the company’s Uber for Business account. However, a significant number of support tickets highlighted a cumbersome invite process, and few admins returned to the platform to add more employees to the program.</p>
+
+          <p><b>Identifying the problem</b></p>
+          
+          <p>Symptoms of a problem sometimes surface in one point of the flow when the core issue lies in another part, potentially causing several symptoms in more than one part. To better understand the core problem, we revisited the user’s journey.</p>
+
+          <p>We found that administrators were adding employees to their business account as part of their new hire process, but employees just joining a new company had no idea if they would be traveling for work, and as such, might not need to immediately register with their company’s Uber for Business account. In these cases, the email invite got lost in the shuffle of other welcome emails.</p>
+
+          <p>Some of these employees reported that they were averse to signing in with their personal Uber account to create their business profiles.</p>
+
+          <img src="images/employee_journeymap.png" alt="User journey map" class="inline-images">
+          <div class="caption">User journey map</div>
+          
+          <h2>Everyone can carry weight</h2>
+
+          <p>ur problem can essentially be boiled down to one analogy: imagine that there are two people and a big pile of rocks that need to be moved. Both people would benefit from the rocks being moved, and they could both help carry them, but for some reason, only one person is doing the carrying. Whether or not this is fair, it is definitely inefficient. It would be better for administrators and employees alike if the Uber for Business sign-up and linking experiences were more efficient, but with our previous invite flow, the admin was doing all of the work setting up the account.</p>
+
+          <img src="images/employee_weight.png" class="inline-images">
+
+          <h2> Designing a solution</h2>
+
+          <p>Designing the process to design a solution is something of a tongue twister, but it’s also something we don’t take lightly. Our process starts with a design jam session to generate concepts from all stakeholders and collaborators. In these sessions, we introduce the problem and relevant research. We bring in the same journey map from the research to act as visual guidance for focus areas. In the end, we translate the problem to data points so that we know which metrics to change and how to measure success. Now we’re jammin’.</p>
+
+          <p>After the jam session, we take those ideas and distill them down to the ones that are most viable, technically and financially. The team then prioritizes concepts. Next, we wireframe the whole flow, figure out edge cases, and make magic happen!</p>
+
+          <img src="images/employee_wireframe.png" class="inline-images">
+
+          <p><b>Solution 1—getting on the guest list</b></p>
+
+          <p>Our first concept focused on getting employees to join their company’s Uber for Business account directly through the Uber app. When someone requested a ride to a company using Uber for Business, we’d serve a popup asking if they worked at that company. If so, we’d send them an invite to join their company’s account on the platform. We soon found, though, that relying on physical addresses was problematic because many office buildings have multiple tenant companies.</p>
+
+          <p>We also tried giving admins email templates they could use to send employees invites to join the company account. This was a classic case of a counterproductive solution: the intent was to make things easier for the admins, but we observed that downloading and filling out set templates was more work, not less. So templates were out, too.</p>
+
+          <ol>
+            <li>The first method was very similar to our current model. You get an invitation in the mail and you must bring that invitation to enter the party. But what if you lose it? Or forget it? Or it gets lost in the mail?
+            <img src="images/employee_mail.png" class="inline-images">
+            </li>
+            <li>The second method was the inspiration for our new solution. You get an invitation in the mail, or even by email, maybe even text message, or word of mouth - it doesn’t matter! So whether you lost your invitation, never got it, or forgot it at home, you’ll still get into the party.
+            <img src="images/employee_inviteparty.png" class="inline-images">
+            </li>
+          </ol>
+
+          <p>Now, employees didn’t have to accept an email invitation to join the account. They could just opt into the account whenever they were ready through the Uber app, without having to sign in on a web landing page, as they’d previously needed to do.</p>
+
+          <img src="images/employee_optin.gif" class="inline-images">
+
+          <p><b>Solution 2—picking out the red Skittles</b></p>
+
+          <p>Similar to solution 1, we looked outside of our product for inspiration on how to best “invite” new users to the platform. Again, we found a method that illustrated our current invite flow, and a second that served as inspiration for what our flow could be like.</p>
+
+          <ol>
+            <li>I’m the person that always picks out the red Skittles from the bag. In the same way, companies might want to invite only engineers to an event, a technical recruiting mixer for instance. They could single out the engineers individually and hand them each an invitation, but that seems like a lot of work.
+            <img src="images/employee_invite.png" class="inline-images">
+            </li>
+            <li>Or, they could post a bulletin or announcement inviting all engineers to that event.
+            <img src="images/employee_poster.png" class="inline-images">
+            </li>
+          </ol>
+
+          <p>Which one would require less effort for the event host? Our second solution was centered around a method of allowing admins to notify all employees of their Uber for Business account without having to individually go in and add each employee’s email to the account. We gave them a link that they could share on a team page or travel document.</p>
+          <img src="images/employee_joinpage.png" class="inline-images">
+          <div class="caption">Admins would share a link and employees could follow it to this page.</div>
+
+          <p>Conclusion</p>
+
+          <p>This conclusion is difficult to label as a “conclusion” because design at Uber is a process and never truly ends. But this story represents a small victory on the road, as we were able to use design (and jam sessions) to rehabilitate the essential sign up and linking process. Even with that success, we can expect to redo this design again and again — making the onboarding flow a little bit better each time. Time goes on, customers change, needs change, businesses change, and like everything else, good products must also change to adapt to the needs of their users.</p>
+
+          <img src="images/employee_weightshared.png" class="inline-images">
+
+          <a href="">See article on Medium</a>
+      </div>
+    </section>
+    <div>
+      <hr>
+      <p>Next project &#8594; Voucher value types</p>
+      <a href="vouchersvaluetypes.html" class="btn">View project
+        <svg>
+          <rect x="0" y="0" fill="none" width="166" height="45"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  </div>
+
+  <!-- **************************************************************** -->    
+  <!--Say Hello -->
+  <!-- **************************************************************** -->
+     
+    <div id="sayhello">
+      <div class="body-content">
+        <div class="container">
+          <section class="two-column"> 
+            <div class="section-content" id="sayhello-content">
+              <h3>Contact</h3>
+              <h2>Say Hello</h2>
+              <p>Have a cool project? Want to get in contact or just want to say hello? Drop me a line.</p>
+            </div>
+            <div class="contact-contents">
+              <div class="contact-wrapper">
+                <div class="contact-item" id="linkedin">
+                  <a href="https://www.linkedin.com/in/margaret-liu-8b116145/" class="contact-item-content" target="_blank">
+                      <h4 class="hello-subtitle">Online Resume</h4>
+                      <h5>LinkedIn</h5>
+                  </a>
+                </div>
+                <div class="contact-item" id="dribbble">
+                  <a href="https://dribbble.com/Margaretliu" class="contact-item-content" target="_blank">
+                    <h4 class="hello-subtitle">Visual designs</h4>
+                    <h5>Dribbble</h5>
+                  </a>
+                </div>
+              </div>
+              <div class="contact-wrapper">
+                <div class="contact-item" id="behance">
+                  <a href="https://medium.com/@margaretliu" class="contact-item-content" target="_blank">
+                    <h4 class="hello-subtitle">Read</h4>
+                    <h5>Medium</h5>
+                  </a>
+                </div>
+                <div class="contact-item" id="email">
+                  <a href="mailto:margaretliu15@gmail.com" class="contact-item-content" target="_blank">
+                    <h4 class="hello-subtitle">Contact me</h4>
+                    <h5>Email</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div>
+            <h3 class="footer">DESIGNED AND CREATED 2019 MARGARET LIU</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+   <!--  <div class="stripes">
+      <div class="grid">
+        <div class="grid-cell">
+          <div class="stripes-container">
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/scripts.js"></script>
+  </body>
+</html>

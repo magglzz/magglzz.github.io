@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111267119-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111267119-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <title>Margaret Liu Designer</title>
+    <meta name="description" content="SF based UI and UX designer">
+    <meta name="keywords" content="SF Designer, designer, product designer, ui designer, ux designer, design, digital">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" 
+      type="image/png" 
+      href="images/logo.png">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+
+  <body class="project-page">
+    <header>
+      <div>
+        <nav>
+          <button id="menu-btn"><span></span></button>
+          <a href="index.html">
+            <img src="images/logo.png" alt="Margaret Liu" id="logo">
+          </a>
+          <ul id="main-menu" class="navigation slide-in-top">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <div class="body-content">
+      <div class="verticalbar">
+        <div class="margin-title">Uber Vouchers</div>
+        <div id="margin-line"></div>
+      </div>  
+      <div class="wrapper">
+        <div class="wrapper-section">
+          <h1>Voucher value types</h1>
+          <p>When I’m teaching dance, I don’t explain every little shift in weight, muscle movement, and intention. That would take days to explain and class is only 75 minutes long. Instead, I need to think of one cue - one sentence - that will allow my students to understand the move. In many ways, design is that one sentence representing a paragraph of words. Designers must condense complicated concepts into one, digestible feature.</p>
+
+          <img src="images/vouchers_dash.gif" alt="Vouchers in it's current form" class="inline-images">
+      
+          <p>When Vouchers was launched in April 2019, we saw incredible traction and growth. The product was a new way for organizations to provide rides for anyone, at scale, and it took off like wildfire. But we saw gaps in our potential. We were limited to a few verticals and use cases because we could only offer two types of subsidization; an amount off a ride and a fully covered ride. We wanted to expand our product and offer value types that organizations could find truly meaningful for their business.</p>
+
+          <p>We talked to our go to market and sales teams and categorized requests into two groups: per trip discounts (subsidized on a per trip basis) and allowances (total values of a voucher).</p>
+
+          <img src="images/vouchers_types.png" alt="proposed voucher types" class="inline-images">
+          <div class="caption">Proposed value types split up into allowances and per trip discounts</div>
+
+          <img src="images/vouchers_newvsold.png" alt="current vs old voucher types" class="inline-images"><div class="caption">Diagram of new voucher value types vs. old</div>
+
+          <p>On their own, the value types were easy to understand. It was how they could be mixed and matched that made them so complicated. How could we translate these value types into the product in a way that the user could discover new ways to use vouchers, but also find the solution for their current needs? </p>
+
+          <img src="images/vouchers_formula.png" alt="diagram of combinations" class="inline-images"><div class="caption">Different ways voucher value types could be combined. You'll notice that credit is different from $ covered/ride, fully covered ride, and %covered/ride.</div>
+
+          <img src="images/vouchers_formulaproto.png" alt="diagram of combinations with inputs" class="inline-images"><div class="caption">The formula translated to inputs</div>
+
+          <p>We started the process by setting down some principles to make sure our team would stay aligned on tough decisions. </p>
+
+          <h2>Principles</h2>
+
+          <p><b>Simplicity through focus.</b> Our users love Uber because of how simple it is to use. One of our greatest achievements for businesses is operational efficiency. We wanted to stay true to how we benefit our users and why our users value our products.</p>
+          <p><b>Inspiration through discovery.</b> The beauty of Vouchers is the millions of ways it can be used. From promotions, to events, to just getting a guest somewhere, the possibilities are endless. Our users don’t yet know how Vouchers can solve their problems, so we want to make sure they can be inspired and discover new ways to use Vouchers.</p>
+          <p><b>From the business’s point of view.</b> We talk to businesses, which in turn talk to consumers. While we design for both, we want to keep the business’s POV top of mind when designing new products. Our tone, content, and functionality should always cater to our direct users.</p>
+          <p><b>Design for the majority.</b> Even though our objective is to expand our reach, we will always make sure our designs are optimized for our biggest use cases. It’s important to remember our core user group and ensure they still have a seamless experience with the new value types that we introduce.</p>
+
+          <h2>Approach</h2>
+          <p>What is the user thinking at this stage of the creation flow? What are they motivated by? I started designing by thinking about the questions I would ask our user if I was completing the creation flow for them. </p>
+
+          <p><b>Approach 1: How much do you want to spend per customer?</b></p>
+          <p>If the first question users are thinking when they get to our value page is “how much do I want to spend per customer?” the first input should be to determine each voucher's value. For every voucher created, there needs to be some way to limit it’s value. The math looks like this:</p>
+
+          <img src="images/vouchers_calculator.png" alt="how to calculate voucher program value" class="inline-images">
+          <div class="caption">Approach 1 focuses on the "max value per voucher"</div>
+
+          <p>This exploration sets the variable “max value per voucher” as the focus point. Determine this, and then we can figure out the rest. </p>
+
+          <img src="images/vouchers_approach1.png" alt="approach 1 diagram" class="inline-images">
+          <div class="caption">This is what the order would look like if we led with this approach. The user would pick one option from each row to create their voucher.</div>
+
+          <img src="images/vouchers_approach1example.png" alt="example of approach 1" class="inline-images">
+          <div class="caption">This is an example of what a conversation with the user would look like and how the math would work out.</div>
+          
+          <p><b>Approach 2: What is the overall program budget?</b></p>
+
+          <p>If we assume that they user is thinking about overall program budget, then they’d want to set the maximum potential cost first and then work down from there. Hierarchically, that means setting the number of vouchers first (program level) and ending with the per trip offer (trip level).</p>
+
+          <img src="images/vouchers_approach2.png" alt="approach 2 diagram" class="inline-images">
+          
+
+          <p><b>Approach 3: What do you want to offer your customers?</b></p>
+
+          <p>Assuming the user starts first with thinking about what the value of the voucher would be for their customers, we would start by asking which per trip discount they’d like to use. </p>
+          <img src="images/vouchers_approach3.png" alt="approach 3 diagram" class="inline-images">
+
+          <p><b>Approach 4: Discovery and exploration</b></p>
+
+          <p>What happens if the user is not sure when they start building their voucher program? Perhaps they are just testing the product, or only have a vague idea of what they want to accomplish. If we framed each value type as a solution, we figured users could be inspired to use vouchers in new ways. It also gave us the freedom to explain each solution fully for better comprehension.</p>
+          <img src="images/vouchers_approach4.png" alt="approach 4 diagram" class="inline-images">
+          <div class="caption">Approach 4 diagram. They would pick one of the four solutions and that would give them a set of inputs. Each solution would have their own set of inputs.</div>
+
+          <p><b>Approach 5: We choose for you</b></p>
+
+          <p>We dug even further outside the box and explored a content focused approach. We were worried the cognitive load would be too much for users, so we tried asking a series of questions to figure out their use case. Then we could recommend a value type for them based on their answers.</p>
+          <img src="images/vouchers_approach5.png" alt="approach 5 diagram" class="inline-images">
+
+          <h2>Challenges</h2>
+
+          <p>We already had a significant cohort of users on the product that did not need the new value types. While we wanted to make the new value types discoverable, we didn’t want them to impede our current users' work flow. So we considered different ways we could make the new value types an optional feature, and came up with the idea of having an “advanced” and "default" set up. </p>
+
+          <img src="images/vouchers_advanced.png" alt="advanced vs. default controls" class="inline-images">
+          <div class="caption">The only advanced features on the page were at the bottom. It would have been confusing to have the only difference be the bottom inputs when the control to switch between advanced and default was at the top.</div>
+
+          <p>But what we were putting in advanced vs default seemed arbitrary. After a research deep dive, we found that the real advanced feature was simply the way we limited the maximum value of the voucher. In the current model, a maximum voucher value could only be set by the number of rides per voucher. The new model would allow users to set a maximum value by either number of rides or a dollar amount. They could also set a frequency for the voucher to reset. </p>
+
+          <img src="images/vouchers_advexplorations.png" alt="explorations of advanced vs. default controls" class="inline-images">
+          <div class="caption">Explorations for how we could display advanced vs. default controls.</div>
+
+          <h2>User testing</h2>
+
+          <p>After consulting with stakeholders, we decided as a team to prototype and test approach 3. It mitigated the most complexity and followed our principles the closest. It was also the most technically viable of the options.</p>
+
+          <p>We used progressive disclosure to slowly reveal information about value types in a way that would keep the user focused on small, easy tasks. We translated the questions we had in approach 5 to UI components the user could act on. </p>
+          <img src="images/vouchers_prototype.gif" alt="prototype" class="inline-images">
+          <div class="caption">Prototype that we tested</div>
+
+          <p>We had 2 key insights:</p>
+
+          <p><b>Advanced controls were too easily discoverable.</b></p>
+          <p>Because advanced controls were placed in the middle of the form, it was too easily discoverable and admins were exploring them more than we wanted them to. They got confused about whether they should use the advanced controls or not when it didn’t seem like they needed them. How could we make advanced controls more buried or only available to orgs that actually needed them?</p>
+
+          <p><b>People thought advanced and default controls were not mutually exclusive</b></p>
+          <p>Some users were confused about the tabs and didn’t think the default and advanced were mutually exclusive. Despite the copy, the design gave too much of an affordance that they should fill out both versus just one.</p>
+
+          <h2>The solution</h2>
+
+          <p>The insights from our user testing sessions revealed that we had strayed from one of our core principles; optimizing for the majority. Our most frequent use case is $X off a trip for a total of Y trips. While we wanted to offer every possible value combination for our users for full versatility, we were also introducing too much complexity. It was a fine line to juggle. So we scaled down our offerings by removing the following:</p>
+
+          <p><b>Flat fare subsidy cap</b></p>
+          <p>This was a value type specifically for transit companies. Riders would pay a flat fare (price of bus ticket) and the rest would be subsidized up to a certain amount. While this was intuitive for transit companies, no one else understood what it meant or why they would need it. So we made it a whitelisted feature available only to our transit partners.</p>
+
+          <p><b>Maximum value per voucher</b></p>
+          <p>It was confusing to have a maximum subsidy per ride, but also to have have a maximum voucher value. We decided having a voucher credit allowance was enough control for our users.</p>
+
+          <p><b>Frequency</b></p>
+          <p>Allowing users to control the per ride discount and also the maximum value of a voucher and then also the frequency for the value to reset, was too much for users to understand. We removed this and added it only for the value type credit, since that was a more simple value type and where we saw the strongest use case for frequency.</p> 
+
+          <img src="images/vouchers_value.gif" alt="Final solution vouchers value types" class="inline-images">
+          <div class="caption">Solution without flat fare subsidy cap, maximum voucher value, and frequency. </div>
+
+          <h2>Next steps</h2>
+
+          <p>This solution is by no means final. We had strong indications from user testing that approach 4 could be successful. But for now, with our current scope and deadline, we decided to build and ship our solution and wait for more data before we iterated again. Until then, I’ll be closely monitoring our user feedback and data and exploring how approach 4 can push our product even more.</p>
+
+        <!--   <img src="images/vouchers_mobile.gif" alt="Redeeming a voucher" class="inline-images">
+          <div class="caption">Redeeming a voucher</div> -->
+
+          <p>Vouchers in the news:</p>
+          <h3>MASHABLE</h3>
+          <a href="https://mashable.com/article/uber-voucher-discount-free-ride-hailing-app/" class="articles">Companies can now give you 'Uber Vouchers' for free or discounted rides</a>
+          <h3>VENTUREBEAT</h3>
+          <a href="https://venturebeat.com/2019/04/09/uber-launches-vouchers-for-businesses-to-give-customers-complimentary-rides/" class="articles">Uber launches vouchers for businesses to give customers complimentary rides</a>
+          <h3>BUSINESSWIRE</h3>
+          <a href="https://www.businesswire.com/news/home/20190423005318/en/Aventri-Introduces-Uber-Vouchers-Deliver-New-Transportation" class="articles">Aventri Introduces Uber Vouchers to Deliver New Transportation Options</a>
+          <h3>THE VERGE</h3>
+          <a href="https://www.theverge.com/2019/4/9/18300390/uber-vouchers-business-to-business-b2b-market-bulk-rides" class="articles">Uber Vouchers lets businesses buy rides for their customers in bulk</a>
+          <h3>THRILLIST</h3>
+          <a href="https://www.thrillist.com/news/nation/uber-launches-uber-vouchers-free-rides-from-bars" class="articles">Uber’s New Feature Lets Bars, Restaurants, Hotels & More to Pay for Your Rides</a>
+          <h3>CNET</h3>
+          <a href="https://www.cnet.com/roadshow/news/uber-vouchers-buy-rides-customers/" class="articles">Uber Vouchers program will let companies buy rides for their clients</a>
+      </div>
+    </section>
+    <div>
+      <hr>
+      <p>Next project &#8594; Partner portal</p>
+      <a href="portal.html" class="btn">View project
+        <svg>
+          <rect x="0" y="0" fill="none" width="166" height="45"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+  </div>
+
+  <!-- **************************************************************** -->    
+  <!--Say Hello -->
+  <!-- **************************************************************** -->
+     
+    <div id="sayhello">
+      <div class="body-content">
+        <div class="container">
+          <section class="two-column"> 
+            <div class="section-content" id="sayhello-content">
+              <h3>Contact</h3>
+              <h2>Say Hello</h2>
+              <p>Have a cool project? Want to get in contact or just want to say hello? Drop me a line.</p>
+            </div>
+            <div class="contact-contents">
+              <div class="contact-wrapper">
+                <div class="contact-item" id="linkedin">
+                  <a href="https://www.linkedin.com/in/margaret-liu-8b116145/" class="contact-item-content" target="_blank">
+                      <h4 class="hello-subtitle">Online Resume</h4>
+                      <h5>LinkedIn</h5>
+                  </a>
+                </div>
+                <div class="contact-item" id="dribbble">
+                  <a href="https://dribbble.com/Margaretliu" class="contact-item-content" target="_blank">
+                    <h4 class="hello-subtitle">Visual designs</h4>
+                    <h5>Dribbble</h5>
+                  </a>
+                </div>
+              </div>
+              <div class="contact-wrapper">
+                <div class="contact-item" id="behance">
+                  <a href="https://medium.com/@margaretliu" class="contact-item-content" target="_blank">
+                    <h4 class="hello-subtitle">Read</h4>
+                    <h5>Medium</h5>
+                  </a>
+                </div>
+                <div class="contact-item" id="email">
+                  <a href="mailto:margaretliu15@gmail.com" class="contact-item-content" target="_blank">
+                    <h4 class="hello-subtitle">Contact me</h4>
+                    <h5>Email</h5>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div>
+            <h3 class="footer">DESIGNED AND CREATED 2019 MARGARET LIU</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- <div class="stripes">
+      <div class="grid">
+        <div class="grid-cell">
+          <div class="stripes-container">
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+            <div class="stripes-item"></div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  <script src="scripts/jquery-3.2.1.min.js"></script>
+  <script src="scripts/scripts.js"></script>
+  </body>
+</html>
