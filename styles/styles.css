@@ -443,6 +443,9 @@ img {
   font-style: italic;
   font-weight: normal;
 }
+.shadow {
+	box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+}
 /********************************/
 /****** referral cards *********/
 /********************************/
@@ -567,7 +570,7 @@ img {
 	background-color: var(--sayhello-background-tint);
 }
 .project-page #sayhello-content h2 {
-	color: var(--accent-color-tint);
+	color: var(--background-tint);
 	}
 .project-page .hello-subtitle {
 	color: var(--accent-color-tint);
