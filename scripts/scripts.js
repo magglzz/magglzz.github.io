@@ -1,4 +1,6 @@
 $('document').ready(function(){
+
+
 //accordian program
 function showAnswerRole() {
   $('#answer-role').slideToggle();
@@ -35,7 +37,10 @@ $('#goals').click(showAnswerGoal);
         $('#main-menu').toggle();
       }
   });
+  
+  
   });
+    });
 
  // $('#menu-btn').click(function() {
  //    // Find menu and show it
@@ -102,5 +107,3 @@ $('#menu-btn').click(showMenu);*/
   //   $('some element').text(text)
   //   console.log(result);
   // });
- 
-});

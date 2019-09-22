@@ -39,10 +39,17 @@
   font-weight: normal;
 }
 :root {
-  --main-color: #FFBCBF;
-  --accent-color: #7FCEFF;
+  --main-color: #F7B4CB;
+  --accent-color: #3572CE;
   --sayhello-background: #222323;
-  --text-color: #2D2F34;
+  --text-color: #313435;
+  --background: #ffffff;
+  --stripes: #E5E8EA;
+  
+  --background-tint: #ffffff;
+  --text-color-tint: #313435;
+  --sayhello-background-tint: #313435;
+  --accent-color-tint: #3572CE; 
 }
 .slide-out-top {
   -webkit-animation: slide-out-top 0.7s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
@@ -55,19 +62,18 @@
 body {
   font-family: Apercu, helvetica neue, sans-serif;
   font-weight: 300;
-  font-size: 19px;
-  line-height: 30px;
+  font-size: 1rem;
+  line-height: 1.4rem;
   color: var(--text-color);
+  background-color: var(--background);
   width: 100%;
   position: relative;
   left: 0;
-  transition: left 0.2s;
+/*   transition: left 0.2s; */
 }
-footer {
-  background-color: var(--sayhello-background);
-  color: white;
-  text-align: center;
-  padding: 1em;
+.footer {
+	color: var(--background);
+	padding-top: 1em;
 }
 .em {
   height: 1em;
@@ -81,26 +87,9 @@ a:hover,
 a:focus {
   color: var(--accent-color);
 }
-h1 {
-  font-size: 4rem;
-  line-height: 1em;
-  color: var(--main-color);
-  margin: .5em 0 0 0;
-}
-/*.project-desc h1 {
-  margin: 1em 0 .2em 0;
-}*/
 h2 {
-  font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: .1em;
-  padding-top: 1.6em;
-}
-.project-desc h2 {
-  color: #9C9FA1;
-  font-weight: 300;
-  font-size: 1.6rem;
-  padding: 0;
+  padding-top: 1em;
+  margin: 0;
 }
 h3 {
   font-weight: bold;
@@ -108,13 +97,12 @@ h3 {
   margin-bottom: .1em;
 }
 hr {
-  color: black;
-  background-color: black;
-  margin: 2em 0 1em 0;
-  height: 4px;
+  color: var (--accent-color);
+  margin: 3em 0 1em 0;
+  height: 1px;
 }
 p {
-  margin: 0.9em 0 0 0;
+  padding: 0;
 }
 .flip {
   -moz-transform: scaleX(-1);
@@ -123,6 +111,14 @@ p {
   transform: scaleX(-1);
   filter: FlipH;
   -ms-filter: "FlipH";
+}
+ul {
+	font-size: 1.2em;
+	line-height: 1.4em;
+}
+ol {
+	font-size: 1.2em;
+	line-height: 1.4em;
 }
 /********************************/
 /****** background stripes *********/
@@ -135,12 +131,14 @@ p {
   right: 0;
   z-index: -1;
 }
+/* 
 .container {
   margin: 0 auto;
   max-width: 1300px;
   position: relative;
   width: 100%;
 }
+ */
 .overflow {
   overflow: auto;
 }
@@ -160,7 +158,7 @@ p {
   margin: -.5rem;
 }
 .stripes-item {
-  background: rgba(0,0,0,.07);
+  background: var(--stripes);
   height: 100%;
   width: 1px;
 }
@@ -168,7 +166,8 @@ p {
 /****** top nav styling *********/
 /********************************/
 nav {
-  padding: 1.5em 0;
+  padding: 1.5em 2em;
+  
 }
 nav img {
   float: left;
@@ -194,11 +193,13 @@ nav ul {
 }
 #logo {
   width: 40px;
-  margin: 0;
 }
-/*.project-page .navigation li a {
-  color: white;
-}*/
+/* 
+.project-page .navigation li a {
+  color: var(--background);
+}
+ */
+ 
 /********************************/
 /****** button styling *********/
 /********************************/
@@ -215,8 +216,8 @@ nav ul {
   color: var(--accent-color);
   cursor: pointer;
   overflow: hidden;
-  margin-top: 3em;
-  background-color: #FFF;
+  margin-top: 1em;
+  background-color: var(--background);
 }
 .btn.btndark {
   margin-left: 30px;
@@ -256,7 +257,7 @@ nav ul {
 #menu-btn {
   position: absolute;
   /* Place menu button above menu ul */
-  z-index: 4;
+  z-index: 2;
   height: 30px;
   width: 35px;
   background: transparent;
@@ -297,31 +298,34 @@ nav ul {
 #menu-btn.active span:after {
   transform: translate3d(0,-10px,0) rotate(-45deg)
 }
-.link {
-  text-decoration: underline;
-}
-.link:hover {
-  text-decoration: none;
-  color: var(--text-color);
-}
+
+/********************************/
+/****** page containers *********/
+/********************************/
+
+.body-content {
+	padding: 4rem 6rem 3rem 6rem;
+	}
+
+.container {
+	max-width: 900px;
+	width: 100%;
+	margin: 0 auto;
+	}
 /********************************/
 /****** homepage header styling *********/
 /********************************/
-#site-title {
-  /*background: -webkit-linear-gradient(var(--main-color), #A5DDFF);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
-  font-size: 3.8rem; 
+h1 {
+  font-size: 5rem; 
   font-weight: bold;
-  text-align: center;
+  line-height: 1.2em;
   color: var(--text-color);
-  margin-top: 0.5rem;
+  margin: 0;
 }
 #site-description {
-  width: 75%;
-  margin: 0 auto;
-  font-size: 1.3rem;
-  text-align: center;
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+  line-height: 1.4em;
 }
 #scroll-indicator {
   font-size: .8rem;
@@ -330,45 +334,18 @@ nav ul {
   margin: 2em;
 }
 .arrow {
-  width: 70px;
-  margin: 0;
+  border: solid var(--accent-color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
 }
-/*.drawing {
-  width: 25%;
-  max-width: 350px;
-  position: absolute;
-  padding-left: 2rem;
-}*/
-/********************************/
-/****** project headers *********/
-/********************************/
-.project-page header {
-/*background-color: var(--accent-color);*/
+.small-text {
+  font-size: 1rem;
+  text-align: center;
 }
-.project-intro {
-  /* Compensate for the header's fixed position */
-/*  padding: 2em 0;*/
-/*  background-color: var(--accent-color);
-  min-height: 329px;*/
-}
-.project-head {
-/*  text-align: left;*/
-  font-size: 4.5rem;
-/*  color: white;
-*/}
-/*.project-desc {
-  display: flex;
-}*/
-.project-desc p {
- /* width: 45%;*/
-/*  color: white;*/
-}
-.project-desc img {
-  /*position: absolute;
-  top: 0px;
-  right: 0;
-  width: 50%;*/
-}
+
 /********************************/
 /****** faq *********/
 /********************************/
@@ -394,7 +371,7 @@ nav ul {
   content: '';
   height: 3px;
   width: 100%;
-  background: black;
+  background: var(--text-color);
   border-radius: 50px;
 }
 .plus span:before {
@@ -407,36 +384,12 @@ nav ul {
 /********************************/
 /****** homepage projects *********/
 /********************************/
-.home-head {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-#helloimg {
-  width: 15%;
-  display: block;
-  margin: 0 auto;
-}
-.home-head .header-content-wrapper {
-  position: relative;
-  height: 69vh;
-}
 
-.home-head canvas {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-}
-#canvas {
-  cursor: url(../images/pencil.png) 0 25, auto;
-}
 .two-column {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 5em;
   justify-content: space-between;
+  padding-top: 2em;
 }
 .two-row {
   display: flex;
@@ -453,19 +406,9 @@ nav ul {
 .section-content p{
   display: inline-block;
 }
-.break-text {
-  text-align: left;
-  font-style: italic;
-  font-weight: 500;
-  width: 45%;
-  font-size: 2.2rem;
-  line-height: 1.4;
-}
-.project-page .break-text {
-  width: 100%;
-}
+
 .subtitle {
-  border-bottom: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--main-color);
 }
 /********************************/
 /****** images *********/
@@ -473,10 +416,8 @@ nav ul {
 img {
   width: 100%;
   height: auto;
-  margin-top: 1em;
 }
-
-.mobileimg {
+.arvideo {
   width: 45%;
 }
 .homephotos {
@@ -489,8 +430,10 @@ img {
 .inline-images {
   margin-top: 1.2em;
  /** box-shadow: 0px 0px 38px rgba(0,0,0,0.25);**/
+/* 
   border-radius: 2px;
   border: solid 1px #D4D8D7;
+ */
 }
 .caption {
   padding: 0 0 1em 0;
@@ -503,11 +446,11 @@ img {
 /********************************/
 /****** referral cards *********/
 /********************************/
-.white-float {
+.background-float {
   width: 35%;
   box-shadow: 0px 2px 30px rgba(0,0,0,0.20);
   padding: 30px;
-  background-color: #FFF;
+  background-color: var(--background);
   margin: 0 0 1.5rem 1.5rem;
 }
 
@@ -515,7 +458,7 @@ img {
   width: 30%;
   box-shadow: 0px 0px 20px rgba(0,0,0,0.15);
   padding: 1rem;
-  background-color: #fff;
+  background-color: var(--background);
   border-radius: 2px;
 }
 .homepage-buttons {
@@ -545,23 +488,36 @@ img {
 .more-work p {
   font-size: 0.8rem;
 }
-.more-work h1 {
+.more-work h2 {
   font-size: 2rem;
   margin: 1em 0;
 }
 .work-float:hover {
   box-shadow: 0 2px 50px rgba(0,0,0,0.3);
 }
-.projects-btn {
-  text-align: center;
-}
-
 /********************************/
 /****** project page *********/
 /********************************/
-/*.verticalbar {
-  left: 40px;
-  top: 700px;
+.articles {
+	text-decoration: underline;
+	font-weight: 500;
+}
+.project-page p {
+	font-size: 1.2em;
+	line-height: 1.4em;
+	color: var(--text-color-tint);
+}
+.project-page h1 {
+	color: var(--text-color-tint);
+	}
+.project-page h2 {
+	color: var(--text-color-tint);
+}
+.project-page {
+	background-color: var(--background-tint);
+	}
+.verticalbar {
+  top: 70em;
   display: flex;
   transform: rotate(-90deg);
   transform-origin: 0 50%;
@@ -570,18 +526,29 @@ img {
   text-transform: uppercase;
   font-size: 14px;
   font-weight: bold;
-  white-space: nowrap;
+  background-space: nowrap;
   width: 700px;
-}*/
-/*#margin-line {
-  background: black;
+}
+.project-page .btn {
+	background-color: var(--background-tint);
+	color: var(--accent-color-tint);
+}
+.project-page .btn svg rect {
+	stroke: var(--accent-color-tint);
+}
+#margin-line {
+  background: var(--text-color-tint);
   height: 1px;
   margin: 0 20px;
   width: 38%;
-}*/
+}
 .wrapper {
-  width: 60%;
+  width: 65%;
+  max-width: 600px;
   margin: 0 auto;
+}
+.wrapper-section {
+  padding-top: 30px;
 }
 .grid {
   clear: both;
@@ -591,57 +558,30 @@ img {
 .project-page #menu-btn span,
 .project-page #menu-btn span:before,
 .project-page #menu-btn span:after {
-  /*  background: white;*/
+  /*   background: var(--background); */
 }
 .project-page #menu-btn.active span {
   background-color: transparent;
 }
-.line {
-  border-bottom: solid 1px #eee;
-  margin: 1.6em 0 1.6em 0;
+.project-page #sayhello {
+	background-color: var(--sayhello-background-tint);
 }
-/********************************/
-/****** accordians *********/
-/********************************/
-/*h3 {
-  font-size: .9rem;
-  text-transform: uppercase;
-  color: var(--main-color);
-  margin: .9rem 0 0 0;
+.project-page #sayhello-content h2 {
+	color: var(--accent-color-tint);
+	}
+.project-page .hello-subtitle {
+	color: var(--accent-color-tint);
 }
-.wrapper-section h3 {
-  color: var(--accent-color);
-}*/
-.details {
-  text-align: left;
-  width: 45%;
-  border: 2px solid var(--main-color);
-  padding: 1rem 3rem 2rem 3rem;
-  margin-top: 1rem;
+.project-page .contact-item::after {
+	background-color: var(--sayhello-background-tint);
 }
-.details p {
-  font-size: 1rem;
-  line-height: 1.2rem;
-}
-dt{
-  cursor: pointer;
-  font-size: 1.5rem;
-  font-weight: 300;
-  padding-top: 40px;
-  border-bottom: 1px solid black;
-  overflow: hidden;
-}
-dd {
-  margin: 1em 0 0 0 ;
-}
-dl {
-  text-align: left;
-  padding: 4em 0;
-  width: 40%;
+.project-page #sayhello p{
+	color: var(--background-tint);
 }
 /********************************/
 /****** say hello *********/
 /********************************/
+
 #sayhello {
   background-color: var(--sayhello-background);
   margin-top: 2em;
@@ -657,8 +597,8 @@ dl {
   border-bottom: 1px solid var(--accent-color); 
   margin-right: 50px; 
 }
-h5 {
-  color: white;
+h6 {
+  color: var(--background);
   font-size: 1.05rem;
   margin: 0;
   text-decoration: none;
@@ -667,14 +607,17 @@ h5 {
   display: flex;
   flex-wrap: wrap;
   margin: 30px;
-  color: #fff;
+  color: var(--background);
   position: relative;
   cursor: pointer;
+}
+.contact-item a {
+	color: var(--background);
 }
 .contact-item-content {
   /* Force content above ::after element */
   z-index: 2;
-  padding: 2em;
+  padding: 1.6em;
 
 }
 .contact-item::after,
@@ -721,22 +664,25 @@ h5 {
 .contact-contents {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 50px;
 }
 #sayhello-content {
-  color: white;
+  color: var(--background);
 }
 #linkedin {
-  height: 172px;
+  height: 132px;
   width: 170px;
 }
-#twitter {
-  height: 232px;
-  width: 172px;
+#dribbble {
+  height: 160px;
+  width: 170px;
 }
 #behance {
-  height: 200px;
-  width: 172px;
+  height: 202px;
+  width: 170px;
+}
+#email {
+  height: 132px;
+  width: 170px;
 }
 /********************************/
 /****** About me *********/
@@ -747,23 +693,19 @@ h5 {
 }
 .about-page .contact-wrapper {
   display: flex;
-  flex-wrap: wrap;
 }
 .about-page .contact-contents {
-  margin: 0 auto;
+  margin: 0;
   width: 47%;
 }
 .about-page .contact-item::after {
-  background-color: white;
+  background-color: var(--background);
 }
-.about-page h5 {
+.about-page h6 {
   color: var(--text-color);
 }
 .about-page .section-content p {
   padding: 0;
-}
-.about-page .homephotos {
-  margin: 0 auto;
 }
 /********************************/
 /****** Work page *********/
@@ -778,43 +720,31 @@ h5 {
 .work-page .two-column {
   width: 100%;
 }
-.work-page h1 {
-  font-size: 4rem;
-}
 /********************************/
 /****** responsive *********/
 /********************************/
-@media screen and (max-width: 1300px) {
-  .container {
-    padding: 0 1em;
-  }
-}
+
 @media screen and (max-width: 960px) {
-  .drawing {
-    width: 27%;
-    padding-left: 1rem;
-  }
   .section-content {
-    width: 80%;
+    width: 100%;
   }
   .wrapper {
     width: 80%;
     padding: 2em 0 0 5em;
   }
-  .two-column {
-    justify-content: space-evenly;
-    padding: 2em 0 0 0;
-  }
   .work-page .two-column {
     padding: 0;
   }
   #sayhello .two-column {
-    padding: 3em 0;
+    padding: 0;
+  }
+  #sayhello .body-content {
+  padding-top:4rem;
   }
   .homephotos {
     width: 100%;
   }
-  .white-float {
+  .background-float {
     width: 60%;
     margin-top: 100px;
   }
@@ -823,16 +753,6 @@ h5 {
   }
   .head-img {
     width: 75%;
-  }
-  dl {
-    width: 85%;
-    padding-top: 7em;
-    margin: 0 auto;
-  }
-  .details {
-    width: 85%;
-    margin: 0 auto;
-    margin-top: 2rem;
   }
   .project-desc img {
     width: 100%;
@@ -849,52 +769,73 @@ h5 {
   .more-work {
     padding: 1em;
   }
-  .white-float {
+  .background-float {
     margin: 2em;
   }
   .work-section {
-    width: 80%;
+    width: 100%;
     padding: 3em 0;
   }
   .about-page .homephotos {
     width: 60%;
   }
-  .white-page #sayhello {
+  .background-page #sayhello {
     padding: 3em 7em;
   }
-  .white-page #sayhello-content {
+  .background-page #sayhello-content {
     width: 100%;
   }
-  .white-page .contact-contents {
+  .background-page .contact-contents {
     margin: 0;
   }
   .about-page .contact-contents {
     width: 80%;
   }
+    .verticalbar {
+    display: none;
+  }r
+}
+@media screen and (max-width: 900px) {
+	.wrapper {
+    padding: 0;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 660px) {
+	.navigation li a {
+		font-size: 1.5em;
+	}
+	.project-page p {
+		font-size: 1.1rem;
+	}
+	ul {
+	font-size: 1.1rem;
+	}
+	ol {
+	font-size: 1.1rem;
+	}
+	.body-content {
+		padding: 4rem;
+	}
+	h2 {
+	font-size: 1.5em;
+	}
   .work-float {
     width: 90%;
     margin: 1em;
   }
   .section-content {
-    width: 90%;
+    width: 100%;
   }
-  .mobileimg {
+  .arvideo {
     width: 65%;
   }
-  #helloimg {
-    width: 50%;
-  }
-  #site-title {
-    padding: 1rem 0 1rem 0;
+  h1 {
+  	font-size: 4rem;
     margin: 0;
-    font-size: 2rem;
   }
   #site-description {
-    width: 90%;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.4rem;
   }
   #logo {
     /*margin: 10px;*/
@@ -902,7 +843,7 @@ h5 {
     position: relative;
     z-index: 2;
   }
-  .white-float {
+  .background-float {
     width: 80%;
   }
   nav {
@@ -912,74 +853,75 @@ h5 {
   #main-menu {
     display: none;
     position: fixed;
-    z-index: 3;
+    z-index: 1;
     height: 100vh;
     align-content: center;
-    background: white;
+    background: var(--background);
     margin: 0;
     padding-top: 100px;
   }
   #main-menu li {
     width: 100%;
-    padding: 30px;
+    padding: 45px;
     text-align: center;
     padding-right: 5em;
   }
- /* .project-page #main-menu {
-    background: var(--accent-color);
-  }*/
+  .project-page #main-menu {
+    background: var(--background-tint);
+  }
   #logo {
     float: right;
   }
-  .verticalbar {
-    display: none;
-  }
-  .wrapper {
-    padding: 0;
-    width: 100%;
-  }
-  .work-section {
-    width: 100%;
-  }
-  #myCanvas {
-    display: none;
-  }
-  .drawing {
-    display: none;
-  }
-  .break-text {
-    width: 100%;
-    font-size: 1.8rem;
-  }
+
 }
 @media screen and (max-width: 490px) {
+
+	.body-content {
+	padding: 2em;
+	}
+	h1 {
+		font-size: 3em;
+	}
+	#site-description {
+		font-size: 1.2em;
+		padding:0;
+	}
   .section-content {
     width: 100%;
   }
-  .white-float {
+    #linkedin {
+  	height: 132px;
+  	width: 100px;
+	}
+	#dribbble {
+ 	 height: 160px;
+ 	 width: 100px;
+	}
+	#behance {
+ 	 height: 181px;
+ 	 width: 100px;
+	}
+	#email {
+  	height: 132px;
+  	width: 100px;
+	}
+	.contact-item {
+		margin: 1em;
+		}
+  .background-float {
     width: 100%;
     margin: 0;
   }
-  .arrow {
-    width: 55px;
-  }
-  dl {
-    padding: 0;
-    width: 100%;
-  }
-  .details {
-    width: 100%;
-  }
-  .mobileimg {
+  .arvideo {
     width: 85%;
   }
   .homephotos {
     width: 100%;
   }
-  .white-page .work-section {
+  .background-page .work-section {
     padding: 2em;
   }
-  .white-page #sayhello {
+  .background-page #sayhello {
     padding: 2em;
   }
   .plus {
