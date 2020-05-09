@@ -1,0 +1,16 @@
+{
+"companyName": "Margaret Liu",
+"productName": "Space Shooter Pro",
+"productVersion": "0.1",
+"dataUrl": "Space Shooter Pro.data.unityweb",
+"wasmCodeUrl": "Space Shooter Pro.wasm.code.unityweb",
+"wasmFrameworkUrl": "Space Shooter Pro.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.3.3f1"
+}
