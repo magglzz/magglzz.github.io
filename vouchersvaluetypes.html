@@ -39,29 +39,39 @@
       </div>  
       <div class="wrapper">
         <div class="wrapper-section">
-          <h1>Voucher value types</h1>
-          <p>My greatest challenge as a dance teacher is coming up with verbal cues that create visual images for my students. "Land your jump like you're landing in a puddle without making a splash" creates a much more effective reaction from the body than "land with shins parallel to the ground, external rotation at the hips, soft knees, relaxed shoulders with a braced spin etc." Design, like teaching dance, is all about condensing a bunch of technical information down to a single cue that users can understand and perform on.</p>
+          <h1>Uber Vouchers</h1>
+          <p>Vouchers can be thought of as promo codes 2.0. They are a way for companies to create and easily distribute “gift cards with restrictions” where they only pay for value that is actually used. For instance, we wanted companies to be able to create vouchers for a company holiday party with 200 employees to be used on a specific day, from a specific location, and with a set maximum ride value. We also wanted transit companies to be able to create last-mile-vouchers for residents of areas without public transportation on UberPool, and for riders to pay a flat fare (price of a bus ticket) and the rest would be covered by the voucher up to a certain amount. In any of these instances, if the rider only used $10 of a $15 voucher, the company would only pay $10. </p>
+
+          <p>Examples of other use cases:</p>
+          <ul>
+            <li>Employee commute: 2 rides/day M-F for up to $15 each on Uber pool</li>
+            <li>Employee commute: $250 voucher value recurring monthly</li>
+            <li>Customer reward: 50% off uber rides for 1 month up to $150 in value</li>
+          </ul>
 
           <img src="images/vouchers_dash.gif" alt="Vouchers in it's current form" class="inline-images shadow">
       
-          <p>When Vouchers was launched in April 2019, we saw incredible traction and growth. More than just a promo code, the product was a new way for organizations to provide rides for anyone, at scale, and it took off like wildfire. But we saw gaps in our potential. We were limited to a few use cases because we only offered two value types; an amount off a ride and a fully covered ride. In order to expand our product, we needed to offer more value types.</p>
+          <p>Vouchers could be created in bulk or individually, but in this project we focused on bulk creation. When you create a bulk of vouchers, it is called a program. The value of a program is calculated by the number of vouchers, and the value per voucher. The value per voucher is determined by the value per trip and the number of trips. </p>
 
-          <p>We talked to our go to market and sales teams and categorized value types into two groups: per trip discounts (subsidized on a per trip basis) and allowances (total values of a voucher).</p>
+          <img src="images/vouchersdiagram.png" alt="Vouchers diagram" class="inline-images">
 
-          <img src="images/vouchers_types.png" alt="proposed voucher types" class="inline-images">
-          <div class="caption">Proposed value types split up into allowances and per trip discounts</div>
+          <p><b>The focus of this project is on the value per voucher.</b></p>
 
-          <img src="images/vouchers_newvsold.png" alt="current vs old voucher types" class="inline-images"><div class="caption">Diagram of new voucher value types vs. old</div>
+          <p>At the time, the value per trip on each voucher was limited to a fully covered trip and $X max amount per trip. We wanted to introduce the following new value types:</p>
+          <ul>
+            <li>Recurring value - the voucher value would reset every week or month</li>
+            <li>Flat fare subsidy cap - riders would pay a flat fare, and the rest would be covered by the voucher up to a certain amount</li>
+            <li>% off per trip</li>
+            <li>Fixed voucher amount without a set number of trips</li>
+          </ul>
 
-          <p>On their own, the value types were easy to understand. It was how they could be mixed and matched that made them so complicated. How could we translate these value types into the product in a way where the user could discover new ways to use vouchers, but also find the solution for their current needs? </p>
+          <h2>Problem</h2>
 
-          <!-- <img src="images/vouchers_formula.png" alt="diagram of combinations" class="inline-images"><div class="caption">Different ways voucher value types could be combined. You'll notice that credit is different from $ covered/ride, fully covered ride, and %covered/ride.</div>
-
-          <img src="images/vouchers_formulaproto.png" alt="diagram of combinations with inputs" class="inline-images"><div class="caption">The formula translated to inputs</div>
- -->
-          <p>We started the process by setting down some principles to make sure our team would stay aligned on tough decisions. </p>
+          <p>Vouchers as a product is inherently versatile. There are a million ways you can mix and match the features to create a fully customized voucher. We needed to design a way of imbedding the new value types so that users could discover new ways of using vouchers, but also find the solution to their current needs. We were working with two conflicting principles–an interface that affords exploration and discoverability but also streamlines the creation process. Would they be able to work in the same interface or should we prioritize one over the other? Was the interface the best place for both these principles?</p>
 
           <h2>Principles</h2>
+
+          <p>We started by creating a set of principles to make sure our team would stay aligned on tough decisions and to set a framework for when we would add Eats vouchers.</p>
 
           <p><b>Simplicity through focus.</b> Our users love Uber because of how simple it is to use. One of our greatest achievements for businesses is operational efficiency. We wanted to stay true to how we benefit our users and why our users value our products.</p>
           <p><b>Inspiration through discovery.</b> The beauty of Vouchers is the millions of ways it can be used. From promotions, to events, to just getting a guest somewhere, the possibilities are endless. Our users don’t yet know how Vouchers can solve their problems, so we want to make sure they can be inspired and discover new ways to use Vouchers.</p>
@@ -69,92 +79,49 @@
           <p><b>Design for the majority.</b> Even though our objective is to expand our reach, we will always make sure our designs are optimized for our biggest use cases. It’s important to remember our core user group and ensure they still have a seamless experience with the new value types that we introduce.</p>
 
           <h2>Approach</h2>
-          <p>What is the user thinking at this stage of the creation flow? What are they motivated by? I started designing by thinking about the questions I would ask our user if I was completing the creation flow for them. </p>
+          <p>While developing approaches, we tried to decide <b>how we should present the information</b> to our users. What are their motivations and priorities? What do they want to set first?</p>
 
-          <p><b>Approach 1: How much do you want to spend per customer?</b></p>
-          <p>If the first question users are thinking when they get to our value page is “how much do I want to spend per customer?” the first input should be to determine each voucher's value. For every voucher created, there needs to be some way to limit it’s value. The math looks like this:</p>
-
-          <img src="images/vouchers_calculator.png" alt="how to calculate voucher program value" class="inline-images">
-          <div class="caption">Approach 1 focuses on the "max value per voucher"</div>
-
-          <p>This exploration sets the variable “max value per voucher” as the focus point. Determine this, and then we can figure out the rest. </p>
-
-          <img src="images/vouchers_approach1.png" alt="approach 1 diagram" class="inline-images">
-          <div class="caption">This is what the order would look like if we led with this approach. The user would pick one option from each row to create their voucher.</div>
-
-          <img src="images/vouchers_approach1example.png" alt="example of approach 1" class="inline-images">
-          <div class="caption">This is an example of what a conversation with the user would look like and how the math would work out.</div>
+          <p><b>Approach 1: Overall budget</b></p>
+          <p>If our users are focused on the overall campaign budget, we would have them set the number of vouchers they wanted to give first. This approach caters to users who have a set number of people in mind already.</p>
           
-          <p><b>Approach 2: What is the overall program budget?</b></p>
+          <p><b>Approach 2: Budget per person</b></p>
 
-          <p>If we assume that they user is thinking about overall program budget, then they’d want to set the maximum potential cost first and then work down from there. Hierarchically, that means setting the number of vouchers first (program level) and ending with the per trip offer (trip level).</p>
-
-          <img src="images/vouchers_approach2.png" alt="approach 2 diagram" class="inline-images">
+          <p>On the flip side, users might be given a budget per person but not a number of people. Here, we’d have them set the per voucher value first.</p>
           
+          <p><b>Approach 3: Promotion or value offering</b></p>
 
-          <p><b>Approach 3: What do you want to offer your customers?</b></p>
-
-          <p>Assuming the user starts first with thinking about what the value of the voucher would be for their customers, we would start by asking which per trip discount they’d like to use. </p>
-          <img src="images/vouchers_approach3.png" alt="approach 3 diagram" class="inline-images">
+          <p>Some users are focused more on what promotion or value they want to give and less by what kind of budget they have. If this was the case, we’d show what value types we have per trip first and have them go from there. </p>
 
           <p><b>Approach 4: Discovery and exploration</b></p>
 
-          <p>What happens if the user is not sure when they start building their voucher program? Perhaps they are just testing the product, or only have a vague idea of what they want to accomplish. If we framed each value type as a solution, we figured users could be inspired to use vouchers in new ways. It also gave us the freedom to explain each solution fully for better comprehension.</p>
-          <img src="images/vouchers_approach4.png" alt="approach 4 diagram" class="inline-images">
-          <div class="caption">Approach 4 diagram. They would pick one of the four solutions and that would give them a set of inputs. Each solution would have their own set of inputs.</div>
+          <p>We also knew there might be users who were unsure of how vouchers could solve their problem. In this case, we wanted vouchers to be a tool for them to explore different solutions and find the best fit.</p>
 
           <p><b>Approach 5: We choose for you</b></p>
 
-          <p>We dug even further outside the box and explored a content focused approach. We were worried the cognitive load would be too much for users, so we tried asking a series of questions to figure out their use case. Then we could recommend a value type for them based on their answers.</p>
-          <img src="images/vouchers_approach5.png" alt="approach 5 diagram" class="inline-images">
+          <p>A more aggressive version of approach 4 would be for us to choose a solution for the user based off of a set of questions we would ask about their problem. </p>
 
           <h2>Challenges</h2>
 
-          <p>We already had a significant cohort of users on the product that did not need the new value types. While we wanted to make the new value types discoverable, we didn’t want them to impede our current users' work flow. So we considered different ways we could make the new value types an optional feature, and decided on having an “advanced” and "default" set up. </p>
-
-          <img src="images/vouchers_advanced.png" alt="advanced vs. default controls" class="inline-images">
-          <div class="caption">The only advanced features on the page were at the bottom. It would have been confusing to have the only difference be the bottom inputs when the control to switch between advanced and default was at the top.</div>
-
-          <p>But what we were putting in advanced vs default seemed arbitrary. After a research deep dive, we found that the real advanced feature was simply the way we limited the maximum value of the voucher. In the current model, a maximum voucher value could only be set by the number of rides per voucher. The new model would allow users to set a maximum value by either number of rides or a dollar amount. They could also set a frequency for the voucher to reset. </p>
-
-          <img src="images/vouchers_advexplorations.png" alt="explorations of advanced vs. default controls" class="inline-images">
-          <div class="caption">Explorations for how we could display advanced vs. default controls.</div>
+          <p>We already had a significant cohort of users on the product that did not need the new value types. While we wanted to make the new value types discoverable, we didn’t want them to impede our current users' workflow. So we considered different ways we could make the new value types an optional feature, and decided on having an “advanced” and "default" set up.</p>
 
           <h2>User testing</h2>
 
-          <p>After consulting with stakeholders, we decided as a team to prototype and test approach 3. It mitigated the most complexity and followed our principles the closest. It was also the most technically viable of the options.</p>
+          <p>User testing revealed 2 key insights:</p>
+          <ol>
+            <li>Advanced controls were too easily discoverable.</li>
+            <li>People thought advanced and default controls were not mutually exclusive</li>
+          </ol>
 
-          <p>We used progressive disclosure to slowly reveal information about value types in a way that would keep the user focused on small, easy tasks. We translated the questions we had in approach 5 to UI components the user could act on. </p>
-          <img src="images/vouchers_prototype.gif" alt="prototype" class="inline-images shadow">
-          <div class="caption">Prototype that we tested</div>
+          <h2>Solution</h2>
 
-          <p>We had 2 key insights:</p>
-
-          <p><b>Advanced controls were too easily discoverable.</b></p>
-          <p>Because advanced controls were placed in the middle of the form, it was too easily discoverable and admins were exploring them more than we wanted them to. They got confused about whether they should use the advanced controls or not when it didn’t seem like they needed them. How could we make advanced controls more buried or only available to orgs that actually needed them?</p>
-
-          <p><b>People thought advanced and default controls were not mutually exclusive</b></p>
-          <p>Some users were confused about the tabs and didn’t think the default and advanced were mutually exclusive. Despite the copy, the design gave too much of an affordance that they should fill out both versus just one.</p>
-
-          <h2>The solution</h2>
-
-          <p>The insights from our user testing sessions revealed that we had strayed from one of our core principles; optimizing for the majority. Our most frequent use case is $X off a trip for a total of Y trips. While we wanted to offer every possible value combination for our users for full versatility, we were also introducing too much complexity. It was a fine line to juggle. So we scaled down our offerings by removing the following:</p>
-
-          <p><b>Flat fare subsidy cap</b></p>
-          <p>This was a value type specifically for transit companies. Riders would pay a flat fare (price of bus ticket) and the rest would be subsidized up to a certain amount. While this was intuitive for transit companies, no one else understood what it meant or why they would need it. So we made it a feature available only to our transit partners.</p>
-
-          <p><b>Maximum value per voucher</b></p>
-          <p>It was confusing to have a maximum subsidy per ride, but also to have have a maximum voucher value. We decided having a voucher credit allowance was enough control for our users.</p>
-
-          <p><b>Frequency</b></p>
-          <p>Allowing users to control the per ride discount and also the maximum value of a voucher and then also the frequency for the value to reset, was too much for users to understand. We removed this and added it only for the value type credit, since that was a more simple value type and where we saw the strongest use case for frequency.</p> 
+          <p>This project showed an uncommon, but very real truth about modern day design; our technology surpassed our users’ ability. While we had all the technical capabilities of offering the most versatile and robust voucher, the majority of our users were only concerned with the most basic value type. We scaled down our offerings by removing features that were not yet part of known use cases and by whitelisting some value types that we knew would be used only by specific companies. </p>
 
           <img src="images/vouchers_value.gif" alt="Final solution vouchers value types" class="inline-images shadow">
           <div class="caption">Solution without flat fare subsidy cap, maximum voucher value, and frequency. </div>
 
           <h2>Next steps</h2>
 
-          <p>This solution is by no means final. We had strong indications from user testing that approach 4 could be successful. But for now, with our current scope and deadline, we decided to build and ship our solution and wait for more data before we iterated again. Until then, I’ll be closely monitoring our user feedback and data and exploring how approach 4 can push our product even more.</p>
+          <p>As a dance coach, I’m constantly finding verbal cues for my athletes that will incite the most effective physical response from them. For example, “sweep your leg like you’re drawing a rainbow” is much easier to do than “lightly kick your leg in an arch.” Design, like teaching dance, is all about condensing information into a visual cue that is both sticky and easy for our users. But coaches never settle on just a “good” verbal cue, we want the best possible one that will make our athletes the best in the competition. In the same way, a design is never finished until it represents the best-possible visual cue. Until our design is actually used, we can never be sure of its success. We had strong indications from user testing that approach 4 could be successful, but for now–with our current scope and deadline–we decided to build and ship our solution and wait for more data before we iterate again. The important part of the design is that it takes future modification into consideration and exists not as a “solution” but as a framework for change. </p>
 
         <!--   <img src="images/vouchers_mobile.gif" alt="Redeeming a voucher" class="inline-images">
           <div class="caption">Redeeming a voucher</div> -->
