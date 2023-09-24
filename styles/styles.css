@@ -85,7 +85,7 @@ a {
 }
 a:hover,
 a:focus {
-  color: var(--accent-color);
+  color: var(--main-color);
 }
 h2 {
   padding-top: 1em;
@@ -203,6 +203,15 @@ nav ul {
 /********************************/
 /****** button styling *********/
 /********************************/
+.link {
+  color: var(--accent-color);
+  hover: ;
+}
+.link:hover,
+.link:focus {
+  color: var(--main-color);
+}
+
 .btn {
   position: relative;
   display: inline-block;
